@@ -17,16 +17,15 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
- public function boot(): void
+public function boot(): void
 {
-    // Pastiin ini ada biar CSS gak diblokir browser karena masalah keamanan
-    if (config('app.env') === 'production') {
-        URL::forceScheme('https');
+    // Paksa HTTPS biar CSS gak diblokir (Mixed Content)
+    if (env('VERCEL_ENV') || config('app.env') === 'production') {
+        \Illuminate\Support\Facades\URL::forceScheme('https');
     }
 
-    // Kasih tahu Laravel lokasi manifest dan folder build-nya
+    // Arahin ke jantung manifest Vite terbaru lo
     \Illuminate\Support\Facades\Vite::useBuildDirectory('build');
     \Illuminate\Support\Facades\Vite::useManifestFilename('.vite/manifest.json');
 }
-
 }
