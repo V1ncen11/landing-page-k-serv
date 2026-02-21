@@ -10,15 +10,10 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
-    // Tambahkan bagian build ini biar Vercel nggak bingung nyari manifest-nya
     build: {
         outDir: 'public/build',
         emptyOutDir: true,
         manifest: true,
-        rollupOptions: {
-            output: {
-                manualChunks: undefined,
-            },
-        },
+        assetsDir: 'assets', // 👈 WAJIB TAMBAH INI
     },
 });
