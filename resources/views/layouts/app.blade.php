@@ -23,7 +23,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     {{-- Favicon sudah diperbaiki dari pavicon ke favicon --}}
-    <link rel="icon" type="image/png" href="{{ asset('images/pavicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
     <link rel="canonical" href="{{ url()->current() }}">
     
     <style> 
