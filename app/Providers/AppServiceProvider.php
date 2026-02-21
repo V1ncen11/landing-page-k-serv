@@ -21,10 +21,10 @@ class AppServiceProvider extends ServiceProvider
 {
     if (config('app.env') === 'production') {
         URL::forceScheme('https');
-        // Tambahin baris di bawah ini:
-        $this->app->bind('path.public', function() {
-            return base_path('public');
-        });
     }
+
+    // TAMBAHIN INI: Kasih tau Laravel alamat manifest yang bener
+    \Illuminate\Support\Facades\Vite::useManifestFilename('.vite/manifest.json');
 }
+
 }
