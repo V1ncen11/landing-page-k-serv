@@ -17,7 +17,7 @@
                 <a href="#katalog" class="text-slate-600 hover:text-indigo-600 transition">Katalog</a>
                 <a href="#portofolio" class="text-slate-600 hover:text-indigo-600 transition">Portofolio</a>
                 <a href="#faq" class="text-slate-600 hover:text-indigo-600 transition">FAQ</a>
-                <a href="https://wa.me/087870402431" target="_blank" class="bg-indigo-600 text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-100">
+                <a href="https://wa.me/6287870402431" target="_blank" class="bg-indigo-600 text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-100">
                     Pesan Jasa
                 </a>
             </div>
@@ -55,7 +55,7 @@
                 <a href="#katalog" class="px-10 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-indigo-600 hover:scale-105 transition-all shadow-2xl shadow-indigo-200/50 text-center">
                     Lihat Katalog Produk
                 </a>
-                <a href="https://wa.me/087870402431?text=Halo%20K-Serv,%20saya%20ingin%20konsultasi%20jasa/produk." target="_blank" class="px-10 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-2xl hover:bg-slate-50 transition-all text-center">
+                <a href="https://wa.me/6287870402431?text=Halo%20K-Serv,%20saya%20ingin%20konsultasi%20jasa/produk." target="_blank" class="px-10 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-2xl hover:bg-slate-50 transition-all text-center">
                     Konsultasi Sekarang
                 </a>
             </div>
@@ -85,7 +85,7 @@
                             <span class="text-xs text-slate-400">Mulai dari</span>
                             <span class="font-bold text-lg text-slate-900">Rp {{ $item->harga }}</span>
                         </div>
-                        <a href="https://wa.me/087870402431?text=Halo%20K-Serv,%20mau%20konsultasi%20tentang%20{{ urlencode($item->nama) }}" 
+                        <a href="https://wa.me/6287870402431?text=Halo%20K-Serv,%20mau%20konsultasi%20tentang%20{{ urlencode($item->nama) }}" 
                         target="_blank" 
                         class="bg-indigo-600 text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-slate-900 transition shadow-lg shadow-indigo-100 text-center">
                             Konsultasi
@@ -153,7 +153,7 @@
         <div class="mt-20 bg-indigo-600 rounded-[32px] p-8 md:p-12 text-center text-white shadow-2xl shadow-indigo-200" data-aos="zoom-out">
             <h3 class="text-2xl md:text-3xl font-bold mb-4 italic">Punya Proyek Khusus?</h3>
             <p class="text-indigo-100 mb-8 max-w-xl mx-auto">Gak nemu yang cocok di katalog? Tenang, gue bisa bantu custom proyek lo.</p>
-            <a href="https://wa.me/087870402431" class="inline-block bg-white text-indigo-600 px-8 py-4 rounded-2xl font-black hover:bg-slate-900 hover:text-white transition-all shadow-lg">
+            <a href="https://wa.me/6287870402431" class="inline-block bg-white text-indigo-600 px-8 py-4 rounded-2xl font-black hover:bg-slate-900 hover:text-white transition-all shadow-lg">
                 Tanya Dulu Aja, Gratis!
             </a>
         </div>

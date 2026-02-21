@@ -10,9 +10,15 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
-    server: {
-        watch: {
-            ignored: ['**/storage/framework/views/**'],
+    // Tambahkan bagian build ini biar Vercel nggak bingung nyari manifest-nya
+    build: {
+        outDir: 'public/build',
+        emptyOutDir: true,
+        manifest: true,
+        rollupOptions: {
+            output: {
+                manualChunks: undefined,
+            },
         },
     },
 });
