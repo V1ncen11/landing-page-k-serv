@@ -13,7 +13,7 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:title" content="K-SERV - Solusi Digital Beres Tanpa Ribet">
     <meta property="og:description" content="Butuh bantuan tugas atau desain template? Biar K-SERV yang urus semuanya dengan hasil profesional.">
-    <meta property="og:image" content="{{ asset('images/pavicon.png') }}">
+    <meta property="og:image" content="{{ asset('images/favicon.png') }}">
     <meta name="theme-color" content="#f8fafc">
 
     {{-- Pemanggilan Vite lengkap (Wajib JS & CSS biar manifest.json terbaca di Vercel) --}}
