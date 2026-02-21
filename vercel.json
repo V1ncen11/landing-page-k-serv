@@ -1,7 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "npm install && npm run build",
-  "outputDirectory": "public",
   "builds": [
     {
       "src": "public/index.php",
@@ -9,7 +7,9 @@
     }
   ],
   "routes": [
-    { "handle": "filesystem" },
+    { "src": "/build/(.*)", "dest": "/public/build/$1" },
+    { "src": "/images/(.*)", "dest": "/public/images/$1" },
+    { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
     { "src": "/(.*)", "dest": "/public/index.php" }
   ]
 }
