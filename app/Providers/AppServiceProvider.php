@@ -19,13 +19,15 @@ class AppServiceProvider extends ServiceProvider
      */
 public function boot(): void
 {
-    // Bantai Mixed Content (Error merah "Mixed Content" di Console lo)
+    // Paksa HTTPS biar CSS gak diblokir Chrome (Mixed Content)
     if (env('VERCEL_ENV') || config('app.env') === 'production') {
         \Illuminate\Support\Facades\URL::forceScheme('https');
     }
 
-    // Kasih tau Laravel kalau lo pake Vite terbaru (Tailwind v4)
+    // Kasih tahu folder build-nya
     \Illuminate\Support\Facades\Vite::useBuildDirectory('build');
-    \Illuminate\Support\Facades\Vite::useManifestFilename('.vite/manifest.json');
+    
+    // PENTING: Cari manifest di root folder build, bukan di .vite
+    \Illuminate\Support\Facades\Vite::useManifestFilename('manifest.json');
 }
 }

@@ -8,7 +8,7 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    // TAMBAHIN INI: Biar manifest langsung di public/build/manifest.json
+    // WAJIB: Biar manifest gak ngumpet di folder .vite
     build: {
         manifest: 'manifest.json',
     },
