@@ -19,11 +19,13 @@ class AppServiceProvider extends ServiceProvider
      */
  public function boot(): void
 {
+    // Pastiin ini ada biar CSS gak diblokir browser karena masalah keamanan
     if (config('app.env') === 'production') {
         URL::forceScheme('https');
     }
 
-    // TAMBAHIN INI: Kasih tau Laravel alamat manifest yang bener
+    // Kasih tahu Laravel lokasi manifest dan folder build-nya
+    \Illuminate\Support\Facades\Vite::useBuildDirectory('build');
     \Illuminate\Support\Facades\Vite::useManifestFilename('.vite/manifest.json');
 }
 
