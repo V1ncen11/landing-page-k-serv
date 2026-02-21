@@ -19,12 +19,8 @@ class AppServiceProvider extends ServiceProvider
      */
 public function boot(): void
 {
-    if (env('VERCEL_ENV') || config('app.env') === 'production') {
-        \Illuminate\Support\Facades\URL::forceScheme('https');
+    if ($this->app->environment('production')) {
+        URL::forceScheme('https');
     }
-
-    \Illuminate\Support\Facades\Vite::useBuildDirectory('build');
-    // PENTING: Paksa Laravel nyari di root build, bukan di .vite
-    \Illuminate\Support\Facades\Vite::useManifestFilename('manifest.json');
 }
 }
