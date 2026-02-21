@@ -146,7 +146,7 @@
             <div class="flex flex-col items-center text-center group" data-aos="zoom-in" data-aos-delay="300">
                 <div class="w-16 h-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center text-2xl font-black mb-6 shadow-xl shadow-slate-200 group-hover:scale-110 transition-transform">3</div>
                 <h3 class="text-xl font-bold mb-3 italic">Serah Terima</h3>
-                <p class="text-slate-500 text-sm">Proyek beres, revisi aman sampai lo bener-bener puas!</p>
+                <p class="text-slate-500 text-sm">Proyek beres, revisi aman sampai kamu bener-bener puas!</p>
             </div>
         </div>
 
