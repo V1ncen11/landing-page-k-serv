@@ -17,10 +17,14 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-   public function boot(): void
+ public function boot(): void
 {
     if (config('app.env') === 'production') {
         URL::forceScheme('https');
+        // Tambahin baris di bawah ini:
+        $this->app->bind('path.public', function() {
+            return base_path('public');
+        });
     }
 }
 }
