@@ -265,11 +265,11 @@
     {{-- ═══════════════════════ TOOLS ═══════════════════════ --}}
     <section class="max-w-7xl mx-auto px-6 md:px-8 py-24 border-t border-slate-100" data-aos="fade-up">
         <div class="text-center mb-14">
-            <h2 class="text-3xl font-bold text-slate-900">Tools yang Kita Pakai</h2>
+            <h2 class="text-3xl font-bold text-slate-900">Tools yang Sering Kita Pakai</h2>
             <p class="text-slate-500 mt-3 max-w-xl mx-auto">Peralatan profesional untuk hasil yang maksimal.</p>
         </div>
 
-        <div class="grid grid-cols-3 md:grid-cols-6 gap-6">
+        <div class="grid grid-cols-3 md:grid-cols-5 gap-6 max-w-3xl mx-auto">
             <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="50">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="h-10 w-10">
                 <span class="text-xs font-bold text-slate-500">Figma</span>
@@ -283,16 +283,12 @@
                 <span class="text-xs font-bold text-slate-500">Laravel</span>
             </div>
             <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="200">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="h-10 w-10">
-                <span class="text-xs font-bold text-slate-500">VS Code</span>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="h-10 w-10">
+                <span class="text-xs font-bold text-slate-500">Tailwind</span>
             </div>
             <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="250">
-                <img src="https://pngtree.com/so/excel-logo" alt="Excel" class="h-10 w-10">
-                <span class="text-xs font-bold text-slate-500">Excel</span>
-            </div>
-            <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="300">
-                <img src="https://id.wikipedia.org/wiki/Berkas:Microsoft_PowerPoint_2013-2019_logo.svg" alt="PowerPoint" class="h-10 w-10">
-                <span class="text-xs font-bold text-slate-500">PowerPoint</span>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="h-10 w-10">
+                <span class="text-xs font-bold text-slate-500">VS Code</span>
             </div>
         </div>
     </section>
