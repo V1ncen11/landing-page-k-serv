@@ -1,7 +1,9 @@
 {
   "version": 2,
   "env": {
-    "APP_URL": "https://k-service.vercel.app"
+    "APP_URL": "https://k-service.vercel.app",
+    "SESSION_DRIVER": "cookie",
+    "CACHE_STORE": "array"
   },
   "builds": [
     {
