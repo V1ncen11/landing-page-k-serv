@@ -107,7 +107,7 @@
             @foreach($produks as $item)
                 @if(strtolower($item->kategori) == 'portofolio')
                 <div class="group relative bg-slate-200 rounded-[24px] aspect-video overflow-hidden shadow-sm border border-slate-100" data-aos="flip-left" data-aos-delay="100">
-                    <img src="{{ $item->gambar ? asset('images/portfolio/' . $item->gambar) : 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80' }}" 
+                    <img src="{{ $item->gambar ?: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80' }}" 
                          class="w-full h-full object-cover group-hover:scale-110 transition duration-700" 
                          alt="{{ $item->nama }}">
                     
@@ -141,7 +141,7 @@
             <div class="flex flex-col items-center text-center group" data-aos="zoom-in" data-aos-delay="200">
                 <div class="w-16 h-16 bg-white text-indigo-600 border-2 border-indigo-100 rounded-2xl flex items-center justify-center text-2xl font-black mb-6 group-hover:scale-110 transition-transform">2</div>
                 <h3 class="text-xl font-bold mb-3 italic">Pengerjaan Cepat</h3>
-                <p class="text-slate-500 text-sm">Gue langsung gaskeun ngerjain proyek lo dengan teliti.</p>
+                <p class="text-slate-500 text-sm">Kita langsung gaskeun ngerjain proyek kamu dengan teliti.</p>
             </div>
             <div class="flex flex-col items-center text-center group" data-aos="zoom-in" data-aos-delay="300">
                 <div class="w-16 h-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center text-2xl font-black mb-6 shadow-xl shadow-slate-200 group-hover:scale-110 transition-transform">3</div>

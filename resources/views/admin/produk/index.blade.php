@@ -16,11 +16,18 @@
                 Lihat Web
             </a>
 
-            <a href="{{ route('admin.produk.create') }}" class="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 text-white font-bold rounded-2xl hover:bg-indigo-700 hover:scale-105 transition-all shadow-lg shadow-indigo-100">
+            <a href="{{ route('admin.produk.create') }}" class="inline-flex items-center justify-center px-5 py-3 bg-indigo-600 text-white font-bold rounded-2xl hover:bg-indigo-700 hover:scale-105 transition-all shadow-lg shadow-indigo-100">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                 </svg>
-                Tambah Produk Baru
+                Tambah Jasa / Template
+            </a>
+
+            <a href="{{ route('admin.produk.create', ['type' => 'portofolio']) }}" class="inline-flex items-center justify-center px-5 py-3 bg-purple-600 text-white font-bold rounded-2xl hover:bg-purple-700 hover:scale-105 transition-all shadow-lg shadow-purple-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Tambah Portofolio
             </a>
         </div>
     </div>
@@ -50,7 +57,7 @@
                         <td class="px-8 py-6">
                             <div class="flex items-center gap-4">
                                 @if($item->gambar)
-                                    <img src="{{ asset('images/portfolio/' . $item->gambar) }}" class="w-12 h-12 rounded-lg object-cover border border-slate-100">
+                                    <img src="{{ $item->gambar }}" class="w-12 h-12 rounded-lg object-cover border border-slate-100" onerror="this.style.display='none'">
                                 @else
                                     <div class="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

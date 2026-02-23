@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Produk;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File; // Wajib buat hapus file di folder public
 
 class ProdukController extends Controller
 {
@@ -17,31 +16,27 @@ class ProdukController extends Controller
 
     public function create()
     {
+        // Baca query param ?type=portofolio untuk pisah halaman
+        if (request()->query('type') === 'portofolio') {
+            return view('admin.produk.create-portofolio');
+        }
         return view('admin.produk.create');
     }
 
-    public function store(Request $request) 
+    public function store(Request $request)
     {
         $request->validate([
-            'nama' => 'required|string|max:255',
+            'nama'     => 'required|string|max:255',
             'kategori' => 'required',
-            'harga' => 'required|string', // Support format "3jt - 5jt"
-            'deskripsi' => 'required',
-            'link' => 'required|url',
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Sudah diganti ke image
+            'harga'    => 'required|string',
+            'deskripsi'=> 'required',
+            'link'     => 'required|url',
+            'gambar'   => 'nullable|url',  // gambar sekarang URL, bukan file
         ]);
 
-        $data = $request->all();
+        Produk::create($request->only(['nama', 'kategori', 'harga', 'deskripsi', 'link', 'gambar']));
 
-        // Logika upload menggunakan nama kolom 'gambar'
-        if ($request->hasFile('gambar')) {
-            $imageName = time().'.'.$request->gambar->extension();
-            $request->gambar->move(public_path('images/portfolio'), $imageName);
-            $data['gambar'] = $imageName;
-        }
-
-        Produk::create($data);
-        return redirect()->route('admin.produk.index')->with('success', 'Produk Berhasil Ditambah!');
+        return redirect()->route('admin.produk.index')->with('success', 'Berhasil ditambah!');
     }
 
     public function edit($id)
@@ -53,42 +48,25 @@ class ProdukController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama' => 'required|string|max:255',
+            'nama'     => 'required|string|max:255',
             'kategori' => 'required',
-            'harga' => 'required|string',
-            'deskripsi' => 'required',
-            'link' => 'required|url',
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'harga'    => 'required|string',
+            'deskripsi'=> 'required',
+            'link'     => 'required|url',
+            'gambar'   => 'nullable|url',  // gambar sekarang URL, bukan file
         ]);
 
         $produk = Produk::findOrFail($id);
-        $data = $request->all();
+        $produk->update($request->only(['nama', 'kategori', 'harga', 'deskripsi', 'link', 'gambar']));
 
-        if ($request->hasFile('gambar')) {
-            // Hapus file lama di folder public/images/portfolio
-            if ($produk->gambar && File::exists(public_path('images/portfolio/' . $produk->gambar))) {
-                File::delete(public_path('images/portfolio/' . $produk->gambar));
-            }
-
-            $imageName = time().'.'.$request->gambar->extension();
-            $request->gambar->move(public_path('images/portfolio'), $imageName);
-            $data['gambar'] = $imageName;
-        }
-
-        $produk->update($data);
         return redirect()->route('admin.produk.index')->with('success', 'Produk berhasil diupdate!');
     }
 
     public function destroy($id)
     {
         $produk = Produk::findOrFail($id);
-
-        // Hapus file fisik agar storage laptop DELL LATITUDE lo gak penuh
-        if ($produk->gambar && File::exists(public_path('images/portfolio/' . $produk->gambar))) {
-            File::delete(public_path('images/portfolio/' . $produk->gambar));
-        }
-
         $produk->delete();
+
         return redirect()->route('admin.produk.index')->with('success', 'Produk berhasil dihapus!');
     }
 }
