@@ -48,7 +48,7 @@
 
             <p class="text-lg md:text-xl text-slate-500 max-w-2xl mb-14 leading-relaxed">
                 Fokus ke yang penting, sisanya biar <span class="text-slate-900 font-bold">K-Serv</span> yang urus. 
-                Dari jasa olah data sampai desain template profesional.
+                Dari jasa olah data sampai desain.
             </p>
 
             <div class="relative z-10 flex flex-col sm:flex-row gap-5">
