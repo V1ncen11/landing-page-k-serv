@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>K-SERV | Jasa Joki Laporan & Template Digital Profesional</title>
+    <title>K-SERV | Layanan Pembuatan Produk Digital</title>
     <meta name="description" content="K-SERV menyediakan solusi digital terpercaya mulai dari jasa olah data, pembuatan laporan, hingga template desain brosur dan PPT profesional. Proses cepat dan bergaransi!">
     <meta name="keywords" content="jasa joki laporan, template brosur, k-serv, kevin nurachman, jasa desain ppt, jasa olah data">
     <meta name="author" content="Kevin Nurachman">

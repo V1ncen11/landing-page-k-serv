@@ -165,12 +165,16 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm" data-aos="fade-right">
-                <h4 class="font-bold text-slate-900 mb-2 italic underline decoration-indigo-200">Berapa lama pengerjaan?</h4>
-                <p class="text-slate-500 text-sm">Biasanya 2-3 hari kerja untuk pembuatan dokumen tergantung tingkat kesulitan proyeknya.</p>
+                <h4 class="font-bold text-slate-900 mb-2 italic underline decoration-indigo-200">Berapa lama pengerjaan pembuatan dokumen?</h4>
+                <p class="text-slate-500 text-sm">Biasanya 2-3 hari kerja untuk pembuatan dokumen tergantung tingkat kesulitannya.</p>
             </div>
             <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm" data-aos="fade-left">
                 <h4 class="font-bold text-slate-900 mb-2 italic underline decoration-indigo-200">Apakah ada garansi revisi?</h4>
                 <p class="text-slate-500 text-sm">Pasti! Kita kasih garansi revisi sampai sesuai dengan brief awal.</p>
+            </div>
+             <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm" data-aos="fade-left">
+                <h4 class="font-bold text-slate-900 mb-2 italic underline decoration-indigo-200">Berapa lama pengerjaan pembuatan Website/Aplikasi?</h4>
+                <p class="text-slate-500 text-sm">Biasanya 2-3 Minggu pengerjaan untuk pembuatan projeknya tergantung tingkat kesulitannya.</p>
             </div>
         </div>
     </section>
