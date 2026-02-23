@@ -143,6 +143,60 @@
         </div>
     </div>
 
+    {{-- ═══════════════════════ KENAPA K-SERV ═══════════════════════ --}}
+    <section class="max-w-7xl mx-auto px-6 md:px-8 py-20 border-t border-slate-100" data-aos="fade-up">
+        <div class="text-center mb-14">
+            <h2 class="text-3xl font-bold text-slate-900">Kenapa Harus K-Serv?</h2>
+            <p class="text-slate-500 mt-3 max-w-xl mx-auto">Alasan kenapa banyak yang percaya sama layanan kita.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {{-- Cepat --}}
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center" data-aos="zoom-in" data-aos-delay="100">
+                <div class="w-14 h-14 mx-auto mb-4 bg-indigo-50 rounded-2xl flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-slate-900 mb-2">Pengerjaan Cepat</h3>
+                <p class="text-slate-500 text-sm">Proyek selesai tepat waktu, tanpa molor.</p>
+            </div>
+
+            {{-- Bergaransi --}}
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="w-14 h-14 mx-auto mb-4 bg-emerald-50 rounded-2xl flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-slate-900 mb-2">Garansi Revisi</h3>
+                <p class="text-slate-500 text-sm">Revisi gratis sampai kamu puas dengan hasilnya.</p>
+            </div>
+
+            {{-- Harga Bersahabat --}}
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center" data-aos="zoom-in" data-aos-delay="300">
+                <div class="w-14 h-14 mx-auto mb-4 bg-amber-50 rounded-2xl flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-slate-900 mb-2">Harga Bersahabat</h3>
+                <p class="text-slate-500 text-sm">Kualitas premium tanpa bikin kantong jebol.</p>
+            </div>
+
+            {{-- Support --}}
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center" data-aos="zoom-in" data-aos-delay="400">
+                <div class="w-14 h-14 mx-auto mb-4 bg-blue-50 rounded-2xl flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-slate-900 mb-2">Respon Cepat</h3>
+                <p class="text-slate-500 text-sm">Chat kapan aja, kita fast response via WhatsApp.</p>
+            </div>
+        </div>
+    </section>
+
     {{-- ═══════════════════════ KATALOG ═══════════════════════ --}}
     <section id="katalog" class="max-w-7xl mx-auto px-6 md:px-8 py-20" data-aos="fade-up">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
@@ -206,6 +260,41 @@
                 </div>
                 @endif
             @endforeach
+        </div>
+    </section>
+
+    {{-- ═══════════════════════ TOOLS ═══════════════════════ --}}
+    <section class="max-w-7xl mx-auto px-6 md:px-8 py-24 border-t border-slate-100" data-aos="fade-up">
+        <div class="text-center mb-14">
+            <h2 class="text-3xl font-bold text-slate-900">Tools yang Kita Pakai</h2>
+            <p class="text-slate-500 mt-3 max-w-xl mx-auto">Peralatan profesional untuk hasil yang maksimal.</p>
+        </div>
+
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-6">
+            <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="50">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="h-10 w-10">
+                <span class="text-xs font-bold text-slate-500">Figma</span>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" class="h-10 w-10">
+                <span class="text-xs font-bold text-slate-500">Canva</span>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="150">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" class="h-10 w-10">
+                <span class="text-xs font-bold text-slate-500">Laravel</span>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="h-10 w-10">
+                <span class="text-xs font-bold text-slate-500">VS Code</span>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="250">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="Excel" class="h-10 w-10">
+                <span class="text-xs font-bold text-slate-500">Excel</span>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="300">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg" alt="PowerPoint" class="h-10 w-10">
+                <span class="text-xs font-bold text-slate-500">PowerPoint</span>
+            </div>
         </div>
     </section>
 
