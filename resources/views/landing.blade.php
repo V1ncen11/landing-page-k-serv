@@ -147,7 +147,6 @@
     <section class="max-w-7xl mx-auto px-6 md:px-8 py-20 border-t border-slate-100" data-aos="fade-up">
         <div class="text-center mb-14">
             <h2 class="text-3xl font-bold text-slate-900">Kenapa Harus K-Serv?</h2>
-            <p class="text-slate-500 mt-3 max-w-xl mx-auto">Alasan kenapa banyak yang percaya sama layanan kita.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -288,11 +287,11 @@
                 <span class="text-xs font-bold text-slate-500">VS Code</span>
             </div>
             <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="250">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="Excel" class="h-10 w-10">
+                <img src="https://pngtree.com/so/excel-logo" alt="Excel" class="h-10 w-10">
                 <span class="text-xs font-bold text-slate-500">Excel</span>
             </div>
             <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="300">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg" alt="PowerPoint" class="h-10 w-10">
+                <img src="https://id.wikipedia.org/wiki/Berkas:Microsoft_PowerPoint_2013-2019_logo.svg" alt="PowerPoint" class="h-10 w-10">
                 <span class="text-xs font-bold text-slate-500">PowerPoint</span>
             </div>
         </div>
