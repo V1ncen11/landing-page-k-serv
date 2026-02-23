@@ -111,6 +111,38 @@
         </div>
     </section>
 
+    {{-- ═══════════════════════ MARQUEE ═══════════════════════ --}}
+    <div class="overflow-hidden py-12 md:py-16 relative">
+        {{-- Gradient fade kiri-kanan --}}
+        <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
+
+        <div class="flex animate-marquee whitespace-nowrap">
+            {{-- Set 1 --}}
+            <span class="mx-6 md:mx-10 text-2xl md:text-3xl font-black text-slate-200 tracking-tight">CEPAT & TEPAT</span>
+            <span class="mx-4 text-2xl md:text-3xl text-indigo-300">✦</span>
+            <span class="mx-6 md:mx-10 text-2xl md:text-3xl font-black text-slate-200 tracking-tight">BERGARANSI</span>
+            <span class="mx-4 text-2xl md:text-3xl text-indigo-300">✦</span>
+            <span class="mx-6 md:mx-10 text-2xl md:text-3xl font-black text-slate-200 tracking-tight">TERPERCAYA</span>
+            <span class="mx-4 text-2xl md:text-3xl text-indigo-300">✦</span>
+            <span class="mx-6 md:mx-10 text-2xl md:text-3xl font-black text-slate-200 tracking-tight">HARGA BERSAHABAT</span>
+            <span class="mx-4 text-2xl md:text-3xl text-indigo-300">✦</span>
+            <span class="mx-6 md:mx-10 text-2xl md:text-3xl font-black text-slate-200 tracking-tight">REVISI GRATIS</span>
+            <span class="mx-4 text-2xl md:text-3xl text-indigo-300">✦</span>
+            {{-- Set 2 (duplicate for seamless loop) --}}
+            <span class="mx-6 md:mx-10 text-2xl md:text-3xl font-black text-slate-200 tracking-tight">CEPAT & TEPAT</span>
+            <span class="mx-4 text-2xl md:text-3xl text-indigo-300">✦</span>
+            <span class="mx-6 md:mx-10 text-2xl md:text-3xl font-black text-slate-200 tracking-tight">BERGARANSI</span>
+            <span class="mx-4 text-2xl md:text-3xl text-indigo-300">✦</span>
+            <span class="mx-6 md:mx-10 text-2xl md:text-3xl font-black text-slate-200 tracking-tight">TERPERCAYA</span>
+            <span class="mx-4 text-2xl md:text-3xl text-indigo-300">✦</span>
+            <span class="mx-6 md:mx-10 text-2xl md:text-3xl font-black text-slate-200 tracking-tight">HARGA BERSAHABAT</span>
+            <span class="mx-4 text-2xl md:text-3xl text-indigo-300">✦</span>
+            <span class="mx-6 md:mx-10 text-2xl md:text-3xl font-black text-slate-200 tracking-tight">REVISI GRATIS</span>
+            <span class="mx-4 text-2xl md:text-3xl text-indigo-300">✦</span>
+        </div>
+    </div>
+
     {{-- ═══════════════════════ KATALOG ═══════════════════════ --}}
     <section id="katalog" class="max-w-7xl mx-auto px-6 md:px-8 py-20" data-aos="fade-up">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
