@@ -39,14 +39,14 @@
                 SOLUSI DIGITAL TERPERCAYA
             </div>
 
-            <h1 class="text-6xl md:text-8xl font-black mb-8 leading-[1.05] tracking-tight text-slate-900">
+            <h1 class="text-6xl md:text-8xl font-black mb-8 leading-[1.05] tracking-tight text-slate-900 w-full text-center">
                 Beresin Tugas <br class="hidden md:block"> & Bisnis 
                 <span class="block mt-2 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-blue-500 italic">
                     Tanpa Ribet.
                 </span>
             </h1>
 
-            <p class="text-lg md:text-xl text-slate-500 max-w-2xl mb-14 leading-relaxed">
+            <p class="text-lg md:text-xl text-slate-500 max-w-2xl mb-14 leading-relaxed text-center">
                 Fokus ke yang penting, sisanya biar <span class="text-slate-900 font-bold">K-Serv</span> yang urus. 
                 Dari jasa olah data sampai desain.
             </p>
