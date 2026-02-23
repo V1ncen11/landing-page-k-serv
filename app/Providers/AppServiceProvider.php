@@ -19,14 +19,20 @@ class AppServiceProvider extends ServiceProvider
      */
 public function boot(): void
 {
-    // Paksa HTTPS di Vercel biar CSS nggak diblokir
+    // Force HTTPS dan URL yang benar di environment production/Vercel
     if (env('VERCEL_ENV') || config('app.env') === 'production') {
-        \Illuminate\Support\Facades\URL::forceScheme('https');
+        URL::forceScheme('https');
+
+        // Force root URL dari APP_URL agar tidak salah dideteksi oleh vercel-php
+        // Ini mencegah prefiks /build/ ganda pada URL aset
+        if ($appUrl = env('APP_URL')) {
+            URL::forceRootUrl(rtrim($appUrl, '/'));
+        }
     }
 
     // Kasih tahu folder build-nya
     \Illuminate\Support\Facades\Vite::useBuildDirectory('build');
-    
+
     // WAJIB: Kasih tahu Laravel manifest-nya ada di public/build/manifest.json
     \Illuminate\Support\Facades\Vite::useManifestFilename('manifest.json');
 }
