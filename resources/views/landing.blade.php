@@ -269,7 +269,7 @@
             <p class="text-slate-500 mt-3 max-w-xl mx-auto">Peralatan profesional untuk hasil yang maksimal.</p>
         </div>
 
-        <div class="grid grid-cols-3 md:grid-cols-7 gap-6 max-w-5xl mx-auto">
+        <div class="grid grid-cols-4 md:grid-cols-8 gap-6 max-w-5xl mx-auto">
             <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="50">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="h-10 w-10">
                 <span class="text-xs font-bold text-slate-500">Figma</span>
@@ -300,6 +300,19 @@
                     <path fill="#FFF" d="M20.1 29.2h-3.5v5.4H13V17.4h7.1c4.4 0 6.7 2 6.7 5.7 0 4.1-2.8 6.1-6.7 6.1zm-.2-8.6H16.6v5.5h3.3c2.3 0 3.6-1 3.6-2.9s-1.3-2.6-3.6-2.6zM33.1 29.2h-3.5v5.4h-3.6V17.4h7.1c4.4 0 6.7 2 6.7 5.7 0 4.1-2.8 6.1-6.7 6.1zm-.2-8.6h-3.3v5.5h3.3c2.3 0 3.6-1 3.6-2.9s-1.3-2.6-3.6-2.6z"/>
                 </svg>
                 <span class="text-xs font-bold text-slate-500">PowerPoint</span>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-delay="400">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-10 w-10">
+                    <defs>
+                        <linearGradient id="geminiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#4285F4"/>
+                            <stop offset="50%" style="stop-color:#9B72CB"/>
+                            <stop offset="100%" style="stop-color:#D96570"/>
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#geminiGrad)" d="M12 0C12 0 12 12 0 12C12 12 12 24 12 24C12 24 12 12 24 12C12 12 12 0 12 0Z"/>
+                </svg>
+                <span class="text-xs font-bold text-slate-500">Gemini AI</span>
             </div>
         </div>
     </section>
