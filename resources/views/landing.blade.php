@@ -87,25 +87,25 @@
 
     {{-- ═══════════════════════ STATS COUNTER ═══════════════════════ --}}
     <section class="max-w-5xl mx-auto px-6 md:px-8 -mt-10 relative z-10" data-aos="fade-up">
-        <div class="bg-white rounded-[28px] shadow-xl shadow-slate-200/50 border border-slate-100 p-8 md:p-10">
+        <div class="bg-gradient-to-r from-indigo-600 to-blue-500 rounded-[28px] shadow-2xl shadow-indigo-300/40 p-8 md:p-10">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                 <div class="text-center group">
-                    <div class="text-3xl md:text-4xl font-black text-indigo-600 counter" data-target="50">0</div>
-                    <div class="text-slate-400 text-sm font-medium mt-1">Proyek Selesai</div>
+                    <div class="text-3xl md:text-4xl font-black text-white counter" data-target="15">0</div>
+                    <div class="text-indigo-100 text-sm font-medium mt-1">Proyek Selesai</div>
                 </div>
                 <div class="text-center group">
-                    <div class="text-3xl md:text-4xl font-black text-slate-900 counter" data-target="30">0</div>
-                    <div class="text-slate-400 text-sm font-medium mt-1">Klien Puas</div>
+                    <div class="text-3xl md:text-4xl font-black text-white counter" data-target="15">0</div>
+                    <div class="text-indigo-100 text-sm font-medium mt-1">Klien Puas</div>
                 </div>
                 <div class="text-center group">
-                    <div class="text-3xl md:text-4xl font-black text-indigo-600 counter" data-target="5">0</div>
-                    <div class="text-slate-400 text-sm font-medium mt-1">Jenis Layanan</div>
+                    <div class="text-3xl md:text-4xl font-black text-white counter" data-target="5">0</div>
+                    <div class="text-indigo-100 text-sm font-medium mt-1">Jenis Layanan</div>
                 </div>
                 <div class="text-center group">
-                    <div class="text-3xl md:text-4xl font-black text-slate-900 flex items-center justify-center gap-1">
+                    <div class="text-3xl md:text-4xl font-black text-white flex items-center justify-center gap-1">
                         <span class="counter" data-target="100">0</span><span>%</span>
                     </div>
-                    <div class="text-slate-400 text-sm font-medium mt-1">Garansi Revisi</div>
+                    <div class="text-indigo-100 text-sm font-medium mt-1">Garansi Revisi</div>
                 </div>
             </div>
         </div>
