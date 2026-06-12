@@ -40,8 +40,8 @@
 
             {{-- Bagian Kanan: Floating UI / Visual --}}
             <div class="relative mt-20 lg:mt-0 scale-75 sm:scale-90 lg:scale-100 transform origin-center" data-aos="fade-up" data-aos-delay="200">
-                {{-- Glow Element --}}
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"></div>
+                {{-- Glow Element (Hidden on mobile to save CPU/GPU) --}}
+                <div class="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"></div>
                 
                 {{-- Mockup Container --}}
                 <div class="relative w-full h-[450px] flex items-center justify-center">
@@ -207,7 +207,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             @foreach($produks as $index => $item)
                 @if(strtolower($item->kategori) != 'portofolio')
-                <div class="tilt-card relative bg-white rounded-3xl shadow-sm border border-slate-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
+                <div class="tilt-card relative bg-white rounded-3xl shadow-sm border border-slate-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group" data-tilt data-tilt-gyroscope="false" data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
                     {{-- Top border accent --}}
                     <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-500 to-sky-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
@@ -318,7 +318,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             @foreach($produks as $item)
                 @if(strtolower($item->kategori) == 'portofolio')
-                <div class="tilt-card group relative bg-slate-200 rounded-[24px] aspect-video overflow-hidden shadow-sm border border-slate-200 hover:shadow-xl transition-shadow duration-500" data-tilt data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.3" data-aos="flip-left" data-aos-delay="100">
+                <div class="tilt-card group relative bg-slate-200 rounded-[24px] aspect-video overflow-hidden shadow-sm border border-slate-200 hover:shadow-xl transition-shadow duration-500" data-tilt data-tilt-gyroscope="false" data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.3" data-aos="flip-left" data-aos-delay="100">
                     <img src="{{ $item->gambar ?: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80' }}"
                          class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                          alt="{{ $item->nama }}">
