@@ -31,7 +31,7 @@
     </style>
 </head>
 
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 antialiased transition-colors duration-300">
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 antialiased transition-colors duration-300 overflow-x-hidden w-full relative">
     @include('partials.navbar')
     
     <main>

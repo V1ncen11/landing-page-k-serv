@@ -6,16 +6,16 @@
 
 
     {{-- ═══════════════════════ HERO ═══════════════════════ --}}
-    <header id="beranda" class="relative overflow-hidden bg-slate-50 pt-28 pb-32 md:pt-36 md:pb-40">
+    <header id="beranda" class="relative overflow-hidden bg-slate-50 dark:bg-slate-900 pt-28 pb-32 md:pt-36 md:pb-40 transition-colors duration-300">
         {{-- Modern Grid Background --}}
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_100%_100%_at_50%_0%,#000_70%,transparent_100%)] opacity-70 dark:opacity-40 transition-all duration-300"></div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
             {{-- Bagian Kiri: Teks --}}
             <div class="flex flex-col items-start text-left" data-aos="fade-right">
 
-                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-[1.1] tracking-tight text-slate-900">
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-[1.1] tracking-tight text-slate-900 dark:text-white transition-colors duration-300">
                     Beresin Tugas <br class="hidden md:block"> & Bisnis
                     <span class="block mt-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-blue-500 to-cyan-400 italic drop-shadow-sm">
                         Tanpa Ribet.
