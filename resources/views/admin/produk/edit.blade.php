@@ -3,68 +3,101 @@
 @section('content')
 <div class="max-w-3xl mx-auto px-4 py-10">
     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-        <h2 class="text-2xl font-bold mb-6 text-slate-900">Edit Produk / Jasa</h2>
+
+        <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-amber-50 rounded-xl flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900">Edit Produk / Jasa</h2>
+                <p class="text-sm text-slate-400 mt-0.5">Perbarui informasi produk di katalog.</p>
+            </div>
+        </div>
+
+        {{-- Error Validation --}}
+        @if($errors->any())
+        <div class="mb-5 p-4 bg-rose-50 border border-rose-200 rounded-xl">
+            <p class="text-sm font-bold text-rose-600 mb-2">⚠️ Ada yang perlu diperbaiki:</p>
+            <ul class="list-disc list-inside text-sm text-rose-500 space-y-1">
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
 
         <form action="{{ route('admin.produk.update', $produk->id) }}" method="POST" class="space-y-5">
             @csrf
             @method('PUT')
 
-            <input type="hidden" name="link" value="{{ $produk->link ?: 'https://wa.me/6287870402431' }}">
-
             <div>
                 <label class="block text-sm font-bold text-slate-700 mb-2">Nama Produk / Jasa</label>
-                <input type="text" name="nama" value="{{ $produk->nama }}"
+                <input type="text" name="nama" value="{{ old('nama', $produk->nama) }}"
                     class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500" required>
             </div>
 
             <div class="grid grid-cols-2 gap-4">
                 <div>
                     <label class="block text-sm font-bold text-slate-700 mb-2">Kategori</label>
-                    <select name="kategori" class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500">
-                        <option value="Jasa"       {{ $produk->kategori == 'Jasa'       ? 'selected' : '' }}>Jasa</option>
-                        <option value="Template"   {{ $produk->kategori == 'Template'   ? 'selected' : '' }}>Template</option>
-                        <option value="Portofolio" {{ strtolower($produk->kategori) == 'portofolio' ? 'selected' : '' }}>Portofolio</option>
+                    <select name="kategori" id="kategori-select" class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500">
+                        <option value="Jasa"       {{ old('kategori', $produk->kategori) == 'Jasa'       ? 'selected' : '' }}>Jasa</option>
+                        <option value="Template"   {{ old('kategori', $produk->kategori) == 'Template'   ? 'selected' : '' }}>Template</option>
+                        <option value="Portofolio" {{ strtolower(old('kategori', $produk->kategori)) == 'portofolio' ? 'selected' : '' }}>Portofolio</option>
                     </select>
                 </div>
 
                 <div>
                     <label class="block text-sm font-bold text-slate-700 mb-2">Harga (Rp)</label>
-                    <input type="text" name="harga" value="{{ $produk->harga }}"
+                    <input type="text" name="harga" value="{{ old('harga', $produk->harga) }}"
                         class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500" required>
                 </div>
             </div>
 
-            {{-- Gambar URL (khusus Portofolio) --}}
             <div>
-                <label class="block text-sm font-bold text-slate-700 mb-2">URL Gambar Portofolio <span class="font-normal text-slate-400">(opsional)</span></label>
+                <label class="block text-sm font-bold text-slate-700 mb-2">Deskripsi</label>
+                <textarea name="deskripsi" rows="3"
+                    class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500" required>{{ old('deskripsi', $produk->deskripsi) }}</textarea>
+            </div>
 
-                {{-- Preview gambar jika sudah ada URL --}}
+            {{-- Spesifikasi (hanya untuk Jasa) --}}
+            <div id="spesifikasi-box">
+                <label class="block text-sm font-bold text-slate-700 mb-2">Spesifikasi <span class="text-slate-400 font-normal">(Pisahkan dengan tombol Enter)</span></label>
+                <textarea name="spesifikasi" rows="4"
+                    class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500"
+                    placeholder="Contoh:&#10;1 Halaman Website&#10;Desain Responsif&#10;Bebas Revisi 3x">{{ old('spesifikasi', $produk->spesifikasi) }}</textarea>
+            </div>
+
+            {{-- Gambar URL (khusus Portofolio) --}}
+            <div id="gambar-box">
+                <label class="block text-sm font-bold text-slate-700 mb-2">URL Gambar Portofolio <span class="font-normal text-slate-400">(opsional)</span></label>
                 @if($produk->gambar)
                 <div class="mb-3">
                     <p class="text-[10px] text-slate-400 mb-2 italic">Gambar saat ini:</p>
                     <img src="{{ $produk->gambar }}" class="w-40 h-28 object-cover rounded-lg border border-slate-100" onerror="this.style.display='none'">
                 </div>
                 @endif
-
-                <input type="url" name="gambar" value="{{ $produk->gambar }}"
+                <input type="url" name="gambar" value="{{ old('gambar', $produk->gambar) }}"
                     class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500"
                     placeholder="https://i.imgur.com/contoh.jpg"
                     id="gambar-input">
                 <p class="text-[11px] text-slate-400 mt-2 italic">
                     💡 Upload gambar ke <a href="https://imgur.com/upload" target="_blank" class="text-indigo-500 font-bold hover:underline">Imgur</a>, lalu paste URL-nya di sini.
                 </p>
-
-                {{-- Preview live --}}
                 <div id="preview-box" class="{{ $produk->gambar ? '' : 'hidden' }} mt-3">
                     <p class="text-xs font-bold text-slate-500 mb-1">Preview baru:</p>
                     <img id="preview-img" src="{{ $produk->gambar }}" class="w-full max-h-40 object-cover rounded-xl border border-slate-100">
                 </div>
             </div>
 
+            {{-- Link Pemesanan --}}
             <div>
-                <label class="block text-sm font-bold text-slate-700 mb-2">Deskripsi</label>
-                <textarea name="deskripsi" rows="4"
-                    class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500" required>{{ $produk->deskripsi }}</textarea>
+                <label class="block text-sm font-bold text-slate-700 mb-2">Link Pemesanan <span class="text-slate-400 font-normal">(URL WhatsApp / Tokopedia dll.)</span></label>
+                <input type="url" name="link" value="{{ old('link', $produk->link) }}"
+                    class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500"
+                    placeholder="https://wa.me/62...">
+                <p class="text-xs text-slate-400 mt-1 italic">Kosongkan jika ingin pakai link WA default.</p>
             </div>
 
             <div class="flex gap-4 pt-4">
@@ -80,16 +113,36 @@
 </div>
 
 <script>
-document.getElementById('gambar-input').addEventListener('input', function() {
-    const url = this.value.trim();
-    const previewBox = document.getElementById('preview-box');
-    const previewImg = document.getElementById('preview-img');
-    if (url.startsWith('http')) {
-        previewImg.src = url;
-        previewBox.classList.remove('hidden');
-    } else {
-        previewBox.classList.add('hidden');
-    }
-});
+    document.addEventListener('DOMContentLoaded', function() {
+        // Image preview
+        const gambarInput = document.getElementById('gambar-input');
+        if (gambarInput) {
+            gambarInput.addEventListener('input', function() {
+                const url = this.value.trim();
+                const previewBox = document.getElementById('preview-box');
+                const previewImg = document.getElementById('preview-img');
+                if (url.startsWith('http')) {
+                    previewImg.src = url;
+                    previewBox.classList.remove('hidden');
+                } else {
+                    previewBox.classList.add('hidden');
+                }
+            });
+        }
+
+        // Kategori toggle: spesifikasi & gambar
+        const kategoriSelect = document.getElementById('kategori-select');
+        const spesifikasiBox = document.getElementById('spesifikasi-box');
+        const gambarBox      = document.getElementById('gambar-box');
+
+        function toggleFields() {
+            const val = kategoriSelect.value;
+            spesifikasiBox.style.display = (val === 'Jasa') ? 'block' : 'none';
+            gambarBox.style.display      = (val === 'Portofolio') ? 'block' : 'none';
+        }
+
+        kategoriSelect.addEventListener('change', toggleFields);
+        toggleFields();
+    });
 </script>
 @endsection

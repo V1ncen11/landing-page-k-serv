@@ -17,14 +17,24 @@
             </div>
         </div>
 
+        {{-- Error Validation --}}
+        @if($errors->any())
+        <div class="mb-5 p-4 bg-rose-50 border border-rose-200 rounded-xl">
+            <p class="text-sm font-bold text-rose-600 mb-2">⚠️ Ada yang perlu diperbaiki:</p>
+            <ul class="list-disc list-inside text-sm text-rose-500 space-y-1">
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+
         <form action="{{ route('admin.produk.store') }}" method="POST" class="space-y-5">
             @csrf
 
-            <input type="hidden" name="link" value="https://wa.me/6287870402431">
-
             <div>
                 <label class="block text-sm font-bold text-slate-700 mb-2">Nama Produk / Jasa</label>
-                <input type="text" name="nama"
+                <input type="text" name="nama" value="{{ old('nama') }}"
                     class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500"
                     placeholder="Contoh: Joki Laporan UP" required>
             </div>
@@ -32,15 +42,15 @@
             <div class="grid grid-cols-2 gap-4">
                 <div>
                     <label class="block text-sm font-bold text-slate-700 mb-2">Kategori</label>
-                    <select name="kategori" class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500">
-                        <option value="Jasa">Jasa</option>
-                        <option value="Template">Template</option>
+                    <select name="kategori" id="kategori-select" class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500">
+                        <option value="Jasa" {{ old('kategori') == 'Jasa' ? 'selected' : '' }}>Jasa</option>
+                        <option value="Template" {{ old('kategori') == 'Template' ? 'selected' : '' }}>Template</option>
                     </select>
                 </div>
 
                 <div>
                     <label class="block text-sm font-bold text-slate-700 mb-2">Harga (Rp)</label>
-                    <input type="text" name="harga"
+                    <input type="text" name="harga" value="{{ old('harga') }}"
                         class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500"
                         placeholder="Contoh: 3.000.000 - 7.000.000" required>
                 </div>
@@ -48,9 +58,25 @@
 
             <div>
                 <label class="block text-sm font-bold text-slate-700 mb-2">Deskripsi</label>
-                <textarea name="deskripsi" rows="4"
+                <textarea name="deskripsi" rows="3"
                     class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500"
-                    placeholder="Jelaskan detail layanannya..." required></textarea>
+                    placeholder="Jelaskan detail layanannya..." required>{{ old('deskripsi') }}</textarea>
+            </div>
+
+            <div id="spesifikasi-box">
+                <label class="block text-sm font-bold text-slate-700 mb-2">Spesifikasi <span class="text-slate-400 font-normal">(Pisahkan dengan tombol Enter)</span></label>
+                <textarea name="spesifikasi" rows="4"
+                    class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500"
+                    placeholder="Contoh:&#10;1 Halaman Website&#10;Desain Responsif&#10;Bebas Revisi 3x">{{ old('spesifikasi') }}</textarea>
+            </div>
+
+            {{-- Link WA --}}
+            <div>
+                <label class="block text-sm font-bold text-slate-700 mb-2">Link Pemesanan <span class="text-slate-400 font-normal">(URL WhatsApp / Tokopedia dll.)</span></label>
+                <input type="url" name="link" value="{{ old('link', 'https://wa.me/6287870402431') }}"
+                    class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500"
+                    placeholder="https://wa.me/62...">
+                <p class="text-xs text-slate-400 mt-1 italic">Kosongkan jika ingin pakai link WA default.</p>
             </div>
 
             <div class="flex gap-4 pt-4">
@@ -64,4 +90,18 @@
         </form>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const kategoriSelect = document.getElementById('kategori-select');
+        const spesifikasiBox = document.getElementById('spesifikasi-box');
+
+        function toggleSpesifikasi() {
+            spesifikasiBox.style.display = (kategoriSelect.value === 'Jasa') ? 'block' : 'none';
+        }
+
+        kategoriSelect.addEventListener('change', toggleSpesifikasi);
+        toggleSpesifikasi();
+    });
+</script>
 @endsection

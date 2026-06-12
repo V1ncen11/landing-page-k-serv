@@ -8,5 +8,16 @@ class Produk extends Model
 {
     protected $table = 'produk';
     protected $fillable = [
-        'nama','kategori','deskripsi','harga','gambar','link'];
+        'nama', 'kategori', 'deskripsi', 'spesifikasi', 'harga', 'gambar', 'link', 'is_active'
+    ];
+
+    protected $casts = [
+        'is_active' => 'boolean',
+    ];
+
+    // Scope: hanya tampilkan produk yang aktif
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
+    }
 }

@@ -5,6 +5,8 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
@@ -21,3 +23,50 @@ html {
 .animate-marquee {
     animation: marquee 20s linear infinite;
 }
+
+/* Floating animation for UI cards */
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(var(--tw-rotate)); }
+    50% { transform: translateY(-15px) rotate(var(--tw-rotate)); }
+}
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+.animate-float-delayed {
+    animation: float 5s ease-in-out infinite 1s;
+}
+.animate-float-fast {
+    animation: float 4s ease-in-out infinite 2s;
+}
+
+/* ─── Dark Mode Global Overrides ─── */
+.dark body,
+.dark .bg-white {
+    background-color: #0f172a !important;
+    color: #e2e8f0;
+}
+.dark #mainNav {
+    background-color: #0f172a !important;
+    border-color: #1e293b !important;
+}
+.dark header,
+.dark section,
+.dark .bg-slate-50 {
+    background-color: #111827 !important;
+}
+.dark .text-slate-900 { color: #f1f5f9 !important; }
+.dark .text-slate-800 { color: #e2e8f0 !important; }
+.dark .text-slate-700 { color: #cbd5e1 !important; }
+.dark .text-slate-600 { color: #94a3b8 !important; }
+.dark .text-slate-500 { color: #64748b !important; }
+.dark .border-slate-100,
+.dark .border-slate-200 { border-color: #1e293b !important; }
+.dark .bg-white.rounded-2xl,
+.dark .bg-white.rounded-\[24px\],
+.dark .bg-white.p-6,
+.dark .bg-white.p-7,
+.dark .bg-white.p-8 {
+    background-color: #1e293b !important;
+}
+.dark .shadow-sm { box-shadow: 0 1px 3px rgba(0,0,0,0.4); }
+.dark footer { background-color: #0f172a !important; border-color: #1e293b !important; }
