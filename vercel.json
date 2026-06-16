@@ -21,6 +21,10 @@
     {
       "src": "public/favicon.ico",
       "use": "@vercel/static"
+    },
+    {
+      "src": "public/sitemap.xml",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -35,6 +39,10 @@
     {
       "src": "/favicon.ico",
       "dest": "/public/favicon.ico"
+    },
+    {
+      "src": "/sitemap.xml",
+      "dest": "/public/sitemap.xml"
     },
     {
       "src": "/(.*)",
