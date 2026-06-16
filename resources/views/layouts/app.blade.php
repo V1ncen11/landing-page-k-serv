@@ -34,13 +34,15 @@
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 antialiased transition-colors duration-300 overflow-x-hidden w-full relative">
-    @include('partials.navbar')
-    
-    <main>
-        @yield('content')
-    </main>
+    <div class="w-full overflow-x-hidden max-w-[100vw]">
+        @include('partials.navbar')
+        
+        <main>
+            @yield('content')
+        </main>
 
-    @include('partials.footer')
+        @include('partials.footer')
+    </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
