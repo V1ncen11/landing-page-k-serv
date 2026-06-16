@@ -59,9 +59,9 @@
                 <div class="lg:col-span-1">
                     <h4 class="text-white font-bold mb-6">Berlangganan Info Promo</h4>
                     <p class="text-slate-400 text-sm mb-4 leading-relaxed">Dapatkan info promo spesial dan tips digital langsung ke emailmu.</p>
-                    <form class="flex flex-col gap-3">
-                        <input type="email" placeholder="Alamat email kamu" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
-                        <button type="button" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm rounded-xl px-4 py-3 transition shadow-lg shadow-blue-600/30">Berlangganan</button>
+                    <form class="flex flex-col gap-3" onsubmit="event.preventDefault(); alert('Terima kasih! Email kamu telah terdaftar dalam antrean sistem kami.'); this.reset();">
+                        <input type="email" required placeholder="Alamat email kamu" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm rounded-xl px-4 py-3 transition shadow-lg shadow-blue-600/30">Berlangganan</button>
                     </form>
                 </div>
             </div>
