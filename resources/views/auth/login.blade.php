@@ -14,7 +14,7 @@
     <div class="max-w-md w-full">
         {{-- Logo --}}
         <div class="flex justify-center items-center gap-2 mb-8">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo KS" class="h-10 w-auto">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo KS" width="40" height="40" class="h-10 w-auto">
             <div class="text-3xl font-extrabold text-blue-600">K-SERV<span class="text-slate-400">.</span></div>
         </div>
 

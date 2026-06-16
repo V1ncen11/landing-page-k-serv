@@ -5,7 +5,7 @@
                 {{-- Brand Info --}}
                 <div class="lg:col-span-1">
                     <div class="flex items-center gap-3 mb-6 group">
-                        <img src="{{ asset('images/logo.png') }}" alt="Logo KS" class="h-10 w-auto invert mix-blend-screen">
+                        <img src="{{ asset('images/logo.png') }}" alt="Logo KS" width="40" height="40" class="h-10 w-auto invert mix-blend-screen">
                         <div class="text-2xl font-extrabold text-blue-500">
                             K-SERV<a href="{{ route('login') }}" class="text-slate-500 cursor-default" style="text-decoration: none;">.</a>
                         </div>
