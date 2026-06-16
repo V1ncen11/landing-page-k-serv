@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>K-SERV | Layanan Pembuatan Produk Digital</title>
-    <meta name="description" content="K-SERV menyediakan solusi digital terpercaya mulai dari jasa olah data, pembuatan laporan, hingga template desain brosur dan PPT profesional. Proses cepat dan bergaransi!">
-    <meta name="keywords" content="jasa joki laporan, template brosur, k-serv, kevin nurachman, jasa desain ppt, jasa olah data">
+    <title>K-SERV | Jasa Pembuatan Website & Sistem Web Custom</title>
+    <meta name="description" content="K-SERV melayani jasa pembuatan website company profile, landing page promosi, dan sistem web custom profesional. Gratis domain & hosting super cepat.">
+    <meta name="keywords" content="jasa pembuatan website, bikin web company profile, jasa landing page, sistem web custom, web developer, k-serv, pembuatan website murah">
     <meta name="author" content="Kevin Nurachman">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="K-SERV - Solusi Digital Beres Tanpa Ribet">
-    <meta property="og:description" content="Butuh bantuan tugas atau desain template? Biar K-SERV yang urus semuanya dengan hasil profesional.">
+    <meta property="og:title" content="K-SERV | Jasa Pembuatan Website & Sistem Web Custom">
+    <meta property="og:description" content="K-SERV melayani jasa pembuatan website company profile, landing page promosi, dan sistem web custom profesional. Gratis domain & hosting.">
     <meta property="og:image" content="{{ asset('images/favicon.png') }}">
     <meta name="theme-color" content="#f8fafc">
 
