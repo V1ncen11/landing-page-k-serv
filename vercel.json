@@ -5,6 +5,20 @@
     "SESSION_DRIVER": "cookie",
     "CACHE_STORE": "array"
   },
+  "headers": [
+    {
+      "source": "/build/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ],
   "builds": [
     {
       "src": "public/index.php",
