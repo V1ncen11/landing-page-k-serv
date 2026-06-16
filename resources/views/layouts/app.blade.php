@@ -31,7 +31,7 @@
     <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
     
     {{-- Favicon sudah diperbaiki dari pavicon ke favicon --}}
-    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}?v=2">
     <link rel="canonical" href="{{ url()->current() }}">
     
     <style> 
