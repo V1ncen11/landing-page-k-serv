@@ -319,9 +319,9 @@
             @foreach($produks as $item)
                 @if(strtolower($item->kategori) == 'portofolio')
                 <div class="tilt-card group relative bg-slate-200 rounded-[24px] aspect-video overflow-hidden shadow-sm border border-slate-200 hover:shadow-xl transition-shadow duration-500" data-tilt data-tilt-gyroscope="false" data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.3" data-aos="flip-left" data-aos-delay="100">
-                    <img src="{{ $item->gambar ?: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80' }}"
+                    <img src="{{ $item->gambar ?: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=600' }}"
                          class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-                         alt="{{ $item->nama }}">
+                         alt="{{ $item->nama }}" loading="lazy">
 
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-all duration-500">
                         <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
