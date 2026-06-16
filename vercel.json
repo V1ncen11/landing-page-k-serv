@@ -5,20 +5,6 @@
     "SESSION_DRIVER": "cookie",
     "CACHE_STORE": "array"
   },
-  "headers": [
-    {
-      "source": "/build/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
-      ]
-    },
-    {
-      "source": "/images/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
-      ]
-    }
-  ],
   "builds": [
     {
       "src": "public/index.php",
@@ -44,11 +30,17 @@
   "routes": [
     {
       "src": "/build/(.*)",
-      "dest": "/public/build/$1"
+      "dest": "/public/build/$1",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
     },
     {
       "src": "/images/(.*)",
-      "dest": "/public/images/$1"
+      "dest": "/public/images/$1",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
     },
     {
       "src": "/favicon.ico",
