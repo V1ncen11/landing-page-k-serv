@@ -37,10 +37,10 @@
              sizes="100vw"
              fetchpriority="high"
              alt="Night Developer Workspace" 
-             class="absolute inset-0 w-full h-full object-cover">
+             class="absolute inset-0 w-full h-full object-cover brightness-125">
         
         {{-- Very subtle vignette/darkening just to guarantee text contrast, no muddy grey filter --}}
-        <div class="absolute inset-0" style="background: radial-gradient(circle at center, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);"></div>
+        <div class="absolute inset-0" style="background: radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);"></div>
 
         {{-- Content --}}
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto" data-aos="fade-up">
