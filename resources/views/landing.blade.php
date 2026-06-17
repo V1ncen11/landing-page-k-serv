@@ -29,18 +29,18 @@
             {{-- ═══════════════════════ HERO ═══════════════════════ --}}
     <header id="beranda" class="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden bg-black" style="height: 100vh;">
         
-        {{-- Background Image (Realistic dark coding setup) --}}
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200" 
-             srcset="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600 600w,
-                     https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200 1200w,
-                     https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2000 2000w"
+        {{-- Background Image (Naturally dark / aesthetic night developer workspace) --}}
+        <img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?auto=format&fit=crop&q=80&w=1200" 
+             srcset="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?auto=format&fit=crop&q=80&w=600 600w,
+                     https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?auto=format&fit=crop&q=80&w=1200 1200w,
+                     https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?auto=format&fit=crop&q=80&w=2000 2000w"
              sizes="100vw"
              fetchpriority="high"
-             alt="Developer Workspace" 
+             alt="Night Developer Workspace" 
              class="absolute inset-0 w-full h-full object-cover">
         
-        {{-- Overlay gelap biar teks 100% kebaca (Pakai inline style biar pasti jalan tanpa perlu re-build Tailwind) --}}
-        <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.40);"></div>
+        {{-- Very subtle vignette/darkening just to guarantee text contrast, no muddy grey filter --}}
+        <div class="absolute inset-0" style="background: radial-gradient(circle at center, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);"></div>
 
         {{-- Content --}}
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto" data-aos="fade-up">
