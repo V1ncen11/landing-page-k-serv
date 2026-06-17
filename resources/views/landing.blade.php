@@ -51,7 +51,7 @@
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto mb-16 md:mb-24" data-aos="fade-up">
 
             <h1 class="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-6 leading-[1.5] tracking-wide" style="text-shadow: 0 4px 15px rgba(0,0,0,0.4), 0 0 25px rgba(0,0,0,0.3);">
-                Bangun Website dan Sistem Digital<br class="hidden md:block"> untuk <span class="font-bold text-sky-400">Bisnis Anda</span>
+                Solusi Website dan Sistem Digital<br class="hidden md:block"> untuk <span class="font-bold text-sky-400">Bisnis Anda</span>
             </h1>
             
             <p class="text-base md:text-lg max-w-3xl mx-auto mb-10 font-light" style="color: white; line-height: 1.8; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
