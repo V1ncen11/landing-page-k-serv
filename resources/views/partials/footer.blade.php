@@ -5,8 +5,8 @@
                 {{-- Brand Info --}}
                 <div class="lg:col-span-1">
                     <div class="flex items-center gap-3 mb-6 group">
-                        <div class="text-2xl font-extrabold text-blue-500">
-                            K-SERV<a href="{{ route('login') }}" class="text-slate-500 cursor-default" style="text-decoration: none;">.</a>
+                        <div class="text-2xl font-extrabold">
+                            <span class="bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text text-transparent">K-SERV</span><a href="{{ route('login') }}" class="text-slate-500 cursor-default hover:text-blue-400 transition-colors" style="text-decoration: none;">.</a>
                         </div>
                     </div>
                     <p class="text-slate-400 text-sm leading-relaxed mb-6">Solusi digital beres tanpa ribet. K-Serv hadir membantu individu dan bisnis tampil profesional dengan harga yang sangat bersahabat.</p>
