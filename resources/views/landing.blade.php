@@ -36,10 +36,10 @@
              sizes="100vw"
              fetchpriority="high"
              alt="Creative Workspace" 
-             class="absolute inset-0 w-full h-full object-cover opacity-70">
+             class="absolute inset-0 w-full h-full object-cover" style="opacity: 0.4;">
         
         {{-- Overlay gradient for readability --}}
-        <div class="absolute inset-0 bg-black/60 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.4) 100%);"></div>
 
         {{-- Content --}}
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto" data-aos="fade-up">
