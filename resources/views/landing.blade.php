@@ -50,12 +50,16 @@
         {{-- Content --}}
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto mb-16 md:mb-24" data-aos="fade-up">
 
-            <h1 class="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 leading-[1.5] tracking-wide" style="text-shadow: 0 4px 15px rgba(0,0,0,0.4), 0 0 25px rgba(0,0,0,0.3);">
-                Bangun sistem digital <span class="font-bold text-sky-400">bisnismu</span><br class="hidden md:block"> tanpa perlu ribet.
+            <h1 class="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-6 leading-[1.5] tracking-wide" style="text-shadow: 0 4px 15px rgba(0,0,0,0.4), 0 0 25px rgba(0,0,0,0.3);">
+                Bangun Website dan Sistem Digital<br class="hidden md:block"> untuk <span class="font-bold text-sky-400">Bisnis Anda</span>
             </h1>
+            
+            <p class="text-base md:text-lg max-w-3xl mx-auto mb-10 font-light" style="color: white; line-height: 1.8; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
+                Kami membantu bisnis Anda memiliki website profesional, landing page, dan sistem custom yang tampil modern, cepat, dan sesuai kebutuhan.
+            </p>
 
             {{-- Original Simple Buttons --}}
-            <div class="flex flex-col sm:flex-row gap-6 md:gap-10 justify-center items-center mt-12">
+            <div class="flex flex-col sm:flex-row gap-6 md:gap-10 justify-center items-center mt-4">
                 <a href="#katalog" class="text-white font-medium text-sm md:text-base hover:text-rose-300 transition-colors tracking-widest uppercase pb-1 border-b border-transparent hover:border-rose-300" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
                     Lihat Katalog
                 </a>
