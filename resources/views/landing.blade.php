@@ -529,7 +529,7 @@
                         K-Serv adalah layanan jasa digital yang didirikan dengan satu misi sederhana: <strong class="text-slate-700">membantu individu dan bisnis tampil profesional di dunia digital tanpa harus ribet dan mahal.</strong>
                     </p>
                     <p class="text-slate-500 leading-relaxed mb-8">
-                        Dari mahasiswa yang butuh tugas selesai cepat, sampai pemilik bisnis yang ingin punya website profesional K-Serv siap jadi partner digital kamu yang responsif, transparan, dan bergaransi.
+                        Dari UMKM yang ingin go-digital, sekolah dan instansi yang butuh sistem informasi terintegrasi, hingga pemilik bisnis yang ingin punya website profesional—K-SERV siap menjadi partner digital Anda yang responsif, transparan, dan bergaransi.
                     </p>
                 </div>
 
