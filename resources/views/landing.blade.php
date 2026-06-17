@@ -302,6 +302,47 @@
     </section>
 
 
+    {{-- ═══════════════════════ TECH STACK ═══════════════════════ --}}
+    <section class="max-w-7xl mx-auto px-6 md:px-8 py-20 bg-white" data-aos="fade-up">
+        <div class="text-center mb-14">
+            <h2 class="text-3xl font-bold text-slate-900">Teknologi Modern yang Kami Gunakan</h2>
+            <p class="text-slate-500 mt-3 max-w-xl mx-auto">Sistem yang cepat, aman, dan mudah di-scale up berkat pondasi teknologi terbaik standar industri.</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-14 max-w-5xl mx-auto">
+            {{-- Laravel --}}
+            <div class="flex flex-col items-center gap-3 group cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" class="w-12 h-12 md:w-16 md:h-16 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 group-hover:drop-shadow-[0_10px_20px_rgba(245,82,71,0.3)] transition-all duration-300" alt="Laravel" />
+                <span class="text-xs font-bold text-transparent group-hover:text-red-500 transition-colors duration-300">Laravel</span>
+            </div>
+            {{-- React --}}
+            <div class="flex flex-col items-center gap-3 group cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="w-12 h-12 md:w-16 md:h-16 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 group-hover:drop-shadow-[0_10px_20px_rgba(97,218,251,0.3)] transition-all duration-300" alt="React" />
+                <span class="text-xs font-bold text-transparent group-hover:text-sky-400 transition-colors duration-300">React</span>
+            </div>
+            {{-- Vue.js --}}
+            <div class="flex flex-col items-center gap-3 group cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" class="w-12 h-12 md:w-16 md:h-16 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 group-hover:drop-shadow-[0_10px_20px_rgba(65,184,131,0.3)] transition-all duration-300" alt="Vue.js" />
+                <span class="text-xs font-bold text-transparent group-hover:text-emerald-500 transition-colors duration-300">Vue.js</span>
+            </div>
+            {{-- Tailwind CSS --}}
+            <div class="flex flex-col items-center gap-3 group cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" class="w-12 h-12 md:w-16 md:h-16 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 group-hover:drop-shadow-[0_10px_20px_rgba(6,182,212,0.3)] transition-all duration-300" alt="Tailwind CSS" />
+                <span class="text-xs font-bold text-transparent group-hover:text-cyan-500 transition-colors duration-300">Tailwind</span>
+            </div>
+            {{-- MySQL --}}
+            <div class="flex flex-col items-center gap-3 group cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" class="w-12 h-12 md:w-16 md:h-16 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 group-hover:drop-shadow-[0_10px_20px_rgba(0,97,138,0.3)] transition-all duration-300" alt="MySQL" />
+                <span class="text-xs font-bold text-transparent group-hover:text-blue-700 transition-colors duration-300">MySQL</span>
+            </div>
+            {{-- AWS --}}
+            <div class="flex flex-col items-center gap-3 group cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" class="w-12 h-12 md:w-20 md:h-16 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 group-hover:drop-shadow-[0_10px_20px_rgba(255,153,0,0.3)] transition-all duration-300 object-contain" alt="AWS" />
+                <span class="text-xs font-bold text-transparent group-hover:text-orange-500 transition-colors duration-300">AWS</span>
+            </div>
+        </div>
+    </section>
+
     {{-- ═══════════════════════ CARA KERJA (TIMELINE) ═══════════════════════ --}}
     <section id="cara-kerja" class="max-w-7xl mx-auto px-6 md:px-8 py-24 border-t border-slate-100 bg-slate-50" data-aos="fade-right">
         <div class="text-center mb-20">
