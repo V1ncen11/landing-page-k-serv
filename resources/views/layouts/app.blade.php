@@ -37,7 +37,8 @@
     <link rel="canonical" href="{{ url()->current() }}">
     
     <style> 
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; } 
+        html { scroll-behavior: auto; /* Disabled for Lenis */ }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .font-signature { font-family: 'La Belle Aurore', cursive; }
         .nav-transparent { background-color: transparent !important; border-color: transparent !important; box-shadow: none !important; }
         .nav-transparent .nav-text-color { color: white !important; }
@@ -204,7 +205,40 @@
             if (counterSection) {
                 statsObserver.observe(counterSection.closest('section') || counterSection.parentElement);
             }
+            
+            // ─── Smooth Scrolling (Lenis) Setup for Anchor Links ───
+            document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if(href.includes('#')) {
+                        const targetId = href.split('#')[1];
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            // Only prevent default if target exists on current page
+                            if(window.location.pathname === '/' || href.startsWith('#')) {
+                                e.preventDefault();
+                                if (window.lenis) {
+                                    window.lenis.scrollTo(targetElement);
+                                } else {
+                                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            }
+                        }
+                    }
+                });
+            });
         });
+    </script>
+    <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
+    <script>
+        // Initialize Lenis Smooth Scrolling
+        if (typeof Lenis !== 'undefined') {
+            window.lenis = new Lenis({
+                autoRaf: true,
+                smoothWheel: true,
+                syncTouch: true
+            });
+        }
     </script>
     @stack('scripts')
 </body>
