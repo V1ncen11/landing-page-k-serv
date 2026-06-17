@@ -1,7 +1,6 @@
 <nav id="mainNav" class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 md:px-8 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3 group cursor-pointer" onclick="window.location.href='{{ url('/') }}'">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo KS" width="40" height="40" class="h-10 w-auto mix-blend-multiply dark:invert dark:mix-blend-screen">
                 <div class="text-2xl font-extrabold tracking-tight text-blue-600">
                     K-SERV<span class="text-slate-400">.</span>
                 </div>
