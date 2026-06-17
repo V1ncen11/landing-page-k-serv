@@ -231,14 +231,22 @@
     </script>
     <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
     <script>
-        // Initialize Lenis Smooth Scrolling
-        if (typeof Lenis !== 'undefined') {
-            window.lenis = new Lenis({
-                autoRaf: true,
-                smoothWheel: true,
-                syncTouch: true
-            });
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lenis Smooth Scrolling
+            if (typeof Lenis !== 'undefined') {
+                window.lenis = new Lenis({
+                    lerp: 0.1,
+                    smoothWheel: true
+                });
+
+                function raf(time) {
+                    window.lenis.raf(time);
+                    requestAnimationFrame(raf);
+                }
+
+                requestAnimationFrame(raf);
+            }
+        });
     </script>
     @stack('scripts')
 </body>
