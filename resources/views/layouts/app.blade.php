@@ -15,6 +15,8 @@
     <meta property="og:description" content="K-SERV melayani jasa pembuatan website company profile, landing page promosi, dan sistem web custom profesional. Gratis domain & hosting.">
     <meta property="og:image" content="{{ asset('images/favicon.png') }}">
     <meta name="theme-color" content="#f8fafc">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23ffffff'/><text x='50%' y='50%' font-family='Arial, sans-serif' font-size='65' font-weight='bold' fill='%23000000' text-anchor='middle' dominant-baseline='central'>K</text></svg>">
 
   
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -35,15 +37,25 @@
     {{-- Favicon sudah diperbaiki dari pavicon ke favicon --}}
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}?v=2">
     <link rel="canonical" href="{{ url()->current() }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
     
     <style> 
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; } 
+        .font-signature { font-family: 'La Belle Aurore', cursive; }
+        .nav-transparent { background-color: transparent !important; border-color: transparent !important; box-shadow: none !important; }
+        .nav-transparent .nav-text-color { color: white !important; }
+
     </style>
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 antialiased transition-colors duration-300 overflow-x-hidden w-full relative">
     <div class="w-full overflow-x-hidden max-w-[100vw]">
-        @include('partials.navbar')
+        @php
+            $is_transparent_nav = View::hasSection('is_transparent_nav');
+        @endphp
+        @include('partials.navbar', ['is_transparent_nav' => $is_transparent_nav])
         
         <main>
             @yield('content')
@@ -54,30 +66,7 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Dark Mode Logic (Runs before DOM load to prevent flash)
-        const htmlEl    = document.documentElement;
-        const darkToggle = document.getElementById('darkToggle');
-        const iconSun   = document.getElementById('iconSun');
-        const iconMoon  = document.getElementById('iconMoon');
 
-        if (localStorage.getItem('kserv_dark') === '1') {
-            htmlEl.classList.add('dark');
-            if (iconSun && iconMoon) {
-                iconSun.classList.remove('hidden');
-                iconMoon.classList.add('hidden');
-            }
-        }
-
-        if (darkToggle) {
-            darkToggle.addEventListener('click', () => {
-                const isDark = htmlEl.classList.toggle('dark');
-                localStorage.setItem('kserv_dark', isDark ? '1' : '0');
-                if (iconSun && iconMoon) {
-                    iconSun.classList.toggle('hidden', !isDark);
-                    iconMoon.classList.toggle('hidden', isDark);
-                }
-            });
-        }
 
         // Promo Banner Dismiss
         const closeBanner = document.getElementById('closeBanner');
@@ -140,14 +129,27 @@
             }
             // ─── Navbar Scroll Effect ───
             const nav = document.getElementById('mainNav');
+            const isHome = document.getElementById('beranda') !== null;
             if (nav) {
+                if (isHome) {
+                    nav.classList.remove('sticky', 'bg-white', 'dark:bg-slate-900', 'border-b', 'border-slate-100', 'dark:border-slate-800', 'shadow-sm');
+                    nav.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'z-50');
+                    if (window.scrollY <= 50) {
+                        nav.classList.add('nav-transparent', 'border-transparent');
+                    }
+                }
                 window.addEventListener('scroll', function() {
                     if (window.scrollY > 50) {
-                        nav.classList.add('shadow-md', 'shadow-slate-100', 'dark:shadow-none');
-                        nav.classList.remove('border-b', 'border-slate-100', 'dark:border-slate-800');
+                        nav.classList.add('shadow-md', 'shadow-slate-100', 'dark:shadow-none', 'bg-white', 'dark:bg-slate-900', 'border-b', 'border-slate-100', 'dark:border-slate-800');
+                        nav.classList.remove('nav-transparent', 'border-transparent');
                     } else {
                         nav.classList.remove('shadow-md', 'shadow-slate-100', 'dark:shadow-none');
-                        nav.classList.add('border-b', 'border-slate-100', 'dark:border-slate-800');
+                        if (isHome) {
+                            nav.classList.add('nav-transparent', 'border-transparent');
+                            nav.classList.remove('bg-white', 'dark:bg-slate-900', 'border-b', 'border-slate-100', 'dark:border-slate-800');
+                        } else {
+                            nav.classList.add('border-b', 'border-slate-100', 'dark:border-slate-800');
+                        }
                     }
                 });
             }
