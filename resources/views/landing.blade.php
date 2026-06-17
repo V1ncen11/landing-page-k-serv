@@ -29,7 +29,14 @@
             {{-- ═══════════════════════ HERO ═══════════════════════ --}}
     <header id="beranda" class="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden bg-black" style="height: 100vh;">
         {{-- Background Image (Elegant aesthetic vibe) --}}
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000" alt="Creative Workspace" class="absolute inset-0 w-full h-full object-cover opacity-60">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" 
+             srcset="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600 600w,
+                     https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200 1200w,
+                     https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000 2000w"
+             sizes="100vw"
+             fetchpriority="high"
+             alt="Creative Workspace" 
+             class="absolute inset-0 w-full h-full object-cover opacity-60">
         
         {{-- Overlay gradient for readability --}}
         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/70"></div>
@@ -546,5 +553,5 @@
 @endsection
 
 @push('scripts')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
 @endpush
