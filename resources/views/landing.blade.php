@@ -51,7 +51,7 @@
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto mb-16 md:mb-24" data-aos="fade-up">
 
             <h1 class="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 leading-[1.5] tracking-wide" style="text-shadow: 0 4px 15px rgba(0,0,0,0.4), 0 0 25px rgba(0,0,0,0.3);">
-                Bangun sistem digital <span class="font-signature text-rose-400 font-normal text-4xl md:text-6xl lg:text-7xl inline-block transform -rotate-3 translate-y-2 px-1" style="text-shadow: 0 4px 12px rgba(0,0,0,0.3);">impianmu</span><br class="hidden md:block"> tanpa perlu ribet.
+                Bangun sistem digital <span class="font-bold text-sky-400">bisnismu</span><br class="hidden md:block"> tanpa perlu ribet.
             </h1>
 
             {{-- Original Simple Buttons --}}
