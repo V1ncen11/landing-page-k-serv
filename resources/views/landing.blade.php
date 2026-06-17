@@ -40,7 +40,7 @@
              class="absolute inset-0 w-full h-full object-cover">
         
         {{-- Overlay gelap biar teks 100% kebaca (Pakai inline style biar pasti jalan tanpa perlu re-build Tailwind) --}}
-        <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.65);"></div>
+        <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.40);"></div>
 
         {{-- Content --}}
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto" data-aos="fade-up">
