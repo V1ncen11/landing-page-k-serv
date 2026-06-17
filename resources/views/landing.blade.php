@@ -54,8 +54,8 @@
                 Solusi Website dan Sistem Digital<br class="hidden md:block"> untuk <span class="font-bold text-sky-400">Bisnis Anda</span>
             </h1>
             
-            <p class="text-base md:text-lg max-w-3xl mx-auto mb-10 font-light" style="color: white; line-height: 1.8; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
-                Kami membantu bisnis Anda memiliki website profesional, landing page, dan sistem custom yang tampil modern, cepat, dan sesuai kebutuhan.
+            <p class="text-base md:text-lg max-w-2xl mx-auto mb-10 font-light" style="color: white; line-height: 1.8; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
+                Website profesional dan sistem custom modern yang dirancang khusus untuk mengakselerasi bisnis Anda.
             </p>
 
             {{-- Original Simple Buttons --}}
