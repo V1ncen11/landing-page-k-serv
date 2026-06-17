@@ -39,8 +39,8 @@
              alt="Developer Workspace" 
              class="absolute inset-0 w-full h-full object-cover">
              
-        {{-- Top Gradient (Khusus buat nge-gelapin area Navbar & Logo biar kebaca jelas) --}}
-        <div class="absolute top-0 inset-x-0 h-32 pointer-events-none" style="background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 100%);"></div>
+        {{-- Top Gradient (Khusus buat nge-gelapin area Navbar & Logo biar kebaca jelas - PURE INLINE CSS) --}}
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 140px; background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); pointer-events: none; z-index: 10;"></div>
         
         {{-- Localized Shadow (Foolproof inline CSS radial gradient exactly behind the text) --}}
         <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
