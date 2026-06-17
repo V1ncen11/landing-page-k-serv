@@ -16,8 +16,10 @@
 
                 <h1 class="text-5xl md:text-7xl font-black mb-6 leading-[1.1] tracking-tight text-slate-900 dark:text-white transition-colors duration-300">
                     Beresin Tugas <br class="hidden md:block"> & Bisnis
-                    <span class="inline-block mt-4 bg-blue-600 text-white px-8 py-2 md:py-3 rounded-[2rem] transform -rotate-2 shadow-[0_10px_40px_-10px_rgba(37,99,235,0.6)] border-4 border-blue-100/20">
-                        Tanpa Ribet.
+                    <span class="relative inline-block z-10 text-slate-900 dark:text-white mt-3 px-2">
+                        <span class="relative z-10 italic tracking-tight">Tanpa Ribet.</span>
+                        {{-- Marker Highlight Effect --}}
+                        <span class="absolute bottom-1 md:bottom-2 left-0 w-full h-4 md:h-6 bg-blue-400/40 dark:bg-blue-500/50 -z-10 transform -rotate-1 rounded-sm"></span>
                     </span>
                 </h1>
 
@@ -444,41 +446,40 @@
                 </div>
             </div>
         </div>
+    {{-- ═══════════════════════ CTA SECTION ═══════════════════════ --}}
+    <section class="py-24 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-6 md:px-8">
+            <div class="bg-blue-50 dark:bg-slate-800 rounded-[3rem] py-16 md:py-24 px-8 md:px-20 text-center relative overflow-hidden border border-blue-100 dark:border-slate-700 transition-colors duration-300">
+                
+                {{-- Minimalist Grid Background --}}
+                <div class="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#334155_1px,transparent_1px),linear-gradient(to_bottom,#334155_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-30"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-blue-50 via-transparent to-transparent dark:from-slate-800 pointer-events-none"></div>
 
-        {{-- ═══════ DRAMATIC CTA ═══════ --}}
-        <div class="mt-20 relative rounded-[32px] overflow-hidden" data-aos="zoom-out">
-            {{-- Background dark gradient + grid pattern --}}
-            <div class="absolute inset-0 bg-slate-900"></div>
-            <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-blue-600/10 blur-[100px] rounded-full"></div>
-            <div class="absolute bottom-0 right-0 w-64 h-64 bg-blue-800/10 blur-[80px] rounded-full"></div>
-
-            <div class="relative z-10 px-8 md:px-16 py-16 md:py-20 text-center">
-                <span class="inline-block px-4 py-1.5 bg-white/10 text-blue-300 text-xs font-black rounded-full uppercase tracking-widest mb-6 border border-white/10">Mulai Sekarang</span>
-                <h3 class="text-3xl md:text-5xl font-black text-white mb-5 leading-tight">
-                    Punya Ide? <br>
-                    <span class="text-slate-200">Kita Wujudkan Bareng.</span>
-                </h3>
-                <p class="text-slate-400 mb-10 max-w-xl mx-auto text-lg">Gak nemu yang cocok di katalog? Tenang, K-Serv bisa bantu custom proyek apapun. Konsultasi pertama selalu gratis!</p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="https://wa.me/6287870402431?text=Halo%20K-Serv!%20Saya%20mau%20konsultasi%20proyek%20custom." target="_blank"
-                        class="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-2xl hover:scale-105 transition-all shadow-2xl shadow-blue-900/50 flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        Chat WhatsApp Sekarang
-                    </a>
-                    <a href="#katalog" class="px-10 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold rounded-2xl hover:scale-105 transition-all backdrop-blur-sm">
-                        Lihat Katalog Dulu
-                    </a>
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Punya Ide? Kita Wujudkan Bareng.</h2>
+                    
+                    <p class="text-slate-500 dark:text-slate-400 text-base mb-10 max-w-xl mx-auto leading-relaxed">
+                        Gak nemu yang cocok di katalog? Tenang, K-Serv bisa bantu custom proyek apapun. Konsultasi pertama selalu gratis!
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="https://wa.me/6287870402431?text=Halo%20K-Serv,%20saya%20punya%20ide%20project%20nih." target="_blank"
+                           class="inline-flex justify-center items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl hover:-translate-y-1 shadow-lg shadow-blue-600/30 transition-all duration-300">
+                            <i class="fab fa-whatsapp text-xl"></i> Chat WhatsApp Sekarang
+                        </a>
+                        <a href="{{ url('/#katalog') }}" 
+                           class="inline-flex justify-center items-center gap-2 px-8 py-4 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-950 font-bold rounded-2xl hover:-translate-y-1 shadow-sm border border-slate-200 dark:border-slate-700 transition-all duration-300">
+                            Lihat Katalog Dulu
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
     {{-- ═══════════════════════ TESTIMONI ═══════════════════════ --}}
     <section class="bg-slate-50 border-t border-slate-100 py-24" data-aos="fade-up">
         <div class="max-w-7xl mx-auto px-6 md:px-8">
             <div class="text-center mb-14">
-                <span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 text-xs font-black rounded-full uppercase tracking-widest mb-4">Testimoni</span>
                 <h2 class="text-3xl font-bold text-slate-900">Kata Mereka tentang K-Serv</h2>
                 <p class="text-slate-500 mt-3 max-w-xl mx-auto">Ratusan klien sudah percaya kami. Ini yang mereka bilang.</p>
             </div>

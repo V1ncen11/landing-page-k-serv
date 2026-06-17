@@ -128,10 +128,7 @@
                                 {{ sprintf('%02d', $index + 1) }}
                             </div>
 
-                            {{-- Label/Tag --}}
-                            <span class="inline-block px-3 py-1 bg-slate-100 text-slate-500 font-bold tracking-widest text-[10px] uppercase rounded-md mb-3 border border-slate-200 group-hover/timeline:bg-blue-50 group-hover/timeline:text-blue-600 group-hover/timeline:border-blue-200 transition-colors duration-300">
-                                Highlight Modul
-                            </span>
+
                             
                             <h3 class="text-2xl font-bold text-slate-900 mb-4 leading-snug group-hover/timeline:text-blue-700 transition-colors duration-300">{{ $fitur->nama_fitur }}</h3>
                             <div class="text-slate-600 text-base leading-relaxed prose prose-sm prose-slate max-w-none text-left">
