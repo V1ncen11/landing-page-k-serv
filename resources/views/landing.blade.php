@@ -39,9 +39,9 @@
              alt="Developer Workspace" 
              class="absolute inset-0 w-full h-full object-cover">
         
-        {{-- Localized Shadow (Only darkens the area exactly behind the text, keeping the rest of the image super bright and clear) --}}
-        <div class="absolute inset-0 flex items-center justify-center">
-            <div class="w-[90vw] md:w-[800px] h-[400px] rounded-full" style="background: radial-gradient(circle, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 70%); filter: blur(30px);"></div>
+        {{-- Localized Shadow (Foolproof inline CSS radial gradient exactly behind the text) --}}
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="w-full max-w-5xl h-[500px]" style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 40%, transparent 70%);"></div>
         </div>
 
         {{-- Content --}}
