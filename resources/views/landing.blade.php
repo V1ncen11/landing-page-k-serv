@@ -29,11 +29,11 @@
             {{-- ═══════════════════════ HERO ═══════════════════════ --}}
     <header id="beranda" class="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden bg-black" style="height: 100vh;">
         
-        {{-- Background Image (Clean, dark aesthetic workspace without distracting code) --}}
-        <img src="https://images.unsplash.com/photo-1531297172315-d35a5088c04c?auto=format&fit=crop&q=80&w=1200" 
-             srcset="https://images.unsplash.com/photo-1531297172315-d35a5088c04c?auto=format&fit=crop&q=80&w=600 600w,
-                     https://images.unsplash.com/photo-1531297172315-d35a5088c04c?auto=format&fit=crop&q=80&w=1200 1200w,
-                     https://images.unsplash.com/photo-1531297172315-d35a5088c04c?auto=format&fit=crop&q=80&w=2000 2000w"
+        {{-- Background Image (Premium Dark Abstract Gradient - Guaranteed no code, perfectly clean) --}}
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200" 
+             srcset="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600 600w,
+                     https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200 1200w,
+                     https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2000 2000w"
              sizes="100vw"
              fetchpriority="high"
              alt="Developer Workspace" 
