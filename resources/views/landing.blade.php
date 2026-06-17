@@ -27,12 +27,20 @@
 
 
             {{-- ═══════════════════════ HERO ═══════════════════════ --}}
-    <header id="beranda" class="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden bg-black" style="height: 100vh;">
-        {{-- Sleek Monochrome Tailwind Background --}}
-        <div class="absolute inset-0 w-full h-full bg-slate-950">
-            <div class="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-black"></div>
-            <div class="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-slate-800/30 to-transparent"></div>
-        </div>
+    <header id="beranda" class="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden bg-[#080b10]" style="height: 100vh;">
+        
+        {{-- Premium Tech Dark Background: Dot Grid + Glow (Vercel/Linear Style) --}}
+        <div class="absolute inset-0" style="
+            background-color: #080b10;
+            background-image: radial-gradient(circle, #2d3748 1px, transparent 1px);
+            background-size: 30px 30px;
+        "></div>
+        
+        {{-- Radial fade/glow overlay biar grid-nya smooth di pinggir --}}
+        <div class="absolute inset-0" style="background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(20,30,50,0) 0%, #080b10 80%);"></div>
+
+        {{-- Top center soft glow (accent cahaya otak) --}}
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full opacity-20" style="background: radial-gradient(ellipse, #6366f1 0%, transparent 70%); filter: blur(60px);"></div>
 
         {{-- Content --}}
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto" data-aos="fade-up">
