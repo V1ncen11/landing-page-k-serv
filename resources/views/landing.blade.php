@@ -46,8 +46,8 @@
 
         {{-- Content --}}
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto" data-aos="fade-up">
-            <h1 class="text-3xl md:text-5xl lg:text-6xl font-light text-white mb-8 leading-[1.4] tracking-wide" style="text-shadow: 0 4px 20px rgba(0,0,0,1), 0 0 40px rgba(0,0,0,0.8);">
-                Bangun sistem digital <span class="font-signature text-rose-400 font-normal text-5xl md:text-7xl lg:text-8xl inline-block transform -rotate-3 translate-y-3 px-1" style="text-shadow: 0 4px 15px rgba(0,0,0,0.8);">impianmu</span><br class="hidden md:block"> tanpa perlu ribet.
+            <h1 class="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 leading-[1.5] tracking-wide" style="text-shadow: 0 4px 15px rgba(0,0,0,0.4), 0 0 25px rgba(0,0,0,0.3);">
+                Bangun sistem digital <span class="font-signature text-rose-400 font-normal text-4xl md:text-6xl lg:text-7xl inline-block transform -rotate-3 translate-y-2 px-1" style="text-shadow: 0 4px 12px rgba(0,0,0,0.3);">impianmu</span><br class="hidden md:block"> tanpa perlu ribet.
             </h1>
             <div class="flex flex-col sm:flex-row gap-6 md:gap-10 justify-center mt-12 items-center">
                 <a href="#katalog" class="text-white font-medium text-sm md:text-base hover:text-rose-300 transition-colors tracking-widest uppercase pb-1 border-b border-transparent hover:border-rose-300">
