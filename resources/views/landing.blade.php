@@ -49,35 +49,29 @@
 
         {{-- Content --}}
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto" data-aos="fade-up">
-            
-            {{-- Top Badge (Selling Point) --}}
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 shadow-lg">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span class="text-white text-xs md:text-sm font-medium tracking-wide" style="text-shadow: 0 2px 8px rgba(0,0,0,0.8);">Jasa Pembuatan Website & Sistem Digital</span>
-            </div>
 
             <h1 class="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-6 leading-[1.5] tracking-wide" style="text-shadow: 0 4px 15px rgba(0,0,0,0.4), 0 0 25px rgba(0,0,0,0.3);">
                 Bangun sistem digital <span class="font-signature text-rose-400 font-normal text-4xl md:text-6xl lg:text-7xl inline-block transform -rotate-3 translate-y-2 px-1" style="text-shadow: 0 4px 12px rgba(0,0,0,0.3);">impianmu</span><br class="hidden md:block"> tanpa perlu ribet.
             </h1>
             
             {{-- Sub-headline (What we sell) --}}
-            <p class="text-slate-200 text-sm md:text-lg max-w-2xl mx-auto mb-10 font-light leading-relaxed" style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
+            <p class="text-sm md:text-lg max-w-2xl mx-auto mb-10 font-light leading-relaxed" style="color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
                 Tingkatkan skala bisnis Anda dengan website profesional, aplikasi custom, dan sistem informasi yang dirancang khusus untuk kebutuhan perusahaan Anda.
             </p>
 
-            {{-- Powerful CTA Buttons --}}
-            <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
-                <a href="#katalog" class="px-8 py-3.5 rounded-full text-white font-medium text-sm md:text-base border border-white/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 w-full sm:w-auto shadow-lg" style="text-shadow: 0 2px 8px rgba(0,0,0,0.8);">
+            {{-- Original Simple Buttons --}}
+            <div class="flex flex-col sm:flex-row gap-6 md:gap-10 justify-center items-center">
+                <a href="#katalog" class="text-white font-medium text-sm md:text-base hover:text-rose-300 transition-colors tracking-widest uppercase pb-1 border-b border-transparent hover:border-rose-300">
                     Lihat Katalog
                 </a>
 
-                <a href="https://wa.me/6287870402431" target="_blank" class="px-8 py-3.5 rounded-full text-white font-bold text-sm md:text-base bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-400 hover:to-rose-500 transition-all duration-300 w-full sm:w-auto shadow-[0_0_20px_rgba(225,29,72,0.4)] hover:shadow-[0_0_30px_rgba(225,29,72,0.6)] transform hover:-translate-y-1">
+                <a href="https://wa.me/6287870402431" target="_blank" class="text-white font-medium text-sm md:text-base hover:text-rose-300 transition-colors tracking-widest uppercase pb-1 border-b border-transparent hover:border-rose-300">
                     Konsultasi Gratis
                 </a>
             </div>
             
             {{-- Trust Signal / Features --}}
-            <div class="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4 text-slate-100 text-xs md:text-sm font-medium" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
+            <div class="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4 text-xs md:text-sm font-medium" style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
                 <div class="flex items-center gap-2">
                     <svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                     Desain Premium
