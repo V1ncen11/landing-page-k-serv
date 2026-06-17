@@ -20,4 +20,9 @@ class Produk extends Model
     {
         return $query->where('is_active', true);
     }
+
+    public function fiturs()
+    {
+        return $this->hasMany(ProdukFitur::class);
+    }
 }

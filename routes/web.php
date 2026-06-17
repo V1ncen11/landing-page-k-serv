@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 // Public Routes
 Route::get('/', [LandingController::class, 'index']);
+Route::get('/portofolio/{id}', [LandingController::class, 'portofolioShow'])->name('portofolio.show');
 
 // Informasi Routes
 Route::get('/syarat-ketentuan', function () { return view('informasi.syarat'); })->name('informasi.syarat');
@@ -22,4 +23,5 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('produk', ProdukController::class);
     Route::patch('produk/{id}/toggle', [ProdukController::class, 'toggleActive'])->name('produk.toggle');
+    Route::resource('produk.fitur', \App\Http\Controllers\Admin\ProdukFiturController::class);
 });
