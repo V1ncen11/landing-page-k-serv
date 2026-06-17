@@ -75,7 +75,7 @@
     <section class="w-full bg-slate-50 pt-0 pb-20 relative z-10">
         
         {{-- Stats Counter (Overlaps Hero) --}}
-        <div class="max-w-5xl mx-auto px-6 md:px-8 -mt-20 mb-24 relative z-20" data-aos="fade-up">
+        <div class="max-w-5xl mx-auto px-6 md:px-8 -mt-20 mb-24 relative z-20">
             <div class="bg-white border border-slate-100 rounded-[28px] shadow-xl p-8 md:p-10">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                     <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
