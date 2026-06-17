@@ -302,23 +302,62 @@
     </section>
 
 
-    {{-- ═══════════════════════ MID CTA BANNER ═══════════════════════ --}}
-    <section class="max-w-7xl mx-auto px-6 md:px-8 py-20" data-aos="fade-up">
-        <div class="bg-slate-900 rounded-[32px] p-10 md:p-16 flex flex-col md:flex-row items-center justify-between relative overflow-hidden shadow-2xl">
-            {{-- Background Accents --}}
-            <div class="absolute -top-32 -right-32 w-96 h-96 bg-blue-500 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
-            <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-sky-400 opacity-10 blur-3xl rounded-full pointer-events-none"></div>
-            
-            <div class="relative z-10 md:w-2/3 text-center md:text-left mb-10 md:mb-0">
-                <h2 class="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">Punya Ide Sistem atau Bisnis Baru?</h2>
-                <p class="text-slate-300 text-lg leading-relaxed max-w-xl mx-auto md:mx-0">Jangan biarkan idemu cuma jadi angan-angan. Mari diskusi bareng tim K-Serv, konsultasinya 100% gratis kok!</p>
+    {{-- ═══════════════════════ PERBANDINGAN ═══════════════════════ --}}
+    <section class="max-w-7xl mx-auto px-6 md:px-8 py-20 bg-white" data-aos="fade-up">
+        <div class="text-center mb-14">
+            <h2 class="text-3xl font-bold text-slate-900">Kenapa K-Serv Beda dari yang Lain?</h2>
+            <p class="text-slate-500 mt-3 max-w-xl mx-auto">Kami nggak cuma sekadar bikin sistem, tapi beneran peduli sama kesuksesan bisnismu.</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto items-stretch">
+            {{-- Yang Lain --}}
+            <div class="flex-1 bg-white border border-slate-100 rounded-3xl p-8 md:p-10 shadow-sm opacity-80 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-red-50 opacity-50 rounded-bl-full"></div>
+                <h3 class="text-xl font-bold text-slate-500 mb-8 relative z-10 flex items-center gap-2"><span class="text-red-400">❌</span> Freelancer / Jasa Biasa</h3>
+                <ul class="space-y-6 relative z-10">
+                    <li class="flex items-start gap-4">
+                        <svg class="w-6 h-6 text-slate-300 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        <span class="text-slate-500">Harga sering mendadak bengkak di tengah jalan</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <svg class="w-6 h-6 text-slate-300 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        <span class="text-slate-500">Pengerjaan sering molor jauh dari deadline</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <svg class="w-6 h-6 text-slate-300 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        <span class="text-slate-500">Susah dihubungi & slow respon pas ada error</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <svg class="w-6 h-6 text-slate-300 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        <span class="text-slate-500">Langsung lepas tangan setelah project selesai</span>
+                    </li>
+                </ul>
             </div>
-            
-            <div class="relative z-10 md:w-1/3 flex justify-center md:justify-end">
-                <a href="https://wa.me/6287870402431" target="_blank" class="bg-white text-slate-900 font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:scale-105 hover:bg-slate-50 transition-transform flex items-center gap-3">
-                    <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    Konsultasi Sekarang
-                </a>
+
+            {{-- K-Serv --}}
+            <div class="flex-1 bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-10 shadow-2xl relative overflow-hidden transform md:-translate-y-4">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 opacity-20 blur-2xl rounded-full"></div>
+                <div class="absolute -top-4 text-[10px] font-black tracking-widest bg-blue-500 text-white px-4 py-2 rounded-b-xl left-1/2 -translate-x-1/2 uppercase">Pilihan Cerdas</div>
+                
+                <h3 class="text-xl font-bold text-white mb-8 relative z-10 flex items-center gap-2"><span class="text-green-400">✅</span> Bersama K-Serv</h3>
+                <ul class="space-y-6 relative z-10">
+                    <li class="flex items-start gap-4">
+                        <div class="bg-slate-800 p-1 rounded-full shrink-0 mt-0.5"><svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+                        <span class="text-slate-300 font-medium">Harga jujur & transparan dari awal kesepakatan</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="bg-slate-800 p-1 rounded-full shrink-0 mt-0.5"><svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+                        <span class="text-slate-300 font-medium">Pengerjaan cepat, rapi, & sesuai deadline</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="bg-slate-800 p-1 rounded-full shrink-0 mt-0.5"><svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+                        <span class="text-slate-300 font-medium">Fast respon & siap bantu kapan aja via WhatsApp</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="bg-slate-800 p-1 rounded-full shrink-0 mt-0.5"><svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+                        <span class="text-slate-300 font-medium">Gratis support & maintenance 3 bulan paska rilis!</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
