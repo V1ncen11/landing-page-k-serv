@@ -39,8 +39,8 @@
              alt="Developer Workspace" 
              class="absolute inset-0 w-full h-full object-cover">
         
-        {{-- Overlay gradient for perfect readability (Heavy Black) --}}
-        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90"></div>
+        {{-- Overlay gelap biar teks 100% kebaca (Pakai inline style biar pasti jalan tanpa perlu re-build Tailwind) --}}
+        <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.65);"></div>
 
         {{-- Content --}}
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto" data-aos="fade-up">
