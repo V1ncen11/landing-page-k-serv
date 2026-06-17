@@ -28,18 +28,11 @@
 
             {{-- ═══════════════════════ HERO ═══════════════════════ --}}
     <header id="beranda" class="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden bg-black" style="height: 100vh;">
-        {{-- Background Image (Elegant aesthetic vibe) --}}
-        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200" 
-             srcset="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600 600w,
-                     https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200 1200w,
-                     https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2000 2000w"
-             sizes="100vw"
-             fetchpriority="high"
-             alt="Creative Workspace" 
-             class="absolute inset-0 w-full h-full object-cover" style="opacity: 0.4;">
-        
-        {{-- Overlay gradient for readability --}}
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.4) 100%);"></div>
+        {{-- Pure CSS Premium Dark Abstract Background --}}
+        <div class="absolute inset-0 w-full h-full bg-black" style="background: radial-gradient(circle at 50% -20%, #1e293b 0%, #020617 60%, #000000 100%);">
+            {{-- Subtle Noise Texture for Premium Feel --}}
+            <div class="absolute inset-0 opacity-[0.05] mix-blend-screen" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+        </div>
 
         {{-- Content --}}
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto" data-aos="fade-up">
