@@ -27,20 +27,20 @@
 
 
             {{-- ═══════════════════════ HERO ═══════════════════════ --}}
-    <header id="beranda" class="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden bg-slate-900" style="height: 100vh;">
+    <header id="beranda" class="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden bg-black" style="height: 100vh;">
         
-        {{-- Background Image (Inherently dark & realistic developer workspace) --}}
-        <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&q=80&w=1200" 
-             srcset="https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&q=80&w=600 600w,
-                     https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&q=80&w=1200 1200w,
-                     https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&q=80&w=2000 2000w"
+        {{-- Background Image (Realistic dark coding setup) --}}
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200" 
+             srcset="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600 600w,
+                     https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200 1200w,
+                     https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2000 2000w"
              sizes="100vw"
              fetchpriority="high"
-             alt="Dark Developer Workspace" 
+             alt="Developer Workspace" 
              class="absolute inset-0 w-full h-full object-cover">
         
-        {{-- Heavy Dark Overlay for 100% Readability --}}
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-slate-900/80 to-slate-900/95"></div>
+        {{-- Overlay gradient for perfect readability (Heavy Black) --}}
+        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90"></div>
 
         {{-- Content --}}
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto" data-aos="fade-up">
