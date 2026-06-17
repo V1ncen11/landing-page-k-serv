@@ -46,10 +46,15 @@
                 <label class="block text-sm font-bold text-slate-700 mb-2">URL Gambar / Screenshot Fitur <span class="text-slate-400 font-normal">(opsional)</span></label>
                 <input type="url" name="gambar_fitur" value="{{ old('gambar_fitur') }}"
                     class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500"
-                    placeholder="https://i.imgur.com/contoh.jpg">
+                    placeholder="https://i.imgur.com/contoh.jpg"
+                    id="gambar-input">
                 <p class="text-[11px] text-slate-400 mt-2 italic">
                     💡 Upload gambar ke <a href="https://imgur.com/upload" target="_blank" class="text-indigo-500 font-bold hover:underline">Imgur</a>, lalu paste URL-nya di sini.
                 </p>
+                <div id="preview-box" class="hidden mt-3">
+                    <p class="text-xs font-bold text-slate-500 mb-1">Preview gambar:</p>
+                    <img id="preview-img" src="" class="w-full max-h-40 object-cover rounded-xl border border-slate-100">
+                </div>
             </div>
 
             <div class="flex gap-4 pt-4">
@@ -63,4 +68,28 @@
         </form>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const gambarInput = document.getElementById('gambar-input');
+        if (gambarInput) {
+            gambarInput.addEventListener('input', function() {
+                const url = this.value.trim();
+                const previewBox = document.getElementById('preview-box');
+                const previewImg = document.getElementById('preview-img');
+                if (url.startsWith('http')) {
+                    previewImg.src = url;
+                    previewBox.classList.remove('hidden');
+                } else {
+                    previewBox.classList.add('hidden');
+                }
+            });
+            
+            // Trigger on load if there's old value
+            if(gambarInput.value.trim() !== '') {
+                gambarInput.dispatchEvent(new Event('input'));
+            }
+        }
+    });
+</script>
 @endsection
