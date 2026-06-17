@@ -302,65 +302,6 @@
     </section>
 
 
-    {{-- ═══════════════════════ PERBANDINGAN ═══════════════════════ --}}
-    <section class="max-w-7xl mx-auto px-6 md:px-8 py-20 bg-white" data-aos="fade-up">
-        <div class="text-center mb-14">
-            <h2 class="text-3xl font-bold text-slate-900">Kenapa K-Serv Beda dari yang Lain?</h2>
-            <p class="text-slate-500 mt-3 max-w-xl mx-auto">Kami nggak cuma sekadar bikin sistem, tapi beneran peduli sama kesuksesan bisnismu.</p>
-        </div>
-
-        <div class="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto items-stretch">
-            {{-- Yang Lain --}}
-            <div class="flex-1 bg-white border border-slate-100 rounded-3xl p-8 md:p-10 shadow-sm opacity-80 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-red-50 opacity-50 rounded-bl-full"></div>
-                <h3 class="text-xl font-bold text-slate-500 mb-8 relative z-10 flex items-center gap-2"><span class="text-red-400">❌</span> Freelancer / Jasa Biasa</h3>
-                <ul class="space-y-6 relative z-10">
-                    <li class="flex items-start gap-4">
-                        <svg class="w-6 h-6 text-slate-300 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                        <span class="text-slate-500">Harga sering mendadak bengkak di tengah jalan</span>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <svg class="w-6 h-6 text-slate-300 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                        <span class="text-slate-500">Pengerjaan sering molor jauh dari deadline</span>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <svg class="w-6 h-6 text-slate-300 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                        <span class="text-slate-500">Susah dihubungi & slow respon pas ada error</span>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <svg class="w-6 h-6 text-slate-300 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                        <span class="text-slate-500">Langsung lepas tangan setelah project selesai</span>
-                    </li>
-                </ul>
-            </div>
-
-            {{-- K-Serv --}}
-            <div class="flex-1 bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-10 shadow-2xl relative overflow-hidden transform md:-translate-y-4">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 opacity-20 blur-2xl rounded-full"></div>
-                <div class="absolute -top-4 text-[10px] font-black tracking-widest bg-blue-500 text-white px-4 py-2 rounded-b-xl left-1/2 -translate-x-1/2 uppercase">Pilihan Cerdas</div>
-                
-                <h3 class="text-xl font-bold text-white mb-8 relative z-10 flex items-center gap-2"><span class="text-green-400">✅</span> Bersama K-Serv</h3>
-                <ul class="space-y-6 relative z-10">
-                    <li class="flex items-start gap-4">
-                        <div class="bg-slate-800 p-1 rounded-full shrink-0 mt-0.5"><svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
-                        <span class="text-slate-300 font-medium">Harga jujur & transparan dari awal kesepakatan</span>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <div class="bg-slate-800 p-1 rounded-full shrink-0 mt-0.5"><svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
-                        <span class="text-slate-300 font-medium">Pengerjaan cepat, rapi, & sesuai deadline</span>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <div class="bg-slate-800 p-1 rounded-full shrink-0 mt-0.5"><svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
-                        <span class="text-slate-300 font-medium">Fast respon & siap bantu kapan aja via WhatsApp</span>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <div class="bg-slate-800 p-1 rounded-full shrink-0 mt-0.5"><svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
-                        <span class="text-slate-300 font-medium">Gratis support & maintenance 3 bulan paska rilis!</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
     {{-- ═══════════════════════ CARA KERJA (TIMELINE) ═══════════════════════ --}}
     <section id="cara-kerja" class="max-w-7xl mx-auto px-6 md:px-8 py-24 border-t border-slate-100 bg-slate-50" data-aos="fade-right">
