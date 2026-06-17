@@ -36,8 +36,8 @@
             </div>
 
             <div class="relative rounded-[24px] overflow-hidden shadow-2xl shadow-slate-200/50 border border-slate-100 aspect-video group" data-aos="fade-up">
-                <img src="{{ $portofolio->gambar ?: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800' }}" alt="{{ $portofolio->nama }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
+                <img src="{{ $portofolio->gambar ?: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800' }}" alt="{{ $portofolio->nama }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 rounded-[24px]">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent rounded-[24px]"></div>
             </div>
         </div>
     </header>
@@ -100,8 +100,8 @@
                                 </div>
                                 
                                 @if($fitur->gambar_fitur)
-                                    <div class="w-full bg-slate-50 relative z-0">
-                                        <img src="{{ $fitur->gambar_fitur }}" alt="{{ $fitur->nama_fitur }}" class="w-full h-auto object-contain">
+                                    <div class="w-full bg-slate-50 relative z-0 p-3 md:p-5">
+                                        <img src="{{ $fitur->gambar_fitur }}" alt="{{ $fitur->nama_fitur }}" class="w-full h-auto object-contain rounded-2xl shadow-md border border-slate-200">
                                     </div>
                                 @else
                                     <div class="w-full aspect-video bg-slate-50 flex items-center justify-center text-slate-400 text-sm">
