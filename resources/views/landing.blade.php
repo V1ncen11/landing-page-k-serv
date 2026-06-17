@@ -72,7 +72,7 @@
     </header>
 
     {{-- ═══════════════════════ STATS & KENAPA K-SERV (Combined Background) ═══════════════════════ --}}
-    <section class="w-full bg-slate-50 pt-0 pb-20 relative z-10">
+    <section class="w-full bg-slate-50 flex flex-col pt-0 pb-20 relative z-10">
         
         {{-- Stats Counter (Overlaps Hero) --}}
         <div class="max-w-5xl mx-auto px-6 md:px-8 -mt-20 mb-24 relative z-20">
