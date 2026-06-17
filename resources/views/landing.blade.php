@@ -301,51 +301,6 @@
         </div>
     </section>
 
-    {{-- ═══════════════════════ ALUR KERJA ═══════════════════════ --}}
-    <section class="max-w-7xl mx-auto px-6 md:px-8 py-24 bg-white" data-aos="fade-up">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-slate-900">Alur Kerja K-Serv</h2>
-            <p class="text-slate-500 mt-3 max-w-xl mx-auto">Proses yang simpel, transparan, dan tanpa ribet. Duduk manis, biar kami yang bekerja.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto relative">
-            {{-- Connecting Line (Desktop Only) --}}
-            <div class="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 z-0"></div>
-
-            {{-- Step 1 --}}
-            <div class="relative z-10 flex flex-col items-center text-center group" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-24 h-24 bg-white rounded-full border-8 border-slate-50 shadow-lg shadow-slate-200 flex items-center justify-center mb-6 group-hover:border-slate-100 group-hover:scale-110 transition-all duration-300">
-                    <div class="w-14 h-14 bg-slate-100 rounded-full flex items-center justify-center text-slate-800">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">1. Konsultasi Gratis</h3>
-                <p class="text-slate-500 text-sm leading-relaxed px-4">Ceritakan masalah dan kebutuhan bisnismu. Kami akan memberikan solusi dan penawaran terbaik.</p>
-            </div>
-
-            {{-- Step 2 --}}
-            <div class="relative z-10 flex flex-col items-center text-center group" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-24 h-24 bg-white rounded-full border-8 border-slate-50 shadow-lg shadow-slate-200 flex items-center justify-center mb-6 group-hover:border-slate-100 group-hover:scale-110 transition-all duration-300">
-                    <div class="w-14 h-14 bg-slate-900 rounded-full flex items-center justify-center text-white">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">2. Proses Development</h3>
-                <p class="text-slate-500 text-sm leading-relaxed px-4">Tim ahli kami langsung mengerjakan UI/UX & coding website sesuai dengan kesepakatan.</p>
-            </div>
-
-            {{-- Step 3 --}}
-            <div class="relative z-10 flex flex-col items-center text-center group" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-24 h-24 bg-white rounded-full border-8 border-slate-50 shadow-lg shadow-slate-200 flex items-center justify-center mb-6 group-hover:border-slate-100 group-hover:scale-110 transition-all duration-300">
-                    <div class="w-14 h-14 bg-slate-100 rounded-full flex items-center justify-center text-slate-800">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">3. Review & Launching</h3>
-                <p class="text-slate-500 text-sm leading-relaxed px-4">Website direview bersama. Jika sudah OK, website langsung di-online-kan ke publik!</p>
-            </div>
-        </div>
-    </section>
 
     {{-- ═══════════════════════ CARA KERJA (TIMELINE) ═══════════════════════ --}}
     <section id="cara-kerja" class="max-w-7xl mx-auto px-6 md:px-8 py-24 border-t border-slate-100 bg-slate-50" data-aos="fade-right">
@@ -439,7 +394,7 @@
         <div class="max-w-7xl mx-auto px-6 md:px-8">
             <div class="text-center mb-14">
                 <h2 class="text-3xl font-bold text-slate-900">Kata Mereka tentang K-Serv</h2>
-                <p class="text-slate-500 mt-3 max-w-xl mx-auto">Ratusan klien sudah percaya kami. Ini yang mereka bilang.</p>
+                <p class="text-slate-500 mt-3 max-w-xl mx-auto">Beberapa klien sudah mempercayakan kebutuhan digitalnya kepada K-Serv.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
