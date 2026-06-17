@@ -335,10 +335,10 @@
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" class="w-12 h-12 md:w-16 md:h-16 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 group-hover:drop-shadow-[0_10px_20px_rgba(0,97,138,0.3)] transition-all duration-300" alt="MySQL" />
                 <span class="text-xs font-bold text-transparent group-hover:text-blue-700 transition-colors duration-300">MySQL</span>
             </div>
-            {{-- AWS --}}
+            {{-- Figma --}}
             <div class="flex flex-col items-center gap-3 group cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" class="w-12 h-12 md:w-20 md:h-16 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 group-hover:drop-shadow-[0_10px_20px_rgba(255,153,0,0.3)] transition-all duration-300 object-contain" alt="AWS" />
-                <span class="text-xs font-bold text-transparent group-hover:text-orange-500 transition-colors duration-300">AWS</span>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" class="w-12 h-12 md:w-16 md:h-16 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 group-hover:drop-shadow-[0_10px_20px_rgba(242,78,30,0.3)] transition-all duration-300" alt="Figma" />
+                <span class="text-xs font-bold text-transparent group-hover:text-pink-500 transition-colors duration-300">Figma</span>
             </div>
         </div>
     </section>
