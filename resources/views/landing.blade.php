@@ -79,20 +79,20 @@
             <div class="bg-white border border-slate-100 rounded-[28px] shadow-xl p-8 md:p-10">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                     <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
-                        <div class="text-3xl md:text-4xl font-black text-slate-900 counter group-hover:scale-110 transition-transform duration-300" data-target="15" data-suffix="+">0</div>
+                        <div class="text-3xl md:text-4xl font-black text-slate-900 counter group-hover:scale-110 transition-transform duration-300" data-target="15" data-suffix="+">15+</div>
                         <div class="text-slate-500 text-sm font-medium mt-1">Proyek Selesai</div>
                     </div>
                     <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="text-3xl md:text-4xl font-black text-slate-900 counter group-hover:scale-110 transition-transform duration-300" data-target="15" data-suffix="+">0</div>
+                        <div class="text-3xl md:text-4xl font-black text-slate-900 counter group-hover:scale-110 transition-transform duration-300" data-target="15" data-suffix="+">15+</div>
                         <div class="text-slate-500 text-sm font-medium mt-1">Klien Puas</div>
                     </div>
                     <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
-                        <div class="text-3xl md:text-4xl font-black text-slate-900 counter group-hover:scale-110 transition-transform duration-300" data-target="5" data-suffix="+">0</div>
+                        <div class="text-3xl md:text-4xl font-black text-slate-900 counter group-hover:scale-110 transition-transform duration-300" data-target="5" data-suffix="+">5+</div>
                         <div class="text-slate-500 text-sm font-medium mt-1">Jenis Layanan</div>
                     </div>
                     <div class="text-center group" data-aos="fade-up" data-aos-delay="400">
                         <div class="text-3xl md:text-4xl font-black text-slate-900 flex items-center justify-center gap-1 group-hover:scale-110 transition-transform duration-300">
-                            <span class="counter" data-target="100" data-suffix="">0</span><span>%</span>
+                            <span class="counter" data-target="100" data-suffix="">100</span><span>%</span>
                         </div>
                         <div class="text-slate-500 text-sm font-medium mt-1">Garansi Revisi</div>
                     </div>
