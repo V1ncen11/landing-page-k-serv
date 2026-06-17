@@ -41,13 +41,13 @@
         
         {{-- Localized Shadow (Foolproof inline CSS radial gradient exactly behind the text) --}}
         <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div class="w-full max-w-5xl h-[500px]" style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 40%, transparent 70%);"></div>
+            <div style="width: 100%; max-width: 1000px; height: 500px; background: radial-gradient(ellipse at center, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 70%);"></div>
         </div>
 
         {{-- Content --}}
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto" data-aos="fade-up">
-            <h1 class="text-3xl md:text-5xl lg:text-6xl font-light text-white mb-8 leading-[1.4] tracking-wide drop-shadow-md">
-                Bangun sistem digital <span class="font-signature text-rose-400 font-normal text-5xl md:text-7xl lg:text-8xl inline-block transform -rotate-3 translate-y-3 px-1">impianmu</span><br class="hidden md:block"> tanpa perlu ribet.
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-light text-white mb-8 leading-[1.4] tracking-wide" style="text-shadow: 0 4px 20px rgba(0,0,0,1), 0 0 40px rgba(0,0,0,0.8);">
+                Bangun sistem digital <span class="font-signature text-rose-400 font-normal text-5xl md:text-7xl lg:text-8xl inline-block transform -rotate-3 translate-y-3 px-1" style="text-shadow: 0 4px 15px rgba(0,0,0,0.8);">impianmu</span><br class="hidden md:block"> tanpa perlu ribet.
             </h1>
             <div class="flex flex-col sm:flex-row gap-6 md:gap-10 justify-center mt-12 items-center">
                 <a href="#katalog" class="text-white font-medium text-sm md:text-base hover:text-rose-300 transition-colors tracking-widest uppercase pb-1 border-b border-transparent hover:border-rose-300">
