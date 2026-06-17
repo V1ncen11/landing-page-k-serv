@@ -29,17 +29,17 @@
             {{-- ═══════════════════════ HERO ═══════════════════════ --}}
     <header id="beranda" class="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden bg-black" style="height: 100vh;">
         {{-- Background Image (Elegant aesthetic vibe) --}}
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" 
-             srcset="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600 600w,
-                     https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200 1200w,
-                     https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000 2000w"
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200" 
+             srcset="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600 600w,
+                     https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200 1200w,
+                     https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=2000 2000w"
              sizes="100vw"
              fetchpriority="high"
              alt="Creative Workspace" 
-             class="absolute inset-0 w-full h-full object-cover opacity-60">
+             class="absolute inset-0 w-full h-full object-cover opacity-70">
         
         {{-- Overlay gradient for readability --}}
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/70"></div>
+        <div class="absolute inset-0 bg-black/60 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
 
         {{-- Content --}}
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto" data-aos="fade-up">
