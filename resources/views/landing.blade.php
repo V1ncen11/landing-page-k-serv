@@ -28,10 +28,10 @@
 
             {{-- ═══════════════════════ HERO ═══════════════════════ --}}
     <header id="beranda" class="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden bg-black" style="height: 100vh;">
-        {{-- Pure CSS Premium Dark Abstract Background --}}
-        <div class="absolute inset-0 w-full h-full bg-black" style="background: radial-gradient(circle at 50% -20%, #1e293b 0%, #020617 60%, #000000 100%);">
-            {{-- Subtle Noise Texture for Premium Feel --}}
-            <div class="absolute inset-0 opacity-[0.05] mix-blend-screen" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+        {{-- Sleek Monochrome Tailwind Background --}}
+        <div class="absolute inset-0 w-full h-full bg-slate-950">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-black"></div>
+            <div class="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-slate-800/30 to-transparent"></div>
         </div>
 
         {{-- Content --}}
