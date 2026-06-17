@@ -100,8 +100,8 @@
                                 </div>
                                 
                                 @if($fitur->gambar_fitur)
-                                    <div class="w-full bg-slate-50 relative z-0 p-3 md:p-5">
-                                        <img src="{{ $fitur->gambar_fitur }}" alt="{{ $fitur->nama_fitur }}" class="w-full h-auto object-contain rounded-2xl shadow-md border border-slate-200">
+                                    <div class="w-full bg-slate-50 relative z-0 p-3 md:p-5 flex justify-center">
+                                        <img src="{{ $fitur->gambar_fitur }}" alt="{{ $fitur->nama_fitur }}" class="max-w-full max-h-[600px] w-auto h-auto object-contain rounded-xl shadow-md border border-slate-200">
                                     </div>
                                 @else
                                     <div class="w-full aspect-video bg-slate-50 flex items-center justify-center text-slate-400 text-sm">
