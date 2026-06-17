@@ -48,40 +48,40 @@
         </div>
 
         {{-- Content --}}
-        <div class="relative z-10 text-center px-4 max-w-6xl mx-auto" data-aos="fade-up">
+        <div class="relative z-10 text-center px-4 max-w-6xl mx-auto mb-16 md:mb-24" data-aos="fade-up">
 
             <h1 class="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-6 leading-[1.5] tracking-wide" style="text-shadow: 0 4px 15px rgba(0,0,0,0.4), 0 0 25px rgba(0,0,0,0.3);">
                 Bangun sistem digital <span class="font-signature text-rose-400 font-normal text-4xl md:text-6xl lg:text-7xl inline-block transform -rotate-3 translate-y-2 px-1" style="text-shadow: 0 4px 12px rgba(0,0,0,0.3);">impianmu</span><br class="hidden md:block"> tanpa perlu ribet.
             </h1>
             
             {{-- Sub-headline (What we sell) --}}
-            <p class="text-sm md:text-lg max-w-2xl mx-auto mb-10 font-light leading-relaxed" style="color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
+            <p class="text-base md:text-xl max-w-xl mx-auto mb-10 font-light" style="color: white; line-height: 1.8; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
                 Tingkatkan skala bisnis Anda dengan website profesional, aplikasi custom, dan sistem informasi yang dirancang khusus untuk kebutuhan perusahaan Anda.
             </p>
 
             {{-- Original Simple Buttons --}}
             <div class="flex flex-col sm:flex-row gap-6 md:gap-10 justify-center items-center">
-                <a href="#katalog" class="text-white font-medium text-sm md:text-base hover:text-rose-300 transition-colors tracking-widest uppercase pb-1 border-b border-transparent hover:border-rose-300">
+                <a href="#katalog" class="text-white font-medium text-sm md:text-base hover:text-rose-300 transition-colors tracking-widest uppercase pb-1 border-b border-transparent hover:border-rose-300" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
                     Lihat Katalog
                 </a>
 
-                <a href="https://wa.me/6287870402431" target="_blank" class="text-white font-medium text-sm md:text-base hover:text-rose-300 transition-colors tracking-widest uppercase pb-1 border-b border-transparent hover:border-rose-300">
+                <a href="https://wa.me/6287870402431" target="_blank" class="text-white font-medium text-sm md:text-base hover:text-rose-300 transition-colors tracking-widest uppercase pb-1 border-b border-transparent hover:border-rose-300" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
                     Konsultasi Gratis
                 </a>
             </div>
             
             {{-- Trust Signal / Features --}}
-            <div class="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4 text-xs md:text-sm font-medium" style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
+            <div class="mt-14 flex flex-wrap justify-center gap-x-12 gap-y-6 text-sm md:text-base font-medium" style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
                 <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <svg class="w-5 h-5 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                     Desain Premium
                 </div>
                 <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <svg class="w-5 h-5 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                     Bebas Revisi
                 </div>
                 <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <svg class="w-5 h-5 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                     Gratis Maintenance
                 </div>
             </div>
