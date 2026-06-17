@@ -67,49 +67,80 @@
     @endif
 
     {{-- DETAIL FITUR --}}
-    <section class="max-w-5xl mx-auto px-6 md:px-8 py-24">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 text-xs font-black rounded-full uppercase tracking-widest mb-4">Fitur Lengkap</span>
-            <h2 class="text-3xl font-bold text-slate-900">Apa aja sih isi sistem ini?</h2>
-            <p class="text-slate-500 mt-3 max-w-xl mx-auto">Berikut ini adalah screenshot dan penjelasan detail untuk setiap fitur yang ada di sistem {{ $portofolio->nama }}.</p>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-24 relative overflow-hidden">
+        {{-- Background aksen biru tipis di pinggiran layarnya --}}
+        <div class="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-blue-600/20 via-blue-400/5 to-transparent"></div>
+        <div class="absolute top-0 right-0 w-1.5 h-full bg-gradient-to-b from-blue-600/20 via-blue-400/5 to-transparent"></div>
+
+        <div class="text-center mb-24" data-aos="fade-up">
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">Eksplorasi Fitur</h2>
+            <p class="text-slate-500 mt-4 max-w-2xl mx-auto text-lg">Dokumentasi antarmuka dan penjelasan detail untuk setiap modul sistem pada {{ $portofolio->nama }}.</p>
         </div>
 
-        <div class="space-y-24">
-            @forelse($fiturs as $index => $fitur)
-            <div class="flex flex-col {{ $index % 2 == 1 ? 'md:flex-row-reverse' : 'md:flex-row' }} gap-10 items-center" data-aos="fade-up">
-                
-                {{-- Gambar Screenshot --}}
-                <div class="w-full md:w-1/2 relative">
-                    <div class="absolute inset-0 bg-blue-100/50 rounded-3xl transform translate-x-3 translate-y-3 -z-10"></div>
-                    <div class="bg-white rounded-2xl shadow-xl shadow-slate-200 border border-slate-100 overflow-hidden relative group">
-                        {{-- Mac style header --}}
-                        <div class="bg-slate-100 px-4 py-2.5 flex items-center gap-2 border-b border-slate-200">
-                            <div class="w-3 h-3 rounded-full bg-rose-400"></div>
-                            <div class="w-3 h-3 rounded-full bg-amber-400"></div>
-                            <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
-                        </div>
-                        @if($fitur->gambar_fitur)
-                            <img src="{{ $fitur->gambar_fitur }}" alt="{{ $fitur->nama_fitur }}" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
-                        @else
-                            <div class="w-full aspect-video bg-slate-50 flex items-center justify-center text-slate-400">
-                                Screenshot belum tersedia
-                            </div>
-                        @endif
-                    </div>
-                </div>
+        <div class="relative z-10">
+            {{-- Garis Tengah Timeline (Hanya Desktop) --}}
+            <div class="hidden md:block absolute left-1/2 top-4 bottom-4 w-0.5 bg-gradient-to-b from-slate-200 via-blue-200 to-slate-100 transform -translate-x-1/2"></div>
 
-                {{-- Penjelasan Fitur --}}
-                <div class="w-full md:w-1/2 flex flex-col justify-center">
-                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 font-black text-xl mb-6 shadow-sm border border-blue-100">
-                        {{ $index + 1 }}
+            <div class="space-y-16 md:space-y-0">
+                @forelse($fiturs as $index => $fitur)
+                <div class="relative group/timeline" data-aos="fade-up">
+                    <div class="grid grid-cols-1 md:grid-cols-11 gap-8 md:gap-0 items-center md:py-16">
+                        
+                        {{-- Gambar Screenshot --}}
+                        <div class="md:col-span-5 {{ $index % 2 == 1 ? 'md:order-3 md:pl-10' : 'md:order-1 md:pr-10' }}">
+                            <div class="bg-white rounded-2xl shadow-lg shadow-slate-200/60 border border-slate-200 overflow-hidden group-hover/timeline:-translate-y-2 group-hover/timeline:shadow-2xl group-hover/timeline:shadow-blue-200/50 transition-all duration-500 relative">
+                                {{-- Aksen biru di sisi gambar --}}
+                                <div class="absolute top-0 bottom-0 {{ $index % 2 == 1 ? 'right-0' : 'left-0' }} w-1 bg-gradient-to-b from-blue-400 to-blue-600 z-20"></div>
+                                
+                                {{-- Mac style header --}}
+                                <div class="bg-slate-50/90 px-4 py-2.5 flex items-center gap-2 border-b border-slate-200/80 backdrop-blur-sm relative z-10 {{ $index % 2 == 1 ? 'flex-row-reverse pr-5' : 'pl-5' }}">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-rose-400"></div>
+                                    <div class="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
+                                    <div class="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
+                                </div>
+                                
+                                @if($fitur->gambar_fitur)
+                                    <div class="w-full bg-slate-50 relative z-0">
+                                        <img src="{{ $fitur->gambar_fitur }}" alt="{{ $fitur->nama_fitur }}" class="w-full h-auto object-contain">
+                                    </div>
+                                @else
+                                    <div class="w-full aspect-video bg-slate-50 flex items-center justify-center text-slate-400 text-sm">
+                                        Screenshot belum tersedia
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
+
+                        {{-- Node Timeline (Titik Tengah) --}}
+                        <div class="hidden md:flex md:col-span-1 justify-center relative md:order-2">
+                            <div class="w-12 h-12 rounded-full bg-white border-4 border-blue-50 text-blue-600 font-black text-lg flex items-center justify-center relative z-10 shadow-lg shadow-blue-100/50 group-hover/timeline:scale-110 group-hover/timeline:border-blue-100 group-hover/timeline:bg-blue-600 group-hover/timeline:text-white transition-all duration-300">
+                                {{ $index + 1 }}
+                            </div>
+                            {{-- Garis putus-putus ke konten --}}
+                            <div class="absolute top-1/2 -translate-y-1/2 w-full h-px border-t-2 border-dashed border-slate-200 -z-10 group-hover/timeline:border-blue-300 transition-colors duration-500"></div>
+                        </div>
+
+                        {{-- Teks Penjelasan --}}
+                        <div class="md:col-span-5 flex flex-col justify-center items-start text-left {{ $index % 2 == 1 ? 'md:order-1 md:pr-10' : 'md:order-3 md:pl-10' }}">
+                            
+                            {{-- Angka untuk Mobile Only --}}
+                            <div class="md:hidden inline-flex items-center justify-center w-8 h-8 rounded-lg bg-blue-50 text-blue-600 font-bold text-sm mb-4 border border-blue-100">
+                                {{ sprintf('%02d', $index + 1) }}
+                            </div>
+
+                            {{-- Label/Tag --}}
+                            <span class="inline-block px-3 py-1 bg-slate-100 text-slate-500 font-bold tracking-widest text-[10px] uppercase rounded-md mb-3 border border-slate-200 group-hover/timeline:bg-blue-50 group-hover/timeline:text-blue-600 group-hover/timeline:border-blue-200 transition-colors duration-300">
+                                Highlight Modul
+                            </span>
+                            
+                            <h3 class="text-2xl font-bold text-slate-900 mb-4 leading-snug group-hover/timeline:text-blue-700 transition-colors duration-300">{{ $fitur->nama_fitur }}</h3>
+                            <div class="text-slate-600 text-base leading-relaxed prose prose-sm prose-slate max-w-none text-left">
+                                {!! nl2br(e($fitur->deskripsi_fitur)) !!}
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">{{ $fitur->nama_fitur }}</h3>
-                    <p class="text-slate-600 leading-relaxed">
-                        {!! nl2br(e($fitur->deskripsi_fitur)) !!}
-                    </p>
                 </div>
-            </div>
-            @empty
+                @empty
             <div class="text-center py-20 bg-slate-50 rounded-3xl border border-slate-100">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-slate-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
