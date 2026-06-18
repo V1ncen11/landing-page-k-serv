@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>K-SERV | Jasa Pembuatan Website & Sistem Web Custom</title>
-    <meta name="description" content="K-SERV melayani jasa pembuatan website company profile, landing page promosi, dan sistem web custom profesional. Gratis domain & hosting super cepat.">
+    <title>K-SERV (KServ) - Jasa Pembuatan Website</title>
+    <meta name="description" content="K-SERV (kserv) adalah agensi developer di Singaparna, Tasikmalaya. Menyediakan jasa pembuatan website company profile, landing page promosi, aplikasi ujian online, dan sistem web custom profesional. Gratis domain & hosting.">
     <meta name="keywords" content="jasa pembuatan website, bikin web company profile, jasa landing page, aplikasi ujian, sistem web custom, web developer, k-serv, pembuatan website murah, kserv">
     <meta name="author" content="Kevin Nurachman">
 
