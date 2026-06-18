@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:title" content="K-SERV (KServ) - Jasa Pembuatan Website">
-    <meta property="og:description" content="K-SERV melayani jasa pembuatan website company profile, landing page promosi, dan sistem web custom profesional. Gratis domain & hosting.">
+    <meta property="og:description" content="K-SERV (kserv) adalah agensi developer di Singaparna, Tasikmalaya. Menyediakan jasa pembuatan website company profile, landing page promosi, aplikasi ujian online, dan sistem web custom profesional. Gratis domain & hosting.">
     <meta property="og:image" content="{{ asset('images/favicon.png') }}">
     <meta name="theme-color" content="#f8fafc">
     
