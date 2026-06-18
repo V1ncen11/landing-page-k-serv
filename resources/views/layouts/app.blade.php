@@ -6,12 +6,12 @@
     
     <title>K-SERV | Jasa Pembuatan Website & Sistem Web Custom</title>
     <meta name="description" content="K-SERV melayani jasa pembuatan website company profile, landing page promosi, dan sistem web custom profesional. Gratis domain & hosting super cepat.">
-    <meta name="keywords" content="jasa pembuatan website, bikin web company profile, jasa landing page, sistem web custom, web developer, k-serv, pembuatan website murah">
+    <meta name="keywords" content="jasa pembuatan website, bikin web company profile, jasa landing page, aplikasi ujian, sistem web custom, web developer, k-serv, pembuatan website murah, kserv">
     <meta name="author" content="Kevin Nurachman">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="K-SERV | Jasa Pembuatan Website & Sistem Web Custom">
+    <meta property="og:title" content="K-SERV | Jasa Pembuatan Website">
     <meta property="og:description" content="K-SERV melayani jasa pembuatan website company profile, landing page promosi, dan sistem web custom profesional. Gratis domain & hosting.">
     <meta property="og:image" content="{{ asset('images/favicon.png') }}">
     <meta name="theme-color" content="#f8fafc">
