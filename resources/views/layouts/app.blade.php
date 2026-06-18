@@ -11,12 +11,11 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="K-SERV | Jasa Pembuatan Website">
+    <meta property="og:title" content="K-SERV (KServ) - Jasa Pembuatan Website">
     <meta property="og:description" content="K-SERV melayani jasa pembuatan website company profile, landing page promosi, dan sistem web custom profesional. Gratis domain & hosting.">
     <meta property="og:image" content="{{ asset('images/favicon.png') }}">
     <meta name="theme-color" content="#f8fafc">
     
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23ffffff'/><text x='50%' y='50%' font-family='Arial, sans-serif' font-size='65' font-weight='bold' fill='%23000000' text-anchor='middle' dominant-baseline='central'>K</text></svg>">
 
   
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -32,8 +31,8 @@
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
     
-    {{-- Favicon sudah diperbaiki dari pavicon ke favicon --}}
-    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}?v=2">
+    {{-- Favicon K hitam (seperti logo iPhone) --}}
+    <link rel="icon" type="image/svg+xml" href="{{ asset('images/favicon.svg') }}?v=6">
     <link rel="canonical" href="{{ url()->current() }}">
     
     <style> 
