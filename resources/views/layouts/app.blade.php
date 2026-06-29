@@ -13,7 +13,7 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:title" content="K-SERV (KServ) - Jasa Pembuatan Website">
     <meta property="og:description" content="K-SERV (kserv) adalah agensi developer di Singaparna, Tasikmalaya. Menyediakan jasa pembuatan website company profile, landing page promosi, aplikasi ujian online, dan sistem web custom profesional. Gratis domain & hosting.">
-    <meta property="og:image" content="{{ asset('images/favicon.png') }}">
+    <meta property="og:image" content="{{ asset('images/favicon.svg') }}">
     <meta name="theme-color" content="#f8fafc">
     
 
@@ -31,8 +31,8 @@
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
     
-    {{-- Favicon K hitam (seperti logo iPhone) --}}
-    <link rel="icon" type="image/svg+xml" href="{{ asset('images/favicon.svg') }}?v=6">
+    {{-- Favicon --}}
+    <link rel="icon" type="image/svg+xml" href="{{ asset('images/favicon.svg') }}?v=7">
     <link rel="canonical" href="{{ url()->current() }}">
     
     <style> 
