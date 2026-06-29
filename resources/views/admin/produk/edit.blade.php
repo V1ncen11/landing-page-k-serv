@@ -91,13 +91,13 @@
                 </div>
             </div>
 
-            {{-- Link Pemesanan --}}
+            {{-- Link Pemesanan / Link Website --}}
             <div>
-                <label class="block text-sm font-bold text-slate-700 mb-2">Link Pemesanan <span class="text-slate-400 font-normal">(URL WhatsApp / Tokopedia dll.)</span></label>
+                <label class="block text-sm font-bold text-slate-700 mb-2" id="label-link">Link Pemesanan <span class="text-slate-400 font-normal">(URL WhatsApp / Tokopedia dll.)</span></label>
                 <input type="url" name="link" value="{{ old('link', $produk->link) }}"
                     class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500"
-                    placeholder="https://wa.me/62...">
-                <p class="text-xs text-slate-400 mt-1 italic">Kosongkan jika ingin pakai link WA default.</p>
+                    placeholder="https://...">
+                <p class="text-xs text-slate-400 mt-1 italic" id="helper-link">Kosongkan jika ingin pakai link WA default.</p>
             </div>
 
             <div class="flex gap-4 pt-4">
@@ -139,6 +139,17 @@
             const val = kategoriSelect.value;
             spesifikasiBox.style.display = (val === 'Jasa') ? 'block' : 'none';
             gambarBox.style.display      = (val === 'Portofolio') ? 'block' : 'none';
+
+            const labelLink = document.getElementById('label-link');
+            const helperLink = document.getElementById('helper-link');
+            
+            if (val === 'Portofolio') {
+                labelLink.innerHTML = 'Link Website Portofolio <span class="text-slate-400 font-normal">(opsional)</span>';
+                helperLink.innerHTML = 'Masukkan link website portofolio agar bisa dikunjungi. Kosongkan jika tidak ada.';
+            } else {
+                labelLink.innerHTML = 'Link Pemesanan <span class="text-slate-400 font-normal">(URL WhatsApp / Tokopedia dll.)</span>';
+                helperLink.innerHTML = 'Kosongkan jika ingin pakai link WA default.';
+            }
         }
 
         kategoriSelect.addEventListener('change', toggleFields);

@@ -27,11 +27,18 @@
                 <p class="text-lg text-slate-500 leading-relaxed mb-8">
                     {{ $portofolio->deskripsi }}
                 </p>
-                <div class="flex items-center gap-4">
+                <div class="flex flex-wrap items-center gap-4">
                     <a href="https://wa.me/6287870402431?text=Halo%20K-Serv,%20saya%20tertarik%20bikin%20sistem%20mirip%20{{ urlencode($portofolio->nama) }}" target="_blank" class="px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-black hover:scale-105 transition-all shadow-xl shadow-slate-200 text-center flex items-center gap-2">
                         Pesan Sistem Serupa
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
+                    
+                    @if($portofolio->link && strpos($portofolio->link, 'wa.me') === false)
+                    <a href="{{ $portofolio->link }}" target="_blank" class="px-8 py-4 bg-white text-slate-900 border border-slate-200 font-bold rounded-2xl hover:bg-slate-50 hover:scale-105 transition-all shadow-sm text-center flex items-center gap-2">
+                        Kunjungi Website
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                    @endif
                 </div>
             </div>
 

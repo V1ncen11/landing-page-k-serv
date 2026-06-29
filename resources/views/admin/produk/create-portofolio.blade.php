@@ -23,7 +23,15 @@
             {{-- Hidden fields - otomatis untuk portofolio --}}
             <input type="hidden" name="kategori" value="Portofolio">
             <input type="hidden" name="harga" value="-">
-            <input type="hidden" name="link" value="https://wa.me/6287870402431">
+
+            {{-- Link Website --}}
+            <div>
+                <label class="block text-sm font-bold text-slate-700 mb-2">Link Website Portofolio <span class="font-normal text-slate-400">(opsional)</span></label>
+                <input type="url" name="link"
+                    class="w-full rounded-xl border-slate-200 focus:border-purple-500 focus:ring-purple-500"
+                    placeholder="https://contoh-website.com">
+                <p class="text-[11px] text-slate-400 mt-2 italic">Masukkan link website portofolio agar bisa dikunjungi. Kosongkan jika tidak ada.</p>
+            </div>
 
             {{-- Nama Proyek --}}
             <div>

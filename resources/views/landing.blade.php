@@ -290,7 +290,7 @@
                             <h4 class="text-white font-bold text-lg leading-tight">{{ $item->nama }}</h4>
                             <p class="text-slate-300 text-xs mt-2 line-clamp-2 leading-relaxed">{{ $item->deskripsi }}</p>
                             <div class="mt-4 flex items-center gap-2 text-white text-xs font-bold bg-white/20 w-fit px-3 py-1.5 rounded-full backdrop-blur-sm">
-                                Lihat Detail
+                                Kunjungi
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" /></svg>
                             </div>
                         </div>
