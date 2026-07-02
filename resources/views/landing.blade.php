@@ -303,7 +303,7 @@
                 {{-- Step 1 --}}
                 <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-right">
-                    <img src="/images/flat_registration.png" alt="Konsultasi Gratis" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                    <img src="/images/konsultasi_gratis_kserv.png" alt="Konsultasi Gratis" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
                     <div class="inline-block bg-slate-900 text-white font-black px-4 py-1 rounded-full text-sm mb-4">Langkah 1</div>
@@ -315,7 +315,7 @@
                 {{-- Step 2 --}}
                 <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-left">
-                    <img src="/images/flat_speed.png" alt="Pengerjaan Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                    <img src="/images/pengerjaan_cepat_kserv.png" alt="Pengerjaan Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
                     <div class="inline-block bg-slate-900 text-white font-black px-4 py-1 rounded-full text-sm mb-4">Langkah 2</div>
@@ -327,7 +327,7 @@
                 {{-- Step 3 --}}
                 <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-right">
-                    <img src="/images/flat_trust.png" alt="Serah Terima & Revisi" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                    <img src="/images/serah_terima_kserv.png" alt="Serah Terima & Revisi" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
                     <div class="inline-block bg-slate-900 text-white font-black px-4 py-1 rounded-full text-sm mb-4">Langkah 3</div>
