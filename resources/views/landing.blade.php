@@ -71,35 +71,9 @@
         </div>
     </header>
 
-    {{-- ═══════════════════════ STATS & KENAPA K-SERV (Combined Background) ═══════════════════════ --}}
-    <section class="w-full bg-slate-50 flex flex-col pt-0 pb-20 relative z-10">
+    {{-- ═══════════════════════ KENAPA K-SERV (Combined Background) ═══════════════════════ --}}
+    <section class="w-full bg-slate-50 flex flex-col py-24 relative z-10">
         
-        {{-- Stats Counter (Overlaps Hero) --}}
-        <div class="max-w-5xl mx-auto px-6 md:px-8 mt-10 mb-24 relative z-20">
-            <div class="bg-white border border-slate-100 rounded-[28px] shadow-xl p-8 md:p-10">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-                    <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
-                        <div class="text-3xl md:text-4xl font-black text-slate-900 counter group-hover:scale-110 transition-transform duration-300" data-target="15" data-suffix="+">15+</div>
-                        <div class="text-slate-500 text-sm font-medium mt-1">Proyek Selesai</div>
-                    </div>
-                    <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="text-3xl md:text-4xl font-black text-slate-900 counter group-hover:scale-110 transition-transform duration-300" data-target="15" data-suffix="+">15+</div>
-                        <div class="text-slate-500 text-sm font-medium mt-1">Klien Puas</div>
-                    </div>
-                    <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
-                        <div class="text-3xl md:text-4xl font-black text-slate-900 counter group-hover:scale-110 transition-transform duration-300" data-target="5" data-suffix="+">5+</div>
-                        <div class="text-slate-500 text-sm font-medium mt-1">Jenis Layanan</div>
-                    </div>
-                    <div class="text-center group" data-aos="fade-up" data-aos-delay="400">
-                        <div class="text-3xl md:text-4xl font-black text-slate-900 flex items-center justify-center gap-1 group-hover:scale-110 transition-transform duration-300">
-                            <span class="counter" data-target="100" data-suffix="">100</span><span>%</span>
-                        </div>
-                        <div class="text-slate-500 text-sm font-medium mt-1">Garansi Revisi</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         {{-- Kenapa Harus K-Serv? --}}
         <div class="max-w-6xl mx-auto px-6 md:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
