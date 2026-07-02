@@ -298,53 +298,42 @@
             <p class="text-slate-500 mt-3">Proses cepat dan transparan buat setiap kebutuhan digitalmu.</p>
         </div>
 
-        <div class="relative max-w-4xl mx-auto">
-            {{-- Garis tengah --}}
-            <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-slate-200 -translate-x-1/2"></div>
-            
-            {{-- Step 1 --}}
-            <div class="relative flex flex-col md:flex-row justify-between items-center w-full mb-16 group" data-aos="fade-up">
-                <div class="order-1 md:w-5/12 text-center md:text-right pr-0 md:pr-12">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Konsultasi Gratis</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Klik tombol pesan, ceritakan kebutuhanmu lewat WhatsApp. Bebas nanya apa aja, mumpung gratis!</p>
+        <div class="max-w-6xl mx-auto px-6 md:px-8 mt-12">
+            <div class="flex flex-col gap-24">
+                {{-- Step 1 --}}
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
+                  <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-right">
+                    <img src="/images/flat_registration.png" alt="Konsultasi Gratis" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                  </div>
+                  <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
+                    <div class="inline-block bg-slate-900 text-white font-black px-4 py-1 rounded-full text-sm mb-4">Langkah 1</div>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Konsultasi Gratis</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed">Klik tombol pesan, ceritakan kebutuhanmu lewat WhatsApp. Bebas nanya apa aja, mumpung gratis! Kita bahas sampai nemu solusi yang pas.</p>
+                  </div>
                 </div>
-                <div class="order-2 w-16 h-16 rounded-full bg-slate-900 border-4 border-slate-50 text-white flex items-center justify-center font-black text-2xl z-10 shadow-xl shadow-slate-300 group-hover:scale-110 transition-transform my-6 md:my-0">1</div>
-                <div class="order-3 md:w-5/12 pl-0 md:pl-12 hidden md:block">
-                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 text-sm text-slate-500 italic relative">
-                        <div class="absolute top-1/2 -left-2 w-4 h-4 bg-white border-b border-l border-slate-200 rotate-45 -translate-y-1/2"></div>
-                        "Halo min, aku mau dibuatin website undangan pernikahan..."
-                    </div>
-                </div>
-            </div>
 
-            {{-- Step 2 --}}
-            <div class="relative flex flex-col md:flex-row justify-between items-center w-full mb-16 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="order-1 md:w-5/12 pr-0 md:pr-12 hidden md:block text-right">
-                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 text-sm text-slate-500 italic relative">
-                        <div class="absolute top-1/2 -right-2 w-4 h-4 bg-white border-t border-r border-slate-200 rotate-45 -translate-y-1/2"></div>
-                        Proses desain, coding, dan setup server dikerjakan...
-                    </div>
+                {{-- Step 2 --}}
+                <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
+                  <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-left">
+                    <img src="/images/flat_speed.png" alt="Pengerjaan Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                  </div>
+                  <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
+                    <div class="inline-block bg-slate-900 text-white font-black px-4 py-1 rounded-full text-sm mb-4">Langkah 2</div>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Pengerjaan Cepat</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed">Setelah deal, tim developer kita langsung gaskeun ngerjain proyek kamu dengan teliti sesuai deadline yang disepakati bersama.</p>
+                  </div>
                 </div>
-                <div class="order-2 w-16 h-16 rounded-full bg-white border-4 border-slate-900 text-slate-900 flex items-center justify-center font-black text-2xl z-10 shadow-xl shadow-slate-200 group-hover:scale-110 transition-transform my-6 md:my-0">2</div>
-                <div class="order-3 md:w-5/12 text-center md:text-left pl-0 md:pl-12">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Pengerjaan Cepat</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Kita langsung gaskeun ngerjain proyek kamu dengan teliti sesuai deadline yang disepakati.</p>
-                </div>
-            </div>
 
-            {{-- Step 3 --}}
-            <div class="relative flex flex-col md:flex-row justify-between items-center w-full group" data-aos="fade-up" data-aos-delay="200">
-                <div class="order-1 md:w-5/12 text-center md:text-right pr-0 md:pr-12">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Serah Terima &amp; Revisi</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Proyek beres, kita review bareng. Kurang pas? Garansi revisi sampai kamu bener-bener puas!</p>
-                </div>
-                <div class="order-2 w-16 h-16 rounded-full bg-slate-900 border-4 border-slate-50 text-white flex items-center justify-center font-black text-2xl z-10 shadow-xl shadow-slate-300 group-hover:scale-110 transition-transform my-6 md:my-0">3</div>
-                <div class="order-3 md:w-5/12 pl-0 md:pl-12 hidden md:block">
-                    <div class="bg-slate-900 text-white p-4 rounded-2xl border border-slate-900 text-sm font-bold flex items-center gap-3 relative">
-                        <div class="absolute top-1/2 -left-2 w-4 h-4 bg-slate-900 border-b border-l border-slate-900 rotate-45 -translate-y-1/2"></div>
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
-                        Proyek Selesai!
-                    </div>
+                {{-- Step 3 --}}
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
+                  <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-right">
+                    <img src="/images/flat_trust.png" alt="Serah Terima & Revisi" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                  </div>
+                  <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
+                    <div class="inline-block bg-slate-900 text-white font-black px-4 py-1 rounded-full text-sm mb-4">Langkah 3</div>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Serah Terima &amp; Revisi</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed">Proyek beres, kita review bareng. Kurang pas? Tenang, ada garansi revisi sampai kamu bener-bener puas sama hasilnya!</p>
+                  </div>
                 </div>
             </div>
         </div>
