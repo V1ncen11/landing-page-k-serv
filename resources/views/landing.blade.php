@@ -69,7 +69,7 @@
                 {{-- Cepat --}}
                 <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-right">
-                    <img src="/images/kserv_pengerjaan_v3.png" alt="Pengerjaan Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                    <img src="/images/kserv_cepat.svg" alt="Pengerjaan Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Pengerjaan Cepat</h3>
@@ -80,7 +80,7 @@
                 {{-- Garansi Revisi --}}
                 <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-left">
-                    <img src="/images/kserv_garansi_v2.png" alt="Garansi Revisi" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                    <img src="/images/kserv_garansi.svg" alt="Garansi Revisi" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Garansi Revisi</h3>
@@ -91,7 +91,7 @@
                 {{-- Harga Bersahabat --}}
                 <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-right">
-                    <img src="/images/kserv_harga_v2.png" alt="Harga Bersahabat" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                    <img src="/images/kserv_harga.svg" alt="Harga Bersahabat" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Harga Bersahabat</h3>
@@ -102,7 +102,7 @@
                 {{-- Respon Cepat --}}
                 <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-left">
-                    <img src="/images/kserv_respon.png" alt="Respon Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                    <img src="/images/kserv_respon.svg" alt="Respon Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Respon Cepat 24/7</h3>
@@ -282,7 +282,7 @@
                 {{-- Step 1 --}}
                 <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-right">
-                    <img src="/images/timeline_konsultasi.png" alt="Konsultasi Gratis" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                    <img src="/images/timeline_konsultasi.svg" alt="Konsultasi Gratis" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
                     <span class="text-violet-600 font-bold tracking-widest text-sm uppercase mb-2 block">Langkah 1</span>
@@ -294,7 +294,7 @@
                 {{-- Step 2 --}}
                 <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-left">
-                    <img src="/images/timeline_pengerjaan.png" alt="Pengerjaan Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                    <img src="/images/timeline_pengerjaan.svg" alt="Pengerjaan Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
                     <span class="text-violet-600 font-bold tracking-widest text-sm uppercase mb-2 block">Langkah 2</span>
@@ -305,8 +305,8 @@
 
                 {{-- Step 3 --}}
                 <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
-                  <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-right">
-                    <img src="/images/timeline_serah_terima.png" alt="Serah Terima & Revisi" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                  <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-right">
+                    <img src="/images/timeline_serah_terima.svg" alt="Serah Terima & Revisi" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
                     <span class="text-violet-600 font-bold tracking-widest text-sm uppercase mb-2 block">Langkah 3</span>
