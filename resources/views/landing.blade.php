@@ -3,54 +3,44 @@
 
 @section('content')
 <style>
-    /* Elegant fixed navbar for light background */
+    /* Hostinger-style: navbar is always dark navy */
     #mainNav {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        background-color: rgba(255, 255, 255, 0.9) !important;
-        backdrop-filter: blur(10px) !important;
-        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
-        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05) !important;
-        transition: all 0.3s ease-in-out;
-        z-index: 50;
-    }
-    #mainNav .nav-text-color {
-        color: #0f172a !important; /* slate-900 */
-        font-weight: 600 !important;
-    }
-    #mainNav #darkToggle {
-        border-color: rgba(0,0,0,0.1) !important;
-        background-color: rgba(0,0,0,0.05) !important;
-        color: #0f172a !important;
+        background-color: #1a1a2e !important;
+        border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+        box-shadow: none !important;
     }
 </style>
-<div class="bg-white text-slate-900 antialiased">
+<div class="text-slate-900 antialiased">
 
 
 
             {{-- ═══════════════════════ HERO ═══════════════════════ --}}
-    <header id="beranda" class="w-full overflow-hidden relative z-10" style="min-height: 100vh; padding-top: 100px; padding-bottom: 80px; background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 30%, #dbeafe 70%, #eff6ff 100%)">
-        <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <header id="beranda" class="w-full overflow-hidden relative z-10 flex items-center" style="min-height: 100vh; padding-top: 80px; padding-bottom: 80px; background-color: #13111c;">
+        {{-- Subtle dot pattern --}}
+        <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, rgba(103,61,230,0.15) 1px, transparent 1px); background-size: 40px 40px;"></div>
+        {{-- Purple glow top left --}}
+        <div class="absolute top-0 left-0 w-[600px] h-[600px] pointer-events-none" style="background: radial-gradient(circle, rgba(103,61,230,0.2) 0%, transparent 70%);"></div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-8 w-full relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {{-- Text Content --}}
-                <div data-aos="fade-right" class="text-center lg:text-left z-10">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-tight tracking-tight">
-                        Bangun Website Profesional <br class="hidden lg:block"> <span style="background: linear-gradient(135deg, #7c3aed, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">untuk Bisnis Anda</span>
+                <div data-aos="fade-right" class="text-center lg:text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight tracking-tight">
+                        Bangun Website Profesional <br class="hidden lg:block"> untuk <span style="color: #a78bfa;">Bisnis Anda</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-slate-500 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    <p class="text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0" style="color: #94a3b8;">
                         Website profesional dan sistem custom modern yang dirancang khusus untuk mengakselerasi bisnis Anda di era digital.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#katalog" class="px-8 py-4 text-white font-bold rounded-full transition-all duration-300 text-center uppercase tracking-wide text-sm hover:shadow-xl hover:-translate-y-0.5" style="background: linear-gradient(135deg, #7c3aed, #3b82f6); box-shadow: 0 4px 20px rgba(124,58,237,0.4);">
+                        <a href="#katalog" class="px-8 py-4 bg-white text-slate-900 font-black rounded-full hover:bg-gray-100 transition-all duration-300 text-center uppercase tracking-wide text-sm hover:-translate-y-0.5 shadow-lg">
                             Lihat Katalog
                         </a>
-                        <a href="https://wa.me/6287870402431" target="_blank" class="px-8 py-4 bg-white text-violet-700 border-2 border-violet-200 font-bold rounded-full hover:border-violet-500 hover:bg-violet-50 transition-all duration-300 text-center uppercase tracking-wide text-sm shadow-sm">
+                        <a href="https://wa.me/6287870402431" target="_blank" class="px-8 py-4 font-bold rounded-full transition-all duration-300 text-center uppercase tracking-wide text-sm border border-white/30 hover:border-white/60 hover:bg-white/10 text-white">
                             Konsultasi Gratis
                         </a>
                     </div>
+                    <p class="mt-6 text-sm" style="color: #64748b;">&#10003; Garansi revisi &nbsp;&nbsp; &#10003; Fast response 24/7</p>
                 </div>
 
                 {{-- Hero SVG Illustration --}}
@@ -58,14 +48,15 @@
                     <img 
                         src="/images/hero_startup.svg" 
                         alt="Web Development Team" 
-                        class="w-full max-w-[580px] h-auto"
+                        class="w-full max-w-[520px] h-auto opacity-90"
+                        style="filter: drop-shadow(0 0 40px rgba(103,61,230,0.3));"
                     />
                 </div>
             </div>
         </div>
     </header>
 
-    {{-- ═══════════════════════ KENAPA K-SERV (Combined Background) ═══════════════════════ --}}
+    {{-- ═══════════════════════ KENAPA K-SERV ═══════════════════════ --}}
     <section class="w-full bg-white flex flex-col py-24 relative z-10">
         
         {{-- Kenapa Harus K-Serv? --}}
@@ -75,81 +66,60 @@
                 <p class="text-lg text-slate-500">Alasan kenapa ratusan klien mempercayakan proyek digitalnya ke kami.</p>
             </div>
 
-            <div class="flex flex-col gap-24">
-                {{-- Cepat --}}
-                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
-                  <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-right">
-                    <img src="/images/kserv_pengerjaan_v3.png" alt="Pengerjaan Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
-                  </div>
-                  <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
-                    <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Pengerjaan Cepat</h3>
-                    <p class="text-lg text-slate-500 leading-relaxed">Proyek selesai tepat waktu, tanpa molor. Fokus pada deadline yang disepakati agar bisnis kamu bisa segera online tanpa harus menunggu lama.</p>
-                  </div>
+    {{-- ═══════════════════════ KENAPA K-SERV ═══════════════════════ --}}
+    <section class="w-full bg-white flex flex-col py-24 relative z-10">
+        <div class="max-w-6xl mx-auto px-6 md:px-8 w-full">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">Kenapa Harus K-Serv?</h2>
+                <p class="text-lg text-slate-500">Alasan kenapa ratusan klien mempercayakan proyek digitalnya ke kami.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-8 rounded-2xl bg-gray-50 border border-slate-100 hover:shadow-md transition" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-xl" style="background-color: #ede9fe;">⚡</div>
+                    <h3 class="text-lg font-black text-slate-900 mb-2">Pengerjaan Cepat</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Proyek selesai tepat waktu, tanpa molor. Deadline selalu terpenuhi.</p>
                 </div>
-
-                {{-- Garansi Revisi --}}
-                <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
-                  <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-left">
-                    <img src="/images/kserv_garansi_v2.png" alt="Garansi Revisi" class="w-[300px] md:w-[400px] h-auto object-contain" />
-                  </div>
-                  <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
-                    <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Garansi Revisi</h3>
-                    <p class="text-lg text-slate-500 leading-relaxed">Revisi gratis sampai kamu puas dengan hasilnya. Kepuasan klien adalah prioritas utama kami dalam menyelesaikan setiap baris kode.</p>
-                  </div>
+                <div class="p-8 rounded-2xl bg-gray-50 border border-slate-100 hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-xl" style="background-color: #ede9fe;">🛡️</div>
+                    <h3 class="text-lg font-black text-slate-900 mb-2">Garansi Revisi</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Revisi gratis sampai kamu puas. Kepuasan klien prioritas utama kami.</p>
                 </div>
-
-                {{-- Harga Bersahabat --}}
-                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
-                  <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-right">
-                    <img src="/images/kserv_harga_v2.png" alt="Harga Bersahabat" class="w-[300px] md:w-[400px] h-auto object-contain" />
-                  </div>
-                  <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
-                    <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Harga Bersahabat</h3>
-                    <p class="text-lg text-slate-500 leading-relaxed">Kualitas premium skala korporasi tanpa bikin kantong jebol. Kami menawarkan solusi terbaik sesuai dengan budget usahamu.</p>
-                  </div>
+                <div class="p-8 rounded-2xl bg-gray-50 border border-slate-100 hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-xl" style="background-color: #ede9fe;">💰</div>
+                    <h3 class="text-lg font-black text-slate-900 mb-2">Harga Bersahabat</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Kualitas premium tanpa bikin kantong jebol. Solusi terbaik sesuai budget.</p>
                 </div>
-
-                {{-- Respon Cepat --}}
-                <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
-                  <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-left">
-                    <img src="/images/kserv_respon.png" alt="Respon Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
-                  </div>
-                  <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
-                    <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Respon Cepat 24/7</h3>
-                    <p class="text-lg text-slate-500 leading-relaxed">Punya pertanyaan atau butuh update progress proyek? Chat kapan aja, tim developer kami pastikan fast response via WhatsApp.</p>
-                  </div>
+                <div class="p-8 rounded-2xl bg-gray-50 border border-slate-100 hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-xl" style="background-color: #ede9fe;">💬</div>
+                    <h3 class="text-lg font-black text-slate-900 mb-2">Respon Cepat 24/7</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Chat kapan aja, tim kami fast response via WhatsApp.</p>
                 </div>
             </div>
         </div>
     </section>
 
     {{-- ═══════════════════════ KATALOG ═══════════════════════ --}}
-    <section id="katalog" class="max-w-7xl mx-auto px-6 md:px-8 py-20 bg-white" data-aos="fade-up">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
-            <div>
-                <h2 class="text-3xl font-bold text-slate-900">Katalog Layanan & Produk</h2>
-                <p class="text-slate-500 mt-2">Pilih solusi digital terbaik buat kebutuhanmu.</p>
-            </div>
+    <section id="katalog" class="max-w-7xl mx-auto px-6 md:px-8 py-24 bg-white" data-aos="fade-up">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-black text-slate-900">Pilihan Paket Layanan</h2>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             @foreach($produks as $index => $item)
                 @if(strtolower($item->kategori) != 'portofolio')
-                <div class="tilt-card relative bg-white rounded-3xl shadow-sm border border-slate-200 hover:border-violet-400 hover:shadow-xl hover:shadow-violet-100 transition-all duration-300 flex flex-col overflow-hidden group" data-tilt data-tilt-gyroscope="false" data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
-                    {{-- Top border accent --}}
-                    <div class="absolute top-0 left-0 w-full h-1.5 opacity-0 group-hover:opacity-100 transition-opacity" style="background: linear-gradient(90deg, #7c3aed, #3b82f6);"></div>
+                {{-- Hostinger-style card: popular card gets elevated with purple header --}}
+                @php $isPopular = ($index === 1 || strpos(strtolower($item->nama), 'ujian') !== false); @endphp
+                <div class="tilt-card relative bg-white rounded-3xl border transition-all duration-300 flex flex-col overflow-hidden group {{ $isPopular ? 'shadow-2xl border-transparent -translate-y-2' : 'shadow-sm border-slate-200 hover:border-slate-300 hover:shadow-md' }}" data-tilt data-tilt-gyroscope="false" data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
+                    {{-- Hostinger-style: popular card has full purple header bar --}}
+                    @if($isPopular)
+                    <div class="w-full py-3 text-center text-white text-xs font-black uppercase tracking-widest" style="background-color: #673de6;">⭐ Paling Dicari</div>
+                    @endif
 
                     <div class="p-8 flex flex-col h-full">
-                        {{-- Label & Popular Badge --}}
+                        {{-- Label --}}
                         <div class="flex justify-between items-start mb-6">
-                            <span class="px-3 py-1 text-xs font-bold text-violet-700 uppercase bg-violet-50 rounded-md border border-violet-200">
+                            <span class="px-3 py-1 text-xs font-bold uppercase rounded-md {{ $isPopular ? 'text-white' : 'text-slate-600 bg-gray-100' }}" style="{{ $isPopular ? 'background-color:#673de6;' : '' }}">
                                 {{ $item->kategori }}
                             </span>
-                            @if($index === 1 || strpos(strtolower($item->nama), 'ujian') !== false)
-                                <span class="px-3 py-1 text-[10px] font-black text-white uppercase tracking-wider rounded-full shadow-sm animate-pulse" style="background: linear-gradient(135deg, #7c3aed, #3b82f6);">
-                                    ⭐ Paling Dicari
-                                </span>
-                            @endif
                         </div>
 
                         {{-- Title & Description --}}
@@ -225,7 +195,7 @@
                         {{-- Full Width Button --}}
                         <a href="{{ $item->link ?: 'https://wa.me/6287870402431' }}?text=Halo%20K-Serv,%20mau%20konsultasi%20tentang%20{{ urlencode($item->nama) }}" 
                            target="_blank" 
-                           class="w-full text-white px-5 py-3.5 rounded-xl text-sm font-bold transition-all shadow-sm text-center flex items-center justify-center gap-2 group-hover:shadow-md" style="background: linear-gradient(135deg, #7c3aed, #3b82f6); box-shadow: 0 2px 12px rgba(124,58,237,0.25);">
+                           class="w-full px-5 py-3.5 rounded-xl text-sm font-bold transition-all text-center flex items-center justify-center gap-2 {{ $isPopular ? 'text-white shadow-md hover:opacity-90' : 'bg-white border border-slate-200 hover:border-[#673de6] text-slate-800' }}" style="{{ $isPopular ? 'background-color: #673de6;' : '' }}">
                             Konsultasi Sekarang
                             <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
@@ -331,29 +301,29 @@
                 </div>
             </div>
         </div>
+    </section>
     {{-- ═══════════════════════ CTA SECTION ═══════════════════════ --}}
-    <section class="py-24 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+    <section class="py-24 bg-white transition-colors duration-300">
         <div class="max-w-5xl mx-auto px-6 md:px-8">
-            <div class="rounded-[3rem] py-16 md:py-24 px-8 md:px-20 text-center relative overflow-hidden border border-violet-200" style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #dbeafe 100%);">
+            <div class="rounded-[3rem] py-16 md:py-24 px-8 md:px-20 text-center relative overflow-hidden" style="background-color: #13111c;">
                 
-                {{-- Minimalist Grid Background --}}
-                <div class="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#334155_1px,transparent_1px),linear-gradient(to_bottom,#334155_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-30"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-100 via-transparent to-transparent dark:from-slate-800 pointer-events-none"></div>
+                {{-- Subtle dot pattern --}}
+                <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, rgba(103,61,230,0.15) 1px, transparent 1px); background-size: 40px 40px;"></div>
 
                 <div class="relative z-10">
-                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Punya Ide? Kita Wujudkan Bareng.</h2>
+                    <h2 class="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight">Punya Ide? Kita Wujudkan Bareng.</h2>
                     
-                    <p class="text-slate-500 dark:text-slate-400 text-base mb-10 max-w-xl mx-auto leading-relaxed">
+                    <p class="text-base mb-10 max-w-xl mx-auto leading-relaxed" style="color: #94a3b8;">
                         Gak nemu yang cocok di katalog? Tenang, K-Serv bisa bantu custom proyek apapun. Konsultasi pertama selalu gratis!
                     </p>
                     
                     <div class="flex flex-col sm:flex-row justify-center gap-4">
                         <a href="https://wa.me/6287870402431?text=Halo%20K-Serv,%20saya%20punya%20ide%20project%20nih." target="_blank"
-                           class="inline-flex justify-center items-center gap-2 px-8 py-4 text-white font-bold rounded-2xl hover:-translate-y-1 shadow-lg transition-all duration-300" style="background: linear-gradient(135deg, #7c3aed, #3b82f6); box-shadow: 0 4px 20px rgba(124,58,237,0.4);">
+                           class="inline-flex justify-center items-center gap-2 px-8 py-4 text-white font-bold rounded-full hover:-translate-y-1 shadow-lg transition-all duration-300" style="background-color: #673de6;">
                             <i class="fab fa-whatsapp text-xl"></i> Chat WhatsApp Sekarang
                         </a>
                         <a href="{{ url('/#katalog') }}" 
-                           class="inline-flex justify-center items-center gap-2 px-8 py-4 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-950 font-bold rounded-2xl hover:-translate-y-1 shadow-sm border border-slate-200 dark:border-slate-700 transition-all duration-300">
+                           class="inline-flex justify-center items-center gap-2 px-8 py-4 bg-transparent text-white border border-white/30 hover:border-white/60 hover:bg-white/10 font-bold rounded-full transition-all duration-300">
                             Lihat Katalog Dulu
                         </a>
                     </div>
