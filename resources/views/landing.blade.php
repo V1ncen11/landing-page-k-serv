@@ -85,7 +85,7 @@
                 {{-- Cepat --}}
                 <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-right">
-                    <img src="/images/kserv_pengerjaan.png" alt="Pengerjaan Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                    <img src="/images/kserv_pengerjaan_v2.png" alt="Pengerjaan Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Pengerjaan Cepat</h3>
@@ -96,7 +96,7 @@
                 {{-- Garansi Revisi --}}
                 <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-left">
-                    <img src="/images/kserv_garansi.png" alt="Garansi Revisi" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                    <img src="/images/kserv_garansi_v2.png" alt="Garansi Revisi" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Garansi Revisi</h3>
@@ -107,7 +107,7 @@
                 {{-- Harga Bersahabat --}}
                 <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-right">
-                    <img src="/images/kserv_harga.png" alt="Harga Bersahabat" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                    <img src="/images/kserv_harga_v2.png" alt="Harga Bersahabat" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Harga Bersahabat</h3>
