@@ -31,23 +31,26 @@
 
 
             {{-- ═══════════════════════ HERO ═══════════════════════ --}}
-    <header id="beranda" class="w-full bg-slate-50 pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden relative z-10" style="min-height: 100vh;">
+    <header id="beranda" class="w-full overflow-hidden relative z-10" style="min-height: 100vh; padding-top: 100px; padding-bottom: 80px; background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 30%, #dbeafe 70%, #eff6ff 100%)">
         <div class="max-w-7xl mx-auto px-6 md:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {{-- Text Content --}}
                 <div data-aos="fade-right" class="text-center lg:text-left z-10">
+                    <div class="inline-flex items-center gap-2 bg-violet-100 text-violet-700 text-sm font-semibold px-4 py-2 rounded-full mb-6">
+                        <span>✨</span> Jasa Digital Terpercaya
+                    </div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-tight tracking-tight">
-                        Bangun Website Profesional <br class="hidden lg:block"> <span class="text-violet-600">untuk Bisnis Anda</span>
+                        Bangun Website Profesional <br class="hidden lg:block"> <span style="background: linear-gradient(135deg, #7c3aed, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">untuk Bisnis Anda</span>
                     </h1>
                     <p class="text-lg md:text-xl text-slate-500 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                         Website profesional dan sistem custom modern yang dirancang khusus untuk mengakselerasi bisnis Anda di era digital.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#katalog" class="px-8 py-4 bg-slate-900 text-white font-bold rounded-full hover:bg-violet-600 hover:shadow-lg hover:shadow-violet-500/30 transition-all duration-300 text-center uppercase tracking-wide text-sm">
+                        <a href="#katalog" class="px-8 py-4 text-white font-bold rounded-full transition-all duration-300 text-center uppercase tracking-wide text-sm hover:shadow-xl hover:-translate-y-0.5" style="background: linear-gradient(135deg, #7c3aed, #3b82f6); box-shadow: 0 4px 20px rgba(124,58,237,0.4);">
                             Lihat Katalog
                         </a>
-                        <a href="https://wa.me/6287870402431" target="_blank" class="px-8 py-4 bg-white text-slate-900 border border-slate-200 font-bold rounded-full hover:border-slate-900 hover:bg-slate-50 transition-all duration-300 text-center uppercase tracking-wide text-sm shadow-sm">
+                        <a href="https://wa.me/6287870402431" target="_blank" class="px-8 py-4 bg-white text-violet-700 border-2 border-violet-200 font-bold rounded-full hover:border-violet-500 hover:bg-violet-50 transition-all duration-300 text-center uppercase tracking-wide text-sm shadow-sm">
                             Konsultasi Gratis
                         </a>
                     </div>
@@ -66,7 +69,7 @@
     </header>
 
     {{-- ═══════════════════════ KENAPA K-SERV (Combined Background) ═══════════════════════ --}}
-    <section class="w-full bg-slate-50 flex flex-col py-24 relative z-10">
+    <section class="w-full bg-white flex flex-col py-24 relative z-10">
         
         {{-- Kenapa Harus K-Serv? --}}
         <div class="max-w-6xl mx-auto px-6 md:px-8">
