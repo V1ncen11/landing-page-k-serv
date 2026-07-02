@@ -53,9 +53,13 @@
                     </div>
                 </div>
 
-                {{-- Hero Image --}}
-                <div data-aos="fade-left" data-aos-delay="200" class="relative flex justify-center lg:justify-end mix-blend-multiply" style="mix-blend-mode: multiply;">
-                    <img src="/images/tentang_kami_team.png" alt="Web Development Team" class="w-full max-w-[600px] h-auto object-contain drop-shadow-2xl" />
+                {{-- Hero SVG Illustration --}}
+                <div data-aos="fade-left" data-aos-delay="200" class="relative flex justify-center lg:justify-end">
+                    <img 
+                        src="/images/hero_developer.svg" 
+                        alt="Web Developer Illustration" 
+                        class="w-full max-w-[580px] h-auto"
+                    />
                 </div>
             </div>
         </div>
