@@ -51,7 +51,7 @@
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto mb-16 md:mb-24" data-aos="fade-up">
 
             <h1 class="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-6 leading-[1.5] tracking-wide" style="text-shadow: 0 4px 15px rgba(0,0,0,0.4), 0 0 25px rgba(0,0,0,0.3);">
-                Bangun Website Profesional<br class="hidden md:block"> untuk <span class="font-bold text-sky-400">Bisnis Anda</span>
+                Bangun Website Profesional<br class="hidden md:block"> untuk <span class="font-bold text-white">Bisnis Anda</span>
             </h1>
             
             <p class="text-base md:text-lg max-w-2xl mx-auto mb-10 font-light" style="color: white; line-height: 1.8; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
@@ -75,7 +75,7 @@
     <section class="w-full bg-slate-50 flex flex-col pt-0 pb-20 relative z-10">
         
         {{-- Stats Counter (Overlaps Hero) --}}
-        <div class="max-w-5xl mx-auto px-6 md:px-8 -mt-20 mb-24 relative z-20">
+        <div class="max-w-5xl mx-auto px-6 md:px-8 mt-10 mb-24 relative z-20">
             <div class="bg-white border border-slate-100 rounded-[28px] shadow-xl p-8 md:p-10">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                     <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
