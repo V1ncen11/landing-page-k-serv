@@ -446,8 +446,8 @@
                 </div>
 
                 {{-- Kanan: Illustration --}}
-                <div class="flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-left" data-aos-delay="150">
-                    <img src="/images/tentang_kami_team.png" alt="Tim K-SERV" class="w-full max-w-[500px] h-auto object-contain drop-shadow-xl" />
+                <div class="flex justify-center" data-aos="fade-left" data-aos-delay="150">
+                    <img src="/images/tentang_kami_team.svg" alt="Tim K-SERV" class="w-full max-w-[500px] h-auto object-contain drop-shadow-xl" />
                 </div>
 
             </div>
