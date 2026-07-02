@@ -466,28 +466,9 @@
                     </p>
                 </div>
 
-                {{-- Kanan: Visual Stats Card --}}
-                <div class="grid grid-cols-2 gap-5" data-aos="fade-left" data-aos-delay="150">
-                    <div class="bg-slate-900 rounded-[24px] p-7 text-white shadow-xl shadow-slate-300 hover:-translate-y-1 transition-all duration-300">
-                        <div class="text-4xl font-black mb-1">15+</div>
-                        <div class="text-slate-300 text-sm font-medium">Proyek Berhasil Diselesaikan</div>
-                        <div class="mt-4 text-slate-400 text-xs">Dari website, sistem, hingga desain</div>
-                    </div>
-                    <div class="bg-white border border-slate-100 rounded-[24px] p-7 shadow-sm hover:-translate-y-1 transition-all duration-300">
-                        <div class="text-4xl font-black text-slate-900 mb-1">15+</div>
-                        <div class="text-slate-500 text-sm font-medium">Klien Puas & Percaya</div>
-                        <div class="mt-4 text-slate-400 text-xs">Dan terus bertambah setiap bulannya</div>
-                    </div>
-                    <div class="bg-white border border-slate-100 rounded-[24px] p-7 shadow-sm hover:-translate-y-1 transition-all duration-300">
-                        <div class="text-4xl font-black text-slate-900 mb-1">100%</div>
-                        <div class="text-slate-500 text-sm font-medium">Garansi Revisi</div>
-                        <div class="mt-4 text-slate-400 text-xs">Revisi sampai kamu beneran puas</div>
-                    </div>
-                    <div class="bg-slate-900 rounded-[24px] p-7 text-white shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <div class="text-4xl font-black mb-1">24/7</div>
-                        <div class="text-slate-300 text-sm font-medium">Siap Konsultasi</div>
-                        <div class="mt-4 text-slate-500 text-xs">Fast response via WhatsApp</div>
-                    </div>
+                {{-- Kanan: Illustration --}}
+                <div class="flex justify-center mix-blend-multiply" style="mix-blend-mode: multiply;" data-aos="fade-left" data-aos-delay="150">
+                    <img src="/images/tentang_kami_team.png" alt="Tim K-SERV" class="w-full max-w-[500px] h-auto object-contain drop-shadow-xl" />
                 </div>
 
             </div>
