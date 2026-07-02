@@ -36,9 +36,6 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {{-- Text Content --}}
                 <div data-aos="fade-right" class="text-center lg:text-left z-10">
-                    <div class="inline-flex items-center gap-2 bg-violet-100 text-violet-700 text-sm font-semibold px-4 py-2 rounded-full mb-6">
-                        <span>✨</span> Jasa Digital Terpercaya
-                    </div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-tight tracking-tight">
                         Bangun Website Profesional <br class="hidden lg:block"> <span style="background: linear-gradient(135deg, #7c3aed, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">untuk Bisnis Anda</span>
                     </h1>
@@ -138,18 +135,18 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             @foreach($produks as $index => $item)
                 @if(strtolower($item->kategori) != 'portofolio')
-                <div class="tilt-card relative bg-white rounded-3xl shadow-sm border border-slate-200 hover:border-slate-900 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group" data-tilt data-tilt-gyroscope="false" data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
+                <div class="tilt-card relative bg-white rounded-3xl shadow-sm border border-slate-200 hover:border-violet-400 hover:shadow-xl hover:shadow-violet-100 transition-all duration-300 flex flex-col overflow-hidden group" data-tilt data-tilt-gyroscope="false" data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
                     {{-- Top border accent --}}
-                    <div class="absolute top-0 left-0 w-full h-1.5 bg-slate-900 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute top-0 left-0 w-full h-1.5 opacity-0 group-hover:opacity-100 transition-opacity" style="background: linear-gradient(90deg, #7c3aed, #3b82f6);"></div>
 
                     <div class="p-8 flex flex-col h-full">
                         {{-- Label & Popular Badge --}}
                         <div class="flex justify-between items-start mb-6">
-                            <span class="px-3 py-1 text-xs font-bold text-slate-600 uppercase bg-slate-50 rounded-md border border-slate-200">
+                            <span class="px-3 py-1 text-xs font-bold text-violet-700 uppercase bg-violet-50 rounded-md border border-violet-200">
                                 {{ $item->kategori }}
                             </span>
                             @if($index === 1 || strpos(strtolower($item->nama), 'ujian') !== false)
-                                <span class="px-3 py-1 text-[10px] font-black text-white uppercase tracking-wider bg-slate-900 rounded-full shadow-sm animate-pulse shadow-slate-200">
+                                <span class="px-3 py-1 text-[10px] font-black text-white uppercase tracking-wider rounded-full shadow-sm animate-pulse" style="background: linear-gradient(135deg, #7c3aed, #3b82f6);">
                                     ⭐ Paling Dicari
                                 </span>
                             @endif
@@ -181,7 +178,7 @@
                             @if($hargaAsli)
                             <div class="flex items-center gap-2 mb-0.5">
                                 <span class="text-sm font-bold text-slate-400 line-through decoration-slate-400/70 decoration-2">Rp {{ $hargaAsli }}</span>
-                                <span class="text-[10px] font-black text-white bg-slate-900 px-2 py-0.5 rounded-full uppercase tracking-wider">Promo Diskon</span>
+                                <span class="text-[10px] font-black text-white px-2 py-0.5 rounded-full uppercase tracking-wider" style="background: linear-gradient(135deg, #7c3aed, #3b82f6);">Promo Diskon</span>
                             </div>
                             @endif
                             
@@ -228,7 +225,7 @@
                         {{-- Full Width Button --}}
                         <a href="{{ $item->link ?: 'https://wa.me/6287870402431' }}?text=Halo%20K-Serv,%20mau%20konsultasi%20tentang%20{{ urlencode($item->nama) }}" 
                            target="_blank" 
-                           class="w-full bg-slate-50 text-slate-900 border border-slate-200 px-5 py-3.5 rounded-xl text-sm font-bold hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all shadow-sm text-center flex items-center justify-center gap-2 group-hover:bg-slate-900 group-hover:text-white group-hover:shadow-md">
+                           class="w-full text-white px-5 py-3.5 rounded-xl text-sm font-bold transition-all shadow-sm text-center flex items-center justify-center gap-2 group-hover:shadow-md" style="background: linear-gradient(135deg, #7c3aed, #3b82f6); box-shadow: 0 2px 12px rgba(124,58,237,0.25);">
                             Konsultasi Sekarang
                             <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
@@ -337,7 +334,7 @@
     {{-- ═══════════════════════ CTA SECTION ═══════════════════════ --}}
     <section class="py-24 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
         <div class="max-w-5xl mx-auto px-6 md:px-8">
-            <div class="bg-slate-100 dark:bg-slate-800 rounded-[3rem] py-16 md:py-24 px-8 md:px-20 text-center relative overflow-hidden border border-slate-200 dark:border-slate-700 transition-colors duration-300">
+            <div class="rounded-[3rem] py-16 md:py-24 px-8 md:px-20 text-center relative overflow-hidden border border-violet-200" style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #dbeafe 100%);">
                 
                 {{-- Minimalist Grid Background --}}
                 <div class="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#334155_1px,transparent_1px),linear-gradient(to_bottom,#334155_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-30"></div>
@@ -352,7 +349,7 @@
                     
                     <div class="flex flex-col sm:flex-row justify-center gap-4">
                         <a href="https://wa.me/6287870402431?text=Halo%20K-Serv,%20saya%20punya%20ide%20project%20nih." target="_blank"
-                           class="inline-flex justify-center items-center gap-2 px-8 py-4 bg-slate-900 hover:bg-black text-white font-bold rounded-2xl hover:-translate-y-1 shadow-lg shadow-slate-900/30 transition-all duration-300">
+                           class="inline-flex justify-center items-center gap-2 px-8 py-4 text-white font-bold rounded-2xl hover:-translate-y-1 shadow-lg transition-all duration-300" style="background: linear-gradient(135deg, #7c3aed, #3b82f6); box-shadow: 0 4px 20px rgba(124,58,237,0.4);">
                             <i class="fab fa-whatsapp text-xl"></i> Chat WhatsApp Sekarang
                         </a>
                         <a href="{{ url('/#katalog') }}" 
@@ -381,7 +378,7 @@
                     </div>
                     <p class="text-slate-600 text-sm leading-relaxed flex-grow italic">"Gila cepet banget pengerjaannya! Website company profile kita jadi dalam 2 minggu dan hasilnya melebihi ekspektasi. Client kita langsung kesan pertama udah wow banget."</p>
                     <div class="flex items-center gap-3 mt-6 pt-5 border-t border-slate-100">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-slate-700 to-slate-500 flex items-center justify-center text-white font-black text-sm">RD</div>
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm" style="background: linear-gradient(135deg, #7c3aed, #3b82f6);">RD</div>
                         <div>
                             <div class="font-bold text-slate-800 text-sm">Rizky D.</div>
                             <div class="text-slate-400 text-xs">Owner, CV Maju Bersama</div>
@@ -390,7 +387,7 @@
                 </div>
 
                 {{-- Testimoni 2 --}}
-                <div class="bg-slate-900 rounded-[24px] p-7 shadow-xl shadow-slate-300 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                <div class="rounded-[24px] p-7 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col" style="background: linear-gradient(135deg, #7c3aed, #3b82f6);" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex text-amber-300 mb-4 gap-0.5">
                         @for($i=0; $i<5; $i++)<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>@endfor
                     </div>
@@ -411,7 +408,7 @@
                     </div>
                     <p class="text-slate-600 text-sm leading-relaxed flex-grow italic">"Awalnya ragu karena baru pertama pakai jasa freelance, tapi K-Serv responsif banget dan selalu update progress. Landing page kita udah naik 40% lead sejak dipasang. Mantap!"</p>
                     <div class="flex items-center gap-3 mt-6 pt-5 border-t border-slate-100">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center text-white font-black text-sm">BW</div>
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm" style="background: linear-gradient(135deg, #7c3aed, #3b82f6);">BW</div>
                         <div>
                             <div class="font-bold text-slate-800 text-sm">Bayu W.</div>
                             <div class="text-slate-400 text-xs">Marketing Manager, StartupX</div>
