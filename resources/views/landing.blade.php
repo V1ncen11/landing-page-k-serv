@@ -57,42 +57,57 @@
     </header>
 
     {{-- ═══════════════════════ KENAPA K-SERV ═══════════════════════ --}}
-    <section class="w-full bg-white flex flex-col py-24 relative z-10">
-        
-        {{-- Kenapa Harus K-Serv? --}}
-        <div class="max-w-6xl mx-auto px-6 md:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">Kenapa Harus K-Serv?</h2>
-                <p class="text-lg text-slate-500">Alasan kenapa ratusan klien mempercayakan proyek digitalnya ke kami.</p>
-            </div>
-
     {{-- ═══════════════════════ KENAPA K-SERV ═══════════════════════ --}}
-    <section class="w-full bg-white flex flex-col py-24 relative z-10">
+    <section class="w-full bg-gray-50 flex flex-col py-24 relative z-10">
         <div class="max-w-6xl mx-auto px-6 md:px-8 w-full">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">Kenapa Harus K-Serv?</h2>
                 <p class="text-lg text-slate-500">Alasan kenapa ratusan klien mempercayakan proyek digitalnya ke kami.</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-8 rounded-2xl bg-gray-50 border border-slate-100 hover:shadow-md transition" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-xl" style="background-color: #ede9fe;">⚡</div>
-                    <h3 class="text-lg font-black text-slate-900 mb-2">Pengerjaan Cepat</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Proyek selesai tepat waktu, tanpa molor. Deadline selalu terpenuhi.</p>
+            
+            <div class="flex flex-col gap-24">
+                {{-- Cepat --}}
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
+                  <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-right">
+                    <img src="/images/kserv_pengerjaan_v3.png" alt="Pengerjaan Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                  </div>
+                  <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Pengerjaan Cepat</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed">Proyek selesai tepat waktu, tanpa molor. Fokus pada deadline yang disepakati agar bisnis kamu bisa segera online tanpa harus menunggu lama.</p>
+                  </div>
                 </div>
-                <div class="p-8 rounded-2xl bg-gray-50 border border-slate-100 hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-xl" style="background-color: #ede9fe;">🛡️</div>
-                    <h3 class="text-lg font-black text-slate-900 mb-2">Garansi Revisi</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Revisi gratis sampai kamu puas. Kepuasan klien prioritas utama kami.</p>
+
+                {{-- Garansi Revisi --}}
+                <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
+                  <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-left">
+                    <img src="/images/kserv_garansi_v2.png" alt="Garansi Revisi" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                  </div>
+                  <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Garansi Revisi</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed">Revisi gratis sampai kamu puas dengan hasilnya. Kepuasan klien adalah prioritas utama kami dalam menyelesaikan setiap baris kode.</p>
+                  </div>
                 </div>
-                <div class="p-8 rounded-2xl bg-gray-50 border border-slate-100 hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-xl" style="background-color: #ede9fe;">💰</div>
-                    <h3 class="text-lg font-black text-slate-900 mb-2">Harga Bersahabat</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Kualitas premium tanpa bikin kantong jebol. Solusi terbaik sesuai budget.</p>
+
+                {{-- Harga Bersahabat --}}
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
+                  <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-right">
+                    <img src="/images/kserv_harga_v2.png" alt="Harga Bersahabat" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                  </div>
+                  <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Harga Bersahabat</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed">Kualitas premium skala korporasi tanpa bikin kantong jebol. Kami menawarkan solusi terbaik sesuai dengan budget usahamu.</p>
+                  </div>
                 </div>
-                <div class="p-8 rounded-2xl bg-gray-50 border border-slate-100 hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-xl" style="background-color: #ede9fe;">💬</div>
-                    <h3 class="text-lg font-black text-slate-900 mb-2">Respon Cepat 24/7</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Chat kapan aja, tim kami fast response via WhatsApp.</p>
+
+                {{-- Respon Cepat --}}
+                <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
+                  <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-left">
+                    <img src="/images/kserv_respon.png" alt="Respon Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
+                  </div>
+                  <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Respon Cepat 24/7</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed">Punya pertanyaan atau butuh update progress proyek? Chat kapan aja, tim developer kami pastikan fast response via WhatsApp.</p>
+                  </div>
                 </div>
             </div>
         </div>
