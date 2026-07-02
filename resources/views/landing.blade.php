@@ -306,7 +306,7 @@
                     <img src="/images/timeline_konsultasi.png" alt="Konsultasi Gratis" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
-                    <div class="inline-block bg-slate-900 text-white font-black px-4 py-1 rounded-full text-sm mb-4">Langkah 1</div>
+                    <span class="text-sky-500 font-bold tracking-widest text-sm uppercase mb-2 block">Langkah 1</span>
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Konsultasi Gratis</h3>
                     <p class="text-lg text-slate-500 leading-relaxed">Klik tombol pesan, ceritakan kebutuhanmu lewat WhatsApp. Bebas nanya apa aja, mumpung gratis! Kita bahas sampai nemu solusi yang pas.</p>
                   </div>
@@ -318,7 +318,7 @@
                     <img src="/images/timeline_pengerjaan.png" alt="Pengerjaan Cepat" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
-                    <div class="inline-block bg-slate-900 text-white font-black px-4 py-1 rounded-full text-sm mb-4">Langkah 2</div>
+                    <span class="text-sky-500 font-bold tracking-widest text-sm uppercase mb-2 block">Langkah 2</span>
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Pengerjaan Cepat</h3>
                     <p class="text-lg text-slate-500 leading-relaxed">Setelah deal, tim developer kita langsung gaskeun ngerjain proyek kamu dengan teliti sesuai deadline yang disepakati bersama.</p>
                   </div>
@@ -330,7 +330,7 @@
                     <img src="/images/timeline_serah_terima.png" alt="Serah Terima & Revisi" class="w-[300px] md:w-[400px] h-auto object-contain" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
-                    <div class="inline-block bg-slate-900 text-white font-black px-4 py-1 rounded-full text-sm mb-4">Langkah 3</div>
+                    <span class="text-sky-500 font-bold tracking-widest text-sm uppercase mb-2 block">Langkah 3</span>
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Serah Terima &amp; Revisi</h3>
                     <p class="text-lg text-slate-500 leading-relaxed">Proyek beres, kita review bareng. Kurang pas? Tenang, ada garansi revisi sampai kamu bener-bener puas sama hasilnya!</p>
                   </div>
