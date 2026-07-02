@@ -56,8 +56,8 @@
                 {{-- Hero SVG Illustration --}}
                 <div data-aos="fade-left" data-aos-delay="200" class="relative flex justify-center lg:justify-end">
                     <img 
-                        src="/images/hero_developer.svg" 
-                        alt="Web Developer Illustration" 
+                        src="/images/hero_startup.svg" 
+                        alt="Web Development Team" 
                         class="w-full max-w-[580px] h-auto"
                     />
                 </div>
