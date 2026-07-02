@@ -363,7 +363,7 @@
                     </div>
                     <p class="text-slate-600 text-sm leading-relaxed flex-grow italic">"Gila cepet banget pengerjaannya! Website company profile kita jadi dalam 2 minggu dan hasilnya melebihi ekspektasi. Client kita langsung kesan pertama udah wow banget."</p>
                     <div class="flex items-center gap-3 mt-6 pt-5 border-t border-slate-100">
-                        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm" style="background: linear-gradient(135deg, #7c3aed, #3b82f6);">RD</div>
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm" style="background-color: #673de6;">RD</div>
                         <div>
                             <div class="font-bold text-slate-800 text-sm">Rizky D.</div>
                             <div class="text-slate-400 text-xs">Owner, CV Maju Bersama</div>
@@ -372,7 +372,7 @@
                 </div>
 
                 {{-- Testimoni 2 --}}
-                <div class="rounded-[24px] p-7 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col" style="background: linear-gradient(135deg, #7c3aed, #3b82f6);" data-aos="fade-up" data-aos-delay="200">
+                <div class="rounded-[24px] p-7 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col" style="background-color: #673de6;" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex text-amber-300 mb-4 gap-0.5">
                         @for($i=0; $i<5; $i++)<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>@endfor
                     </div>
@@ -393,7 +393,7 @@
                     </div>
                     <p class="text-slate-600 text-sm leading-relaxed flex-grow italic">"Awalnya ragu karena baru pertama pakai jasa freelance, tapi K-Serv responsif banget dan selalu update progress. Landing page kita udah naik 40% lead sejak dipasang. Mantap!"</p>
                     <div class="flex items-center gap-3 mt-6 pt-5 border-t border-slate-100">
-                        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm" style="background: linear-gradient(135deg, #7c3aed, #3b82f6);">BW</div>
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm" style="background-color: #673de6;">BW</div>
                         <div>
                             <div class="font-bold text-slate-800 text-sm">Bayu W.</div>
                             <div class="text-slate-400 text-xs">Marketing Manager, StartupX</div>
