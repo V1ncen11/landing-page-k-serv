@@ -3,23 +3,27 @@
 
 @section('content')
 <style>
-    /* Bulletproof force transparent and fixed navbar on landing page */
+    /* Elegant fixed navbar for light background */
     #mainNav {
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         width: 100% !important;
-        background-color: transparent !important;
-        border-color: transparent !important;
-        box-shadow: none !important;
+        background-color: rgba(255, 255, 255, 0.9) !important;
+        backdrop-filter: blur(10px) !important;
+        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05) !important;
+        transition: all 0.3s ease-in-out;
+        z-index: 50;
     }
     #mainNav .nav-text-color {
-        color: white !important;
+        color: #0f172a !important; /* slate-900 */
+        font-weight: 600 !important;
     }
     #mainNav #darkToggle {
-        border-color: rgba(255,255,255,0.2) !important;
-        background-color: rgba(255,255,255,0.1) !important;
-        color: white !important;
+        border-color: rgba(0,0,0,0.1) !important;
+        background-color: rgba(0,0,0,0.05) !important;
+        color: #0f172a !important;
     }
 </style>
 <div class="bg-white text-slate-900 antialiased">
@@ -27,46 +31,32 @@
 
 
             {{-- ═══════════════════════ HERO ═══════════════════════ --}}
-    <header id="beranda" class="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden bg-black" style="height: 100vh;">
-        
-        {{-- Background Image (Agency Team Working - Professional, corporate, no messy code) --}}
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" 
-             srcset="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600 600w,
-                     https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200 1200w,
-                     https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000 2000w"
-             sizes="100vw"
-             fetchpriority="high"
-             alt="Developer Workspace" 
-             class="absolute inset-0 w-full h-full object-cover">
-             
-        {{-- Top Gradient (Khusus buat nge-gelapin area Navbar & Logo biar kebaca jelas - PURE INLINE CSS) --}}
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 140px; background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); pointer-events: none; z-index: 10;"></div>
-        
-        {{-- Localized Shadow (Foolproof inline CSS radial gradient exactly behind the text) --}}
-        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div style="width: 100%; max-width: 1000px; height: 500px; background: radial-gradient(ellipse at center, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 70%);"></div>
-        </div>
+    <header id="beranda" class="w-full bg-slate-50 pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden relative z-10" style="min-height: 100vh;">
+        <div class="max-w-7xl mx-auto px-6 md:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                {{-- Text Content --}}
+                <div data-aos="fade-right" class="text-center lg:text-left z-10">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-tight tracking-tight">
+                        Bangun Website Profesional <br class="hidden lg:block"> <span class="text-sky-500">untuk Bisnis Anda</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-500 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Website profesional dan sistem custom modern yang dirancang khusus untuk mengakselerasi bisnis Anda di era digital.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#katalog" class="px-8 py-4 bg-slate-900 text-white font-bold rounded-full hover:bg-sky-500 hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-300 text-center uppercase tracking-wide text-sm">
+                            Lihat Katalog
+                        </a>
+                        <a href="https://wa.me/6287870402431" target="_blank" class="px-8 py-4 bg-white text-slate-900 border border-slate-200 font-bold rounded-full hover:border-slate-900 hover:bg-slate-50 transition-all duration-300 text-center uppercase tracking-wide text-sm shadow-sm">
+                            Konsultasi Gratis
+                        </a>
+                    </div>
+                </div>
 
-        {{-- Content --}}
-        <div class="relative z-10 text-center px-4 max-w-6xl mx-auto mb-16 md:mb-24" data-aos="fade-up">
-
-            <h1 class="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-6 leading-[1.5] tracking-wide" style="text-shadow: 0 4px 15px rgba(0,0,0,0.4), 0 0 25px rgba(0,0,0,0.3);">
-                Bangun Website Profesional<br class="hidden md:block"> untuk <span class="font-bold text-white">Bisnis Anda</span>
-            </h1>
-            
-            <p class="text-base md:text-lg max-w-2xl mx-auto mb-10 font-light" style="color: white; line-height: 1.8; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
-                Website profesional dan sistem custom modern yang dirancang khusus untuk mengakselerasi bisnis Anda.
-            </p>
-
-            {{-- Original Simple Buttons --}}
-            <div class="flex flex-col sm:flex-row gap-6 md:gap-10 justify-center items-center mt-4">
-                <a href="#katalog" class="text-white font-medium text-sm md:text-base hover:text-rose-300 transition-colors tracking-widest uppercase pb-1 border-b border-transparent hover:border-rose-300" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
-                    Lihat Katalog
-                </a>
-
-                <a href="https://wa.me/6287870402431" target="_blank" class="text-white font-medium text-sm md:text-base hover:text-rose-300 transition-colors tracking-widest uppercase pb-1 border-b border-transparent hover:border-rose-300" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
-                    Konsultasi Gratis
-                </a>
+                {{-- Hero Image --}}
+                <div data-aos="fade-left" data-aos-delay="200" class="relative flex justify-center lg:justify-end mix-blend-multiply" style="mix-blend-mode: multiply;">
+                    <img src="/images/hero_illustration.png" alt="Web Development Team" class="w-full max-w-[600px] h-auto object-contain drop-shadow-2xl" />
+                </div>
             </div>
         </div>
     </header>
