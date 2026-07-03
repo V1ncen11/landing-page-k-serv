@@ -15,20 +15,20 @@
 
 
             {{-- ═══════════════════════ HERO ═══════════════════════ --}}
-    <header id="beranda" class="w-full overflow-hidden relative z-10 flex items-center" style="min-height: 100vh; padding-top: 80px; padding-bottom: 80px; background-color: #13111c;">
+    <header id="beranda" class="w-full overflow-hidden relative z-10 flex items-center" style="min-height: 100svh; padding-top: 80px; padding-bottom: 48px; background-color: #13111c;">
         {{-- Subtle dot pattern --}}
         <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, rgba(103,61,230,0.15) 1px, transparent 1px); background-size: 40px 40px;"></div>
         {{-- Purple glow top left --}}
         <div class="absolute top-0 left-0 w-[600px] h-[600px] pointer-events-none" style="background: radial-gradient(circle, rgba(103,61,230,0.2) 0%, transparent 70%);"></div>
 
         <div class="max-w-7xl mx-auto px-6 md:px-8 w-full relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 {{-- Text Content --}}
                 <div data-aos="fade-right" class="text-center lg:text-left">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight tracking-tight">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 lg:mb-6 leading-tight tracking-tight">
                         Bangun Website Profesional <br class="hidden lg:block"> untuk <span style="color: #a78bfa;">Bisnis Anda</span>
                     </h1>
-                    <p class="text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0" style="color: #94a3b8;">
+                    <p class="text-base md:text-lg lg:text-xl mb-7 lg:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0" style="color: #94a3b8;">
                         Website profesional dan sistem custom modern yang dirancang khusus untuk mengakselerasi bisnis Anda di era digital.
                     </p>
                     
@@ -40,7 +40,7 @@
                             Konsultasi Gratis
                         </a>
                     </div>
-                    <p class="mt-6 text-sm" style="color: #64748b;">&#10003; Garansi revisi &nbsp;&nbsp; &#10003; Fast response 24/7</p>
+                    <p class="mt-5 text-sm" style="color: #64748b;">&#10003; Garansi revisi &nbsp;&nbsp; &#10003; Fast response 24/7</p>
                 </div>
 
                 {{-- Hero SVG Illustration --}}
@@ -48,7 +48,7 @@
                     <img 
                         src="/images/hero_startup.svg" 
                         alt="Web Development Team" 
-                        class="w-full max-w-[520px] h-auto opacity-90"
+                        class="w-full max-w-[280px] sm:max-w-[380px] lg:max-w-[520px] h-auto opacity-90"
                         style="filter: drop-shadow(0 0 40px rgba(103,61,230,0.3));"
                     />
                 </div>
