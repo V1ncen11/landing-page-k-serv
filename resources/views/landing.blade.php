@@ -54,14 +54,6 @@
                 <p class="text-base leading-relaxed max-w-sm" style="color: #94a3b8;">
                     Website profesional dan sistem custom modern untuk mengakselerasi bisnis Anda di era digital.
                 </p>
-                <div class="flex flex-col w-full max-w-xs gap-3">
-                    <a href="#katalog" class="px-6 py-3 bg-white text-slate-900 font-black rounded-full hover:bg-gray-100 transition-all duration-300 text-center uppercase tracking-wide text-sm shadow-lg">
-                        Lihat Katalog
-                    </a>
-                    <a href="https://wa.me/6287870402431" target="_blank" class="px-6 py-3 font-bold rounded-full transition-all duration-300 text-center uppercase tracking-wide text-sm border border-white/30 hover:border-white/60 hover:bg-white/10 text-white">
-                        Konsultasi Gratis
-                    </a>
-                </div>
                 <p class="text-xs" style="color: #64748b;">&#10003; Garansi revisi &nbsp;&nbsp; &#10003; Fast response 24/7</p>
             </div>
 
@@ -75,14 +67,6 @@
                     <p class="text-base md:text-base lg:text-xl mb-7 lg:mb-10 leading-relaxed" style="color: #94a3b8;">
                         Website profesional dan sistem custom modern yang dirancang khusus untuk mengakselerasi bisnis Anda di era digital.
                     </p>
-                    <div class="flex gap-4">
-                        <a href="#katalog" class="px-8 py-4 bg-white text-slate-900 font-black rounded-full hover:bg-gray-100 transition-all duration-300 text-center uppercase tracking-wide text-sm hover:-translate-y-0.5 shadow-lg">
-                            Lihat Katalog
-                        </a>
-                        <a href="https://wa.me/6287870402431" target="_blank" class="px-8 py-4 font-bold rounded-full transition-all duration-300 text-center uppercase tracking-wide text-sm border border-white/30 hover:border-white/60 hover:bg-white/10 text-white">
-                            Konsultasi Gratis
-                        </a>
-                    </div>
                     <p class="mt-5 text-sm" style="color: #64748b;">&#10003; Garansi revisi &nbsp;&nbsp; &#10003; Fast response 24/7</p>
                 </div>
 
