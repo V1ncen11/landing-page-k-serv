@@ -9,6 +9,16 @@
         border-bottom: 1px solid rgba(255,255,255,0.08) !important;
         box-shadow: none !important;
     }
+    /* Hero layout switch */
+    #hero-mobile { display: flex; }
+    #hero-desktop { display: none; }
+    @media (min-width: 768px) {
+        #hero-mobile { display: none !important; }
+        #hero-desktop { display: grid !important; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }
+    }
+    @media (min-width: 1024px) {
+        #hero-desktop { gap: 3rem; }
+    }
 </style>
 <div class="text-slate-900 antialiased">
 
@@ -24,7 +34,7 @@
         <div class="max-w-7xl mx-auto px-6 md:px-8 w-full relative z-10">
 
             {{-- Mobile layout: stacked (heading > image > desc+buttons), only below md --}}
-            <div class="flex flex-col items-center text-center md:hidden gap-4">
+            <div id="hero-mobile" class="flex-col items-center text-center gap-4">
                 {{-- Heading --}}
                 <h1 class="text-3xl font-black text-white leading-tight tracking-tight">
                     Bangun Website Profesional untuk <span style="color: #a78bfa;">Bisnis Anda</span>
@@ -56,7 +66,7 @@
             </div>
 
             {{-- Desktop layout: 2-column side by side, from md+ --}}
-            <div class="hidden md:grid grid-cols-2 gap-10 lg:gap-12 items-center">
+            <div id="hero-desktop">
                 {{-- Text Content --}}
                 <div data-aos="fade-right" class="text-left">
                     <h1 class="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-4 lg:mb-6 leading-tight tracking-tight">
