@@ -54,22 +54,12 @@
                 <p class="text-base leading-relaxed max-w-sm" style="color: #94a3b8;">
                     Website profesional dan sistem custom modern untuk mengakselerasi bisnis Anda di era digital.
                 </p>
-                <p class="text-sm font-semibold italic" style="color: #a78bfa;">"Dari ide jadi kenyataan — cepat, transparan, bergaransi."</p>
-                <div class="flex justify-center gap-6 pt-2">
-                    <div class="text-center">
-                        <div class="text-2xl font-black text-white">100+</div>
-                        <div class="text-xs" style="color: #64748b;">Klien Puas</div>
-                    </div>
-                    <div class="w-px bg-white/10"></div>
-                    <div class="text-center">
-                        <div class="text-2xl font-black text-white">50+</div>
-                        <div class="text-xs" style="color: #64748b;">Proyek Selesai</div>
-                    </div>
-                    <div class="w-px bg-white/10"></div>
-                    <div class="text-center">
-                        <div class="text-2xl font-black text-white">2 Thn</div>
-                        <div class="text-xs" style="color: #64748b;">Pengalaman</div>
-                    </div>
+                {{-- Feature Badges --}}
+                <div class="flex flex-wrap justify-center gap-2 pt-2">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold" style="background: rgba(103,61,230,0.15); border: 1px solid rgba(103,61,230,0.3); color: #c4b5fd;">⚡ Pengerjaan Cepat</span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold" style="background: rgba(103,61,230,0.15); border: 1px solid rgba(103,61,230,0.3); color: #c4b5fd;">🛡️ Garansi Revisi</span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold" style="background: rgba(103,61,230,0.15); border: 1px solid rgba(103,61,230,0.3); color: #c4b5fd;">💬 Fast Response 24/7</span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold" style="background: rgba(103,61,230,0.15); border: 1px solid rgba(103,61,230,0.3); color: #c4b5fd;">💰 Harga Bersahabat</span>
                 </div>
             </div>
 
@@ -80,27 +70,17 @@
                     <h1 class="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-4 lg:mb-6 leading-tight tracking-tight">
                         Bangun Website Profesional untuk <span style="color: #a78bfa;">Bisnis Anda</span>
                     </h1>
-                    <p class="text-base md:text-base lg:text-xl leading-relaxed mb-3" style="color: #94a3b8;">
+                    <p class="text-base md:text-base lg:text-xl leading-relaxed mb-5" style="color: #94a3b8;">
                         Website profesional dan sistem custom modern yang dirancang khusus untuk mengakselerasi bisnis Anda di era digital.
                     </p>
-                    <p class="text-base font-semibold italic mb-6" style="color: #a78bfa;">"Dari ide jadi kenyataan — cepat, transparan, bergaransi."</p>
-                    <div class="flex gap-8 mb-4">
-                        <div>
-                            <div class="text-3xl font-black text-white">100+</div>
-                            <div class="text-sm" style="color: #64748b;">Klien Puas</div>
-                        </div>
-                        <div class="w-px bg-white/10"></div>
-                        <div>
-                            <div class="text-3xl font-black text-white">50+</div>
-                            <div class="text-sm" style="color: #64748b;">Proyek Selesai</div>
-                        </div>
-                        <div class="w-px bg-white/10"></div>
-                        <div>
-                            <div class="text-3xl font-black text-white">2 Thn</div>
-                            <div class="text-sm" style="color: #64748b;">Pengalaman</div>
-                        </div>
+                    {{-- Feature Badges --}}
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold" style="background: rgba(103,61,230,0.15); border: 1px solid rgba(103,61,230,0.3); color: #c4b5fd;">⚡ Pengerjaan Cepat</span>
+                        <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold" style="background: rgba(103,61,230,0.15); border: 1px solid rgba(103,61,230,0.3); color: #c4b5fd;">🛡️ Garansi Revisi</span>
+                        <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold" style="background: rgba(103,61,230,0.15); border: 1px solid rgba(103,61,230,0.3); color: #c4b5fd;">💬 Fast Response 24/7</span>
+                        <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold" style="background: rgba(103,61,230,0.15); border: 1px solid rgba(103,61,230,0.3); color: #c4b5fd;">💰 Harga Bersahabat</span>
                     </div>
-                    <p class="text-sm" style="color: #64748b;">&#10003; Garansi revisi &nbsp;&nbsp; &#10003; Fast response 24/7</p>
+                    <p class="text-sm" style="color: #64748b;">&#10003; Konsultasi pertama selalu gratis</p>
                 </div>
 
                 {{-- Hero SVG Illustration --}}
