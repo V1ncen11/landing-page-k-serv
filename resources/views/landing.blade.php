@@ -50,11 +50,27 @@
                     />
                 </div>
 
-                {{-- Description + Buttons --}}
+                {{-- Description + Stats --}}
                 <p class="text-base leading-relaxed max-w-sm" style="color: #94a3b8;">
                     Website profesional dan sistem custom modern untuk mengakselerasi bisnis Anda di era digital.
                 </p>
-                <p class="text-xs" style="color: #64748b;">&#10003; Garansi revisi &nbsp;&nbsp; &#10003; Fast response 24/7</p>
+                <p class="text-sm font-semibold italic" style="color: #a78bfa;">"Dari ide jadi kenyataan — cepat, transparan, bergaransi."</p>
+                <div class="flex justify-center gap-6 pt-2">
+                    <div class="text-center">
+                        <div class="text-2xl font-black text-white">100+</div>
+                        <div class="text-xs" style="color: #64748b;">Klien Puas</div>
+                    </div>
+                    <div class="w-px bg-white/10"></div>
+                    <div class="text-center">
+                        <div class="text-2xl font-black text-white">50+</div>
+                        <div class="text-xs" style="color: #64748b;">Proyek Selesai</div>
+                    </div>
+                    <div class="w-px bg-white/10"></div>
+                    <div class="text-center">
+                        <div class="text-2xl font-black text-white">2 Thn</div>
+                        <div class="text-xs" style="color: #64748b;">Pengalaman</div>
+                    </div>
+                </div>
             </div>
 
             {{-- Desktop layout: 2-column side by side, from md+ --}}
@@ -64,10 +80,27 @@
                     <h1 class="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-4 lg:mb-6 leading-tight tracking-tight">
                         Bangun Website Profesional untuk <span style="color: #a78bfa;">Bisnis Anda</span>
                     </h1>
-                    <p class="text-base md:text-base lg:text-xl mb-7 lg:mb-10 leading-relaxed" style="color: #94a3b8;">
+                    <p class="text-base md:text-base lg:text-xl leading-relaxed mb-3" style="color: #94a3b8;">
                         Website profesional dan sistem custom modern yang dirancang khusus untuk mengakselerasi bisnis Anda di era digital.
                     </p>
-                    <p class="mt-5 text-sm" style="color: #64748b;">&#10003; Garansi revisi &nbsp;&nbsp; &#10003; Fast response 24/7</p>
+                    <p class="text-base font-semibold italic mb-6" style="color: #a78bfa;">"Dari ide jadi kenyataan — cepat, transparan, bergaransi."</p>
+                    <div class="flex gap-8 mb-4">
+                        <div>
+                            <div class="text-3xl font-black text-white">100+</div>
+                            <div class="text-sm" style="color: #64748b;">Klien Puas</div>
+                        </div>
+                        <div class="w-px bg-white/10"></div>
+                        <div>
+                            <div class="text-3xl font-black text-white">50+</div>
+                            <div class="text-sm" style="color: #64748b;">Proyek Selesai</div>
+                        </div>
+                        <div class="w-px bg-white/10"></div>
+                        <div>
+                            <div class="text-3xl font-black text-white">2 Thn</div>
+                            <div class="text-sm" style="color: #64748b;">Pengalaman</div>
+                        </div>
+                    </div>
+                    <p class="text-sm" style="color: #64748b;">&#10003; Garansi revisi &nbsp;&nbsp; &#10003; Fast response 24/7</p>
                 </div>
 
                 {{-- Hero SVG Illustration --}}
