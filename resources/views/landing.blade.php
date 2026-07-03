@@ -21,26 +21,29 @@
         {{-- Purple glow top left --}}
         <div class="absolute top-0 left-0 w-[600px] h-[600px] pointer-events-none" style="background: radial-gradient(circle, rgba(103,61,230,0.2) 0%, transparent 70%);"></div>
 
-        <div class="max-w-7xl mx-auto px-6 md:px-8 w-full relative z-10">
-            <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 w-full relative z-10">
+            <div class="grid grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8 lg:gap-12 items-center">
                 {{-- Text Content --}}
-                <div data-aos="fade-right" class="text-center lg:text-left">
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 lg:mb-6 leading-tight tracking-tight">
-                        Bangun Website Profesional <br class="hidden lg:block"> untuk <span style="color: #a78bfa;">Bisnis Anda</span>
+                <div data-aos="fade-right" class="text-left">
+                    <h1 class="text-xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-white mb-3 md:mb-6 leading-tight tracking-tight">
+                        Bangun Website <span class="hidden sm:inline">Profesional</span><span class="sm:hidden">Pro</span> untuk <span style="color: #a78bfa;">Bisnis Anda</span>
                     </h1>
-                    <p class="text-base md:text-lg lg:text-xl mb-7 lg:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0" style="color: #94a3b8;">
+                    <p class="hidden sm:block text-base md:text-lg lg:text-xl mb-7 lg:mb-10 leading-relaxed" style="color: #94a3b8;">
                         Website profesional dan sistem custom modern yang dirancang khusus untuk mengakselerasi bisnis Anda di era digital.
                     </p>
+                    <p class="sm:hidden text-xs mb-4 leading-relaxed" style="color: #94a3b8;">
+                        Website & sistem custom untuk bisnis Anda.
+                    </p>
                     
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#katalog" class="px-8 py-4 bg-white text-slate-900 font-black rounded-full hover:bg-gray-100 transition-all duration-300 text-center uppercase tracking-wide text-sm hover:-translate-y-0.5 shadow-lg">
+                    <div class="flex flex-col gap-2 sm:flex-row sm:gap-4">
+                        <a href="#katalog" class="px-4 py-2.5 sm:px-8 sm:py-4 bg-white text-slate-900 font-black rounded-full hover:bg-gray-100 transition-all duration-300 text-center uppercase tracking-wide text-xs sm:text-sm hover:-translate-y-0.5 shadow-lg">
                             Lihat Katalog
                         </a>
-                        <a href="https://wa.me/6287870402431" target="_blank" class="px-8 py-4 font-bold rounded-full transition-all duration-300 text-center uppercase tracking-wide text-sm border border-white/30 hover:border-white/60 hover:bg-white/10 text-white">
-                            Konsultasi Gratis
+                        <a href="https://wa.me/6287870402431" target="_blank" class="px-4 py-2.5 sm:px-8 sm:py-4 font-bold rounded-full transition-all duration-300 text-center uppercase tracking-wide text-xs sm:text-sm border border-white/30 hover:border-white/60 hover:bg-white/10 text-white">
+                            Konsultasi
                         </a>
                     </div>
-                    <p class="mt-5 text-sm" style="color: #64748b;">&#10003; Garansi revisi &nbsp;&nbsp; &#10003; Fast response 24/7</p>
+                    <p class="mt-4 text-xs hidden sm:block" style="color: #64748b;">&#10003; Garansi revisi &nbsp;&nbsp; &#10003; Fast response 24/7</p>
                 </div>
 
                 {{-- Hero SVG Illustration --}}
@@ -48,7 +51,7 @@
                     <img 
                         src="/images/hero_startup.svg" 
                         alt="Web Development Team" 
-                        class="w-full max-w-[280px] sm:max-w-[380px] lg:max-w-[520px] h-auto opacity-90"
+                        class="w-full max-w-[200px] sm:max-w-[320px] lg:max-w-[520px] h-auto opacity-90"
                         style="filter: drop-shadow(0 0 40px rgba(103,61,230,0.3));"
                     />
                 </div>
