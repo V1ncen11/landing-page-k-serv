@@ -262,7 +262,7 @@
                         <p class="text-slate-500 text-sm mb-6 leading-relaxed">Cocok untuk bisnis yang baru mulai go-digital dengan budget terjangkau.</p>
                         <div class="mb-6">
                             <span class="text-sm font-semibold text-slate-400 block mb-1">Mulai dari</span>
-                            <span class="text-2xl font-black text-slate-900">Hubungi Kami</span>
+                            <span class="text-2xl font-black text-slate-900">Rp 800.000</span>
                         </div>
                         <hr class="border-slate-100 mb-6">
                         <p class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4">Yang kamu dapatkan:</p>
@@ -302,7 +302,7 @@
                         <p class="text-slate-500 text-sm mb-6 leading-relaxed">Untuk bisnis yang serius tampil profesional dan siap bersaing di Google.</p>
                         <div class="mb-6">
                             <span class="text-sm font-semibold text-slate-400 block mb-1">Mulai dari</span>
-                            <span class="text-2xl font-black text-slate-900">Hubungi Kami</span>
+                            <span class="text-2xl font-black text-slate-900">Rp 1.500.000</span>
                         </div>
                         <hr class="border-slate-100 mb-6">
                         <p class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4">Yang kamu dapatkan:</p>
@@ -341,7 +341,7 @@
                         <p class="text-slate-500 text-sm mb-6 leading-relaxed">Paket lengkap untuk bisnis yang ingin tampil maksimal dan dominan di pencarian Google.</p>
                         <div class="mb-6">
                             <span class="text-sm font-semibold text-slate-400 block mb-1">Mulai dari</span>
-                            <span class="text-2xl font-black text-slate-900">Hubungi Kami</span>
+                            <span class="text-2xl font-black text-slate-900">Rp 2.500.000</span>
                         </div>
                         <hr class="border-slate-100 mb-6">
                         <p class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4">Yang kamu dapatkan:</p>
