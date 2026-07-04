@@ -345,7 +345,7 @@
                         <ul class="space-y-2.5 flex-grow mb-8 text-sm text-slate-600">
                             @foreach([
                                 'Semua fitur Professional',
-                                'Domain .com'
+                                'Domain .com',
                                 'Google Search Console',
                                 'Google Analytics',
                                 'Schema Markup',
