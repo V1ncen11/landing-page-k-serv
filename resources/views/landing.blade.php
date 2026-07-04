@@ -261,7 +261,7 @@
                         <h3 class="text-2xl font-black text-slate-900 mb-1">Starter</h3>
                         <p class="text-slate-500 text-sm mb-6 leading-relaxed">Cocok untuk bisnis yang baru mulai go-digital dengan budget terjangkau.</p>
                         <div class="mb-6">
-                            <span class="text-2xl font-black text-slate-900">Rp 800.000</span>
+                            <span class="text-2xl font-black text-slate-900">Rp 990.000</span>
                         </div>
                         <hr class="border-slate-100 mb-6">
                         <p class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4">Yang kamu dapatkan:</p>
@@ -300,7 +300,7 @@
                         <h3 class="text-2xl font-black text-slate-900 mb-1">Professional</h3>
                         <p class="text-slate-500 text-sm mb-6 leading-relaxed">Untuk bisnis yang serius tampil profesional dan siap bersaing di Google.</p>
                         <div class="mb-6">
-                            <span class="text-2xl font-black text-slate-900">Rp 1.500.000</span>
+                            <span class="text-2xl font-black text-slate-900">Rp 2.200.000</span>
                         </div>
                         <hr class="border-slate-100 mb-6">
                         <p class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4">Yang kamu dapatkan:</p>
@@ -338,13 +338,14 @@
                         <h3 class="text-2xl font-black text-slate-900 mb-1">Premium</h3>
                         <p class="text-slate-500 text-sm mb-6 leading-relaxed">Paket lengkap untuk bisnis yang ingin tampil maksimal dan dominan di pencarian Google.</p>
                         <div class="mb-6">
-                            <span class="text-2xl font-black text-slate-900">Rp 2.500.000</span>
+                            <span class="text-2xl font-black text-slate-900">Rp 2.800.000</span>
                         </div>
                         <hr class="border-slate-100 mb-6">
                         <p class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4">Yang kamu dapatkan:</p>
                         <ul class="space-y-2.5 flex-grow mb-8 text-sm text-slate-600">
                             @foreach([
                                 'Semua fitur Professional',
+                                'Domain .com'
                                 'Google Search Console',
                                 'Google Analytics',
                                 'Schema Markup',
