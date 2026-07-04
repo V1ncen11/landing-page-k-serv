@@ -245,96 +245,136 @@
             @endforeach
         </div>
 
-        {{-- ── Feature Comparison Table (Landing Page) ── --}}
+        {{-- ── Landing Page Pricing Cards ── --}}
         <div class="mt-20" data-aos="fade-up">
-            <div class="text-center mb-10">
-                <h3 class="text-2xl md:text-3xl font-black text-slate-900">Perbandingan Fitur Lengkap</h3>
-                <p class="text-slate-500 mt-2 text-sm">Khusus paket Landing Page</p>
+            <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-black text-slate-900">Paket Landing Page</h3>
+                <p class="text-slate-500 mt-2">Pilih paket yang sesuai kebutuhanmu</p>
             </div>
 
-            <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
-                <table class="w-full text-sm border-collapse">
-                    <thead>
-                        <tr style="background-color: #1e1b4b;">
-                            <th class="text-left px-6 py-4 text-white font-bold text-base w-1/2">Fitur</th>
-                            <th class="text-center px-4 py-4 font-black text-base" style="color: #4ade80; min-width: 110px;">
-                                🟢 Starter
-                            </th>
-                            <th class="text-center px-4 py-4 font-black text-base" style="color: #f87171; min-width: 130px;">
-                                🔴 Professional
-                            </th>
-                            <th class="text-center px-4 py-4 font-black text-base" style="color: #94a3b8; min-width: 110px;">
-                                ⚫ Premium
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @php
-                        $features = [
-                            ['label' => 'Responsive',               'starter' => true,      'pro' => true,      'premium' => true],
-                            ['label' => 'Hosting 1 Tahun',          'starter' => true,      'pro' => true,      'premium' => true],
-                            ['label' => 'SSL',                      'starter' => true,      'pro' => true,      'premium' => true],
-                            ['label' => 'Integrasi WhatsApp',       'starter' => true,      'pro' => true,      'premium' => true],
-                            ['label' => 'Google Maps',              'starter' => true,      'pro' => true,      'premium' => true],
-                            ['label' => 'Domain .web.id / .my.id',  'starter' => true,      'pro' => false,     'premium' => false],
-                            ['label' => 'Domain .com',              'starter' => false,     'pro' => true,      'premium' => true],
-                            ['label' => 'Basic SEO',                'starter' => true,      'pro' => true,      'premium' => true],
-                            ['label' => 'Sitemap & Robots.txt',     'starter' => false,     'pro' => true,      'premium' => true],
-                            ['label' => 'Open Graph (Share Preview)','starter' => false,    'pro' => true,      'premium' => true],
-                            ['label' => 'Animasi Premium',          'starter' => false,     'pro' => true,      'premium' => true],
-                            ['label' => 'Google Search Console',    'starter' => false,     'pro' => false,     'premium' => true],
-                            ['label' => 'Google Analytics',         'starter' => false,     'pro' => false,     'premium' => true],
-                            ['label' => 'Schema Markup',            'starter' => false,     'pro' => false,     'premium' => true],
-                            ['label' => 'Copywriting Dasar',        'starter' => false,     'pro' => false,     'premium' => true],
-                            ['label' => 'Revisi Mayor',             'starter' => '-',       'pro' => '1x',      'premium' => '2x'],
-                            ['label' => 'Maintenance',              'starter' => '7 Hari',  'pro' => '14 Hari', 'premium' => '30 Hari'],
-                        ];
-                        @endphp
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                        @foreach($features as $i => $f)
-                        <tr class="{{ $i % 2 === 0 ? 'bg-white' : 'bg-slate-50' }} border-t border-slate-100 hover:bg-violet-50 transition-colors duration-150">
-                            <td class="px-6 py-3.5 text-slate-700 font-medium">{{ $f['label'] }}</td>
+                {{-- STARTER --}}
+                <div class="relative bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="p-8 flex flex-col h-full">
+                        <span class="px-3 py-1 text-xs font-bold uppercase rounded-md bg-gray-100 text-slate-600 self-start mb-6">Landing Page</span>
+                        <h3 class="text-2xl font-black text-slate-900 mb-1">Starter</h3>
+                        <p class="text-slate-500 text-sm mb-6 leading-relaxed">Cocok untuk bisnis yang baru mulai go-digital dengan budget terjangkau.</p>
+                        <div class="mb-6">
+                            <span class="text-sm font-semibold text-slate-400 block mb-1">Mulai dari</span>
+                            <span class="text-2xl font-black text-slate-900">Hubungi Kami</span>
+                        </div>
+                        <hr class="border-slate-100 mb-6">
+                        <p class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4">Yang kamu dapatkan:</p>
+                        <ul class="space-y-2.5 flex-grow mb-8 text-sm text-slate-600">
+                            @foreach([
+                                'Desain Responsif (Mobile-Friendly)',
+                                'Hosting 1 Tahun',
+                                'SSL (HTTPS)',
+                                'Integrasi WhatsApp',
+                                'Google Maps',
+                                'Domain .web.id / .my.id',
+                                'Basic SEO',
+                                'Maintenance 7 Hari',
+                            ] as $feat)
+                            <li class="flex items-start gap-3">
+                                <div class="mt-0.5 bg-slate-100 p-1 rounded-full shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <span>{{ $feat }}</span>
+                            </li>
+                            @endforeach
+                        </ul>
+                        <a href="https://wa.me/6287870402431?text=Halo%20K-Serv,%20saya%20tertarik%20dengan%20paket%20Landing%20Page%20Starter" target="_blank"
+                           class="w-full px-5 py-3.5 rounded-xl text-sm font-bold transition-all text-center flex items-center justify-center gap-2 bg-white border border-slate-200 hover:border-[#673de6] text-slate-800">
+                            Konsultasi Sekarang
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+                </div>
 
-                            {{-- Starter --}}
-                            <td class="text-center px-4 py-3.5">
-                                @if($f['starter'] === true)
-                                    <span style="color: #22c55e; font-size: 18px;">✅</span>
-                                @elseif($f['starter'] === false)
-                                    <span style="color: #cbd5e1; font-size: 18px;">❌</span>
-                                @else
-                                    <span class="font-semibold text-slate-600">{{ $f['starter'] }}</span>
-                                @endif
-                            </td>
+                {{-- PROFESSIONAL (Popular) --}}
+                <div class="relative bg-white rounded-3xl border-transparent shadow-2xl transition-all duration-300 flex flex-col overflow-hidden -translate-y-2">
+                    <div class="w-full py-3 text-center text-white text-xs font-black uppercase tracking-widest" style="background-color: #673de6;">⭐ Paling Dicari</div>
+                    <div class="p-8 flex flex-col h-full">
+                        <span class="px-3 py-1 text-xs font-bold uppercase rounded-md text-white self-start mb-6" style="background-color:#673de6;">Landing Page</span>
+                        <h3 class="text-2xl font-black text-slate-900 mb-1">Professional</h3>
+                        <p class="text-slate-500 text-sm mb-6 leading-relaxed">Untuk bisnis yang serius tampil profesional dan siap bersaing di Google.</p>
+                        <div class="mb-6">
+                            <span class="text-sm font-semibold text-slate-400 block mb-1">Mulai dari</span>
+                            <span class="text-2xl font-black text-slate-900">Hubungi Kami</span>
+                        </div>
+                        <hr class="border-slate-100 mb-6">
+                        <p class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4">Yang kamu dapatkan:</p>
+                        <ul class="space-y-2.5 flex-grow mb-8 text-sm text-slate-600">
+                            @foreach([
+                                'Semua fitur Starter',
+                                'Domain .com',
+                                'Sitemap & Robots.txt',
+                                'Open Graph (Share Preview)',
+                                'Animasi Premium',
+                                'Revisi Mayor 1x',
+                                'Maintenance 14 Hari',
+                            ] as $feat)
+                            <li class="flex items-start gap-3">
+                                <div class="mt-0.5 p-1 rounded-full shrink-0" style="background-color: rgba(103,61,230,0.1);">
+                                    <svg class="w-3.5 h-3.5" style="color:#673de6;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <span>{{ $feat }}</span>
+                            </li>
+                            @endforeach
+                        </ul>
+                        <a href="https://wa.me/6287870402431?text=Halo%20K-Serv,%20saya%20tertarik%20dengan%20paket%20Landing%20Page%20Professional" target="_blank"
+                           class="w-full px-5 py-3.5 rounded-xl text-sm font-bold transition-all text-center flex items-center justify-center gap-2 text-white shadow-md hover:opacity-90"
+                           style="background-color: #673de6;">
+                            Konsultasi Sekarang
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+                </div>
 
-                            {{-- Professional --}}
-                            <td class="text-center px-4 py-3.5" style="background: rgba(109,40,217,0.04);">
-                                @if($f['pro'] === true)
-                                    <span style="color: #22c55e; font-size: 18px;">✅</span>
-                                @elseif($f['pro'] === false)
-                                    <span style="color: #cbd5e1; font-size: 18px;">❌</span>
-                                @else
-                                    <span class="font-semibold" style="color: #673de6;">{{ $f['pro'] }}</span>
-                                @endif
-                            </td>
+                {{-- PREMIUM --}}
+                <div class="relative bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="p-8 flex flex-col h-full">
+                        <span class="px-3 py-1 text-xs font-bold uppercase rounded-md bg-gray-100 text-slate-600 self-start mb-6">Landing Page</span>
+                        <h3 class="text-2xl font-black text-slate-900 mb-1">Premium</h3>
+                        <p class="text-slate-500 text-sm mb-6 leading-relaxed">Paket lengkap untuk bisnis yang ingin tampil maksimal dan dominan di pencarian Google.</p>
+                        <div class="mb-6">
+                            <span class="text-sm font-semibold text-slate-400 block mb-1">Mulai dari</span>
+                            <span class="text-2xl font-black text-slate-900">Hubungi Kami</span>
+                        </div>
+                        <hr class="border-slate-100 mb-6">
+                        <p class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4">Yang kamu dapatkan:</p>
+                        <ul class="space-y-2.5 flex-grow mb-8 text-sm text-slate-600">
+                            @foreach([
+                                'Semua fitur Professional',
+                                'Google Search Console',
+                                'Google Analytics',
+                                'Schema Markup',
+                                'Copywriting Dasar',
+                                'Revisi Mayor 2x',
+                                'Maintenance 30 Hari',
+                            ] as $feat)
+                            <li class="flex items-start gap-3">
+                                <div class="mt-0.5 bg-slate-100 p-1 rounded-full shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <span>{{ $feat }}</span>
+                            </li>
+                            @endforeach
+                        </ul>
+                        <a href="https://wa.me/6287870402431?text=Halo%20K-Serv,%20saya%20tertarik%20dengan%20paket%20Landing%20Page%20Premium" target="_blank"
+                           class="w-full px-5 py-3.5 rounded-xl text-sm font-bold transition-all text-center flex items-center justify-center gap-2 bg-white border border-slate-200 hover:border-[#673de6] text-slate-800">
+                            Konsultasi Sekarang
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+                </div>
 
-                            {{-- Premium --}}
-                            <td class="text-center px-4 py-3.5">
-                                @if($f['premium'] === true)
-                                    <span style="color: #22c55e; font-size: 18px;">✅</span>
-                                @elseif($f['premium'] === false)
-                                    <span style="color: #cbd5e1; font-size: 18px;">❌</span>
-                                @else
-                                    <span class="font-semibold text-slate-700">{{ $f['premium'] }}</span>
-                                @endif
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
             </div>
-            <p class="text-center text-xs text-slate-400 mt-4">* Tabel ini khusus untuk kategori paket Landing Page</p>
         </div>
     </section>
+
 
 
     {{-- ═══════════════════════ PORTOFOLIO ═══════════════════════ --}}
