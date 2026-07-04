@@ -145,7 +145,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             @foreach($produks as $index => $item)
-                @if(strtolower($item->kategori) != 'portofolio')
+                @if(strtolower($item->kategori) != 'portofolio' && strpos(strtolower($item->nama), 'landing page') === false)
                 {{-- Hostinger-style card: popular card gets elevated with purple header --}}
                 @php $isPopular = ($index === 1 || strpos(strtolower($item->nama), 'ujian') !== false); @endphp
                 <div class="tilt-card relative bg-white rounded-3xl border transition-all duration-300 flex flex-col overflow-hidden group {{ $isPopular ? 'shadow-2xl border-transparent -translate-y-2' : 'shadow-sm border-slate-200 hover:border-slate-300 hover:shadow-md' }}" data-tilt data-tilt-gyroscope="false" data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
@@ -257,11 +257,10 @@
                 {{-- STARTER --}}
                 <div class="relative bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
                     <div class="p-8 flex flex-col h-full">
-                        <span class="px-3 py-1 text-xs font-bold uppercase rounded-md bg-gray-100 text-slate-600 self-start mb-6">Landing Page</span>
+
                         <h3 class="text-2xl font-black text-slate-900 mb-1">Starter</h3>
                         <p class="text-slate-500 text-sm mb-6 leading-relaxed">Cocok untuk bisnis yang baru mulai go-digital dengan budget terjangkau.</p>
                         <div class="mb-6">
-                            <span class="text-sm font-semibold text-slate-400 block mb-1">Mulai dari</span>
                             <span class="text-2xl font-black text-slate-900">Rp 800.000</span>
                         </div>
                         <hr class="border-slate-100 mb-6">
@@ -297,11 +296,10 @@
                 <div class="relative bg-white rounded-3xl border-transparent shadow-2xl transition-all duration-300 flex flex-col overflow-hidden -translate-y-2">
                     <div class="w-full py-3 text-center text-white text-xs font-black uppercase tracking-widest" style="background-color: #673de6;">⭐ Paling Dicari</div>
                     <div class="p-8 flex flex-col h-full">
-                        <span class="px-3 py-1 text-xs font-bold uppercase rounded-md text-white self-start mb-6" style="background-color:#673de6;">Landing Page</span>
+
                         <h3 class="text-2xl font-black text-slate-900 mb-1">Professional</h3>
                         <p class="text-slate-500 text-sm mb-6 leading-relaxed">Untuk bisnis yang serius tampil profesional dan siap bersaing di Google.</p>
                         <div class="mb-6">
-                            <span class="text-sm font-semibold text-slate-400 block mb-1">Mulai dari</span>
                             <span class="text-2xl font-black text-slate-900">Rp 1.500.000</span>
                         </div>
                         <hr class="border-slate-100 mb-6">
@@ -336,11 +334,10 @@
                 {{-- PREMIUM --}}
                 <div class="relative bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
                     <div class="p-8 flex flex-col h-full">
-                        <span class="px-3 py-1 text-xs font-bold uppercase rounded-md bg-gray-100 text-slate-600 self-start mb-6">Landing Page</span>
+
                         <h3 class="text-2xl font-black text-slate-900 mb-1">Premium</h3>
                         <p class="text-slate-500 text-sm mb-6 leading-relaxed">Paket lengkap untuk bisnis yang ingin tampil maksimal dan dominan di pencarian Google.</p>
                         <div class="mb-6">
-                            <span class="text-sm font-semibold text-slate-400 block mb-1">Mulai dari</span>
                             <span class="text-2xl font-black text-slate-900">Rp 2.500.000</span>
                         </div>
                         <hr class="border-slate-100 mb-6">
