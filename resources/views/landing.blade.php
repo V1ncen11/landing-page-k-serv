@@ -94,7 +94,7 @@
                 {{-- Cepat --}}
                 <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-right">
-                    <img src="/images/kserv_cepat.svg" alt="Pengerjaan Cepat" class="h-auto object-contain" style="width: 200px; max-width: 100%;" />
+                    <img src="/images/kserv_cepat.svg" alt="Pengerjaan Cepat" class="h-auto object-contain" style="width: 300px; max-width: 100%;" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Pengerjaan Cepat</h3>
@@ -105,7 +105,7 @@
                 {{-- Garansi Revisi --}}
                 <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-left">
-                    <img src="/images/kserv_garansi.svg" alt="Garansi Revisi" class="h-auto object-contain" style="width: 200px; max-width: 100%;" />
+                    <img src="/images/kserv_garansi.svg" alt="Garansi Revisi" class="h-auto object-contain" style="width: 300px; max-width: 100%;" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Garansi Revisi</h3>
@@ -116,7 +116,7 @@
                 {{-- Harga Bersahabat --}}
                 <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-right">
-                    <img src="/images/kserv_harga.svg" alt="Harga Bersahabat" class="h-auto object-contain" style="width: 200px; max-width: 100%;" />
+                    <img src="/images/kserv_harga.svg" alt="Harga Bersahabat" class="h-auto object-contain" style="width: 300px; max-width: 100%;" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Harga Bersahabat</h3>
@@ -127,7 +127,7 @@
                 {{-- Respon Cepat --}}
                 <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-left">
-                    <img src="/images/kserv_respon.svg" alt="Respon Cepat" class="h-auto object-contain" style="width: 200px; max-width: 100%;" />
+                    <img src="/images/kserv_respon.svg" alt="Respon Cepat" class="h-auto object-contain" style="width: 300px; max-width: 100%;" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Respon Cepat 24/7</h3>
@@ -244,7 +244,98 @@
                 @endif
             @endforeach
         </div>
+
+        {{-- ── Feature Comparison Table (Landing Page) ── --}}
+        <div class="mt-20" data-aos="fade-up">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl md:text-3xl font-black text-slate-900">Perbandingan Fitur Lengkap</h3>
+                <p class="text-slate-500 mt-2 text-sm">Khusus paket Landing Page</p>
+            </div>
+
+            <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+                <table class="w-full text-sm border-collapse">
+                    <thead>
+                        <tr style="background-color: #1e1b4b;">
+                            <th class="text-left px-6 py-4 text-white font-bold text-base w-1/2">Fitur</th>
+                            <th class="text-center px-4 py-4 font-black text-base" style="color: #4ade80; min-width: 110px;">
+                                🟢 Starter
+                            </th>
+                            <th class="text-center px-4 py-4 font-black text-base" style="color: #f87171; min-width: 130px;">
+                                🔴 Professional
+                            </th>
+                            <th class="text-center px-4 py-4 font-black text-base" style="color: #94a3b8; min-width: 110px;">
+                                ⚫ Premium
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @php
+                        $features = [
+                            ['label' => 'Responsive',               'starter' => true,      'pro' => true,      'premium' => true],
+                            ['label' => 'Hosting 1 Tahun',          'starter' => true,      'pro' => true,      'premium' => true],
+                            ['label' => 'SSL',                      'starter' => true,      'pro' => true,      'premium' => true],
+                            ['label' => 'Integrasi WhatsApp',       'starter' => true,      'pro' => true,      'premium' => true],
+                            ['label' => 'Google Maps',              'starter' => true,      'pro' => true,      'premium' => true],
+                            ['label' => 'Domain .web.id / .my.id',  'starter' => true,      'pro' => false,     'premium' => false],
+                            ['label' => 'Domain .com',              'starter' => false,     'pro' => true,      'premium' => true],
+                            ['label' => 'Basic SEO',                'starter' => true,      'pro' => true,      'premium' => true],
+                            ['label' => 'Sitemap & Robots.txt',     'starter' => false,     'pro' => true,      'premium' => true],
+                            ['label' => 'Open Graph (Share Preview)','starter' => false,    'pro' => true,      'premium' => true],
+                            ['label' => 'Animasi Premium',          'starter' => false,     'pro' => true,      'premium' => true],
+                            ['label' => 'Google Search Console',    'starter' => false,     'pro' => false,     'premium' => true],
+                            ['label' => 'Google Analytics',         'starter' => false,     'pro' => false,     'premium' => true],
+                            ['label' => 'Schema Markup',            'starter' => false,     'pro' => false,     'premium' => true],
+                            ['label' => 'Copywriting Dasar',        'starter' => false,     'pro' => false,     'premium' => true],
+                            ['label' => 'Revisi Mayor',             'starter' => '-',       'pro' => '1x',      'premium' => '2x'],
+                            ['label' => 'Maintenance',              'starter' => '7 Hari',  'pro' => '14 Hari', 'premium' => '30 Hari'],
+                        ];
+                        @endphp
+
+                        @foreach($features as $i => $f)
+                        <tr class="{{ $i % 2 === 0 ? 'bg-white' : 'bg-slate-50' }} border-t border-slate-100 hover:bg-violet-50 transition-colors duration-150">
+                            <td class="px-6 py-3.5 text-slate-700 font-medium">{{ $f['label'] }}</td>
+
+                            {{-- Starter --}}
+                            <td class="text-center px-4 py-3.5">
+                                @if($f['starter'] === true)
+                                    <span style="color: #22c55e; font-size: 18px;">✅</span>
+                                @elseif($f['starter'] === false)
+                                    <span style="color: #cbd5e1; font-size: 18px;">❌</span>
+                                @else
+                                    <span class="font-semibold text-slate-600">{{ $f['starter'] }}</span>
+                                @endif
+                            </td>
+
+                            {{-- Professional --}}
+                            <td class="text-center px-4 py-3.5" style="background: rgba(109,40,217,0.04);">
+                                @if($f['pro'] === true)
+                                    <span style="color: #22c55e; font-size: 18px;">✅</span>
+                                @elseif($f['pro'] === false)
+                                    <span style="color: #cbd5e1; font-size: 18px;">❌</span>
+                                @else
+                                    <span class="font-semibold" style="color: #673de6;">{{ $f['pro'] }}</span>
+                                @endif
+                            </td>
+
+                            {{-- Premium --}}
+                            <td class="text-center px-4 py-3.5">
+                                @if($f['premium'] === true)
+                                    <span style="color: #22c55e; font-size: 18px;">✅</span>
+                                @elseif($f['premium'] === false)
+                                    <span style="color: #cbd5e1; font-size: 18px;">❌</span>
+                                @else
+                                    <span class="font-semibold text-slate-700">{{ $f['premium'] }}</span>
+                                @endif
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center text-xs text-slate-400 mt-4">* Tabel ini khusus untuk kategori paket Landing Page</p>
+        </div>
     </section>
+
 
     {{-- ═══════════════════════ PORTOFOLIO ═══════════════════════ --}}
     <section id="portofolio" class="max-w-7xl mx-auto px-6 md:px-8 py-24 border-t border-slate-100 bg-slate-50" data-aos="fade-up">
