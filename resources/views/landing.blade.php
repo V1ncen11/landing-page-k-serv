@@ -580,33 +580,7 @@
         </div>
     </section>
 
-    {{-- ═══════════════════════ TENTANG KAMI ═══════════════════════ --}}
-    <section class="bg-white border-t border-slate-100 py-24" data-aos="fade-up">
-        <div class="max-w-7xl mx-auto px-6 md:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                {{-- Kiri: Teks --}}
-                <div data-aos="fade-right">
-                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 leading-tight">
-                        Kami Hadir untuk <br>
-                        Beresin Urusan Digital<br>Kamu.
-                    </h2>
-                    <p class="text-slate-500 leading-relaxed mb-6">
-                        K-Serv adalah layanan jasa digital yang didirikan dengan satu misi sederhana: <strong class="text-slate-700">membantu individu dan bisnis tampil profesional di dunia digital tanpa harus ribet dan mahal.</strong>
-                    </p>
-                    <p class="text-slate-500 leading-relaxed mb-8">
-                        Dari UMKM yang ingin go-digital, sekolah dan instansi yang butuh sistem informasi terintegrasi, hingga pemilik bisnis yang ingin punya website profesional—K-SERV siap menjadi partner digital Anda yang responsif, transparan, dan bergaransi.
-                    </p>
-                </div>
-
-                {{-- Kanan: Illustration --}}
-                <div class="flex justify-center" data-aos="fade-left" data-aos-delay="150">
-                    <img src="/images/tentang_kami_team.svg" alt="Tim K-SERV" class="w-full max-w-[500px] h-auto object-contain drop-shadow-xl" />
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     {{-- ═══════════════════════ WHATSAPP FLOATING BUTTON ═══════════════════════ --}}
     <a href="https://wa.me/6287870402431?text=Halo%20K-Serv,%20saya%20mau%20konsultasi%20nih!" 
