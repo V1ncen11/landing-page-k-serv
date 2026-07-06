@@ -35,7 +35,7 @@
         </div>
         @endif
 
-        <form action="{{ route('admin.blog.update', $blog->id) }}" method="POST" class="space-y-8">
+        <form id="form-blog" action="{{ route('admin.blog.update', $blog->id) }}" method="POST" class="space-y-8">
             @csrf
             @method('PUT')
 
@@ -132,7 +132,7 @@
         });
 
         // Set form submit
-        const form = document.querySelector('form');
+        const form = document.getElementById('form-blog');
         const contentInput = document.getElementById('content-input');
         
         form.addEventListener('submit', function(e) {
