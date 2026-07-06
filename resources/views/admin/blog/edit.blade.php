@@ -1,20 +1,28 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="max-w-5xl mx-auto">
-    <div class="bg-white p-8 md:p-12 rounded-[32px] shadow-sm border border-slate-100">
+<div class="max-w-4xl mx-auto">
+    <!-- Content Header -->
+    <div class="mb-6 flex flex-col md:flex-row md:items-center justify-between">
+        <h1 class="text-2xl font-bold text-slate-800">Edit Artikel</h1>
+        <ol class="flex text-sm text-slate-500 mt-2 md:mt-0">
+            <li><a href="{{ route('admin.dashboard') }}" class="text-indigo-600 hover:underline">Home</a></li>
+            <li class="mx-2">/</li>
+            <li><a href="{{ route('admin.blog.index') }}" class="text-indigo-600 hover:underline">Blog</a></li>
+            <li class="mx-2">/</li>
+            <li class="text-slate-400">Edit Artikel</li>
+        </ol>
+    </div>
 
-        <div class="flex items-center gap-4 mb-10">
-            <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg shadow-amber-200">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                </svg>
-            </div>
-            <div>
-                <h2 class="text-3xl md:text-4xl font-black text-slate-900">Edit Artikel</h2>
-                <p class="text-slate-500 mt-2 font-medium">Perbarui konten dan informasi artikel blog.</p>
-            </div>
+    <!-- Card -->
+    <div class="bg-white rounded-lg shadow-sm border-t-4 border-t-amber-500 border-x border-b border-slate-200">
+        <!-- Card Header -->
+        <div class="px-6 py-4 border-b border-slate-200">
+            <h3 class="text-lg font-bold text-slate-700">Form Edit Artikel</h3>
         </div>
+        
+        <!-- Card Body -->
+        <div class="p-6">
 
         @if($errors->any())
         <div class="mb-8 p-5 bg-rose-50 border border-rose-100 rounded-2xl">
@@ -84,18 +92,19 @@
             </div>
 
             {{-- Buttons --}}
-            <div class="flex flex-col sm:flex-row gap-4 pt-6 border-t border-slate-100">
-                <button type="submit" id="btn-submit" class="flex-1 bg-amber-500 text-white py-4 px-8 rounded-2xl font-black hover:bg-amber-600 hover:scale-[1.02] transition-all shadow-xl shadow-amber-200 text-lg flex justify-center items-center gap-2">
+            <div class="flex gap-4 pt-4 border-t border-slate-100 mt-6">
+                <button type="submit" id="btn-submit" class="bg-amber-500 text-white px-6 py-2.5 rounded font-bold hover:bg-amber-600 transition flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
                     </svg>
                     Update Artikel
                 </button>
-                <a href="{{ route('admin.blog.index') }}" class="sm:w-48 py-4 px-8 border border-slate-200 rounded-2xl font-bold text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition flex items-center justify-center text-center">
+                <a href="{{ route('admin.blog.index') }}" class="px-6 py-2.5 bg-slate-100 rounded font-bold text-slate-600 hover:bg-slate-200 transition">
                     Batal
                 </a>
             </div>
         </form>
+        </div> <!-- End Card Body -->
     </div>
 </div>
 

@@ -2,27 +2,21 @@
 
 @section('content')
 <div>
-    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
+    <!-- Content Header -->
+    <div class="mb-6 flex flex-col md:flex-row md:items-center justify-between">
         <div>
-            <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight">Manajemen Blog</h1>
-            <p class="text-slate-500 mt-1">Kelola artikel SEO dan insight untuk website K-SERV.</p>
+            <h1 class="text-2xl font-bold text-slate-800">Manajemen Blog</h1>
+            <p class="text-slate-500 text-sm mt-1">Kelola artikel SEO dan insight untuk website K-SERV.</p>
         </div>
-        
-        <div class="flex items-center gap-3">
-            <a href="{{ route('admin.produk.index') }}" class="inline-flex items-center px-5 py-3 bg-white border border-slate-200 text-slate-600 font-bold rounded-2xl hover:bg-slate-50 transition-all shadow-sm">
-                Kembali ke Produk
-            </a>
-            <a href="{{ route('admin.blog.create') }}" class="inline-flex items-center justify-center px-5 py-3 bg-[#673de6] text-white font-bold rounded-2xl hover:bg-purple-700 hover:scale-105 transition-all shadow-lg shadow-purple-100">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-                Tulis Artikel Baru
-            </a>
-        </div>
+        <ol class="flex text-sm text-slate-500 mt-2 md:mt-0">
+            <li><a href="{{ route('admin.dashboard') }}" class="text-indigo-600 hover:underline">Home</a></li>
+            <li class="mx-2">/</li>
+            <li class="text-slate-400">Blog</li>
+        </ol>
     </div>
 
     @if(session('success'))
-        <div class="mb-6 p-4 bg-emerald-50 text-emerald-700 rounded-xl border border-emerald-100 flex items-center shadow-sm">
+        <div class="mb-6 p-4 bg-emerald-50 text-emerald-700 rounded border border-emerald-200 flex items-center shadow-sm">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
@@ -30,7 +24,20 @@
         </div>
     @endif
 
-    <div class="bg-white rounded-[24px] shadow-sm border border-slate-200/60 overflow-hidden">
+    <!-- Card -->
+    <div class="bg-white rounded-lg shadow-sm border-t-4 border-t-[#673de6] border-x border-b border-slate-200">
+        <!-- Card Header -->
+        <div class="px-4 py-3 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <h3 class="text-lg font-bold text-slate-700">Daftar Artikel</h3>
+            <a href="{{ route('admin.blog.create') }}" class="inline-flex items-center justify-center px-4 py-2 bg-indigo-600 text-white text-sm font-bold rounded hover:bg-indigo-700 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+                Tulis Artikel Baru
+            </a>
+        </div>
+        
+        <!-- Card Body -->
         <div class="overflow-x-auto">
             <table class="w-full text-left border-collapse">
                 <thead>

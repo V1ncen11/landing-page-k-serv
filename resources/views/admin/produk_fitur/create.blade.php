@@ -1,20 +1,30 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="max-w-3xl mx-auto">
-    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+<div class="max-w-4xl mx-auto">
+    <!-- Content Header -->
+    <div class="mb-6 flex flex-col md:flex-row md:items-center justify-between">
+        <h1 class="text-2xl font-bold text-slate-800">Tambah Fitur Portofolio</h1>
+        <ol class="flex text-sm text-slate-500 mt-2 md:mt-0">
+            <li><a href="{{ route('admin.dashboard') }}" class="text-indigo-600 hover:underline">Home</a></li>
+            <li class="mx-2">/</li>
+            <li><a href="{{ route('admin.produk.index') }}" class="text-indigo-600 hover:underline">Produk</a></li>
+            <li class="mx-2">/</li>
+            <li><a href="{{ route('admin.produk.fitur.index', $produk->id) }}" class="text-indigo-600 hover:underline">Fitur</a></li>
+            <li class="mx-2">/</li>
+            <li class="text-slate-400">Tambah Fitur</li>
+        </ol>
+    </div>
 
-        <div class="flex items-center gap-3 mb-6">
-            <div class="w-10 h-10 bg-indigo-50 rounded-xl flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-            </div>
-            <div>
-                <h2 class="text-2xl font-bold text-slate-900">Tambah Fitur Portofolio</h2>
-                <p class="text-sm text-slate-400 mt-0.5">Untuk Portofolio: <span class="font-bold text-slate-600">{{ $produk->nama }}</span></p>
-            </div>
+    <!-- Card -->
+    <div class="bg-white rounded-lg shadow-sm border-t-4 border-t-indigo-500 border-x border-b border-slate-200">
+        <!-- Card Header -->
+        <div class="px-6 py-4 border-b border-slate-200">
+            <h3 class="text-lg font-bold text-slate-700">Untuk Portofolio: {{ $produk->nama }}</h3>
         </div>
+        
+        <!-- Card Body -->
+        <div class="p-6">
 
         @if($errors->any())
         <div class="mb-5 p-4 bg-rose-50 border border-rose-200 rounded-xl">
@@ -57,15 +67,16 @@
                 </div>
             </div>
 
-            <div class="flex gap-4 pt-4">
-                <button type="submit" class="flex-1 bg-indigo-600 text-white py-3 rounded-xl font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-100">
+            <div class="flex gap-4 pt-4 border-t border-slate-100 mt-6">
+                <button type="submit" class="bg-indigo-600 text-white px-6 py-2.5 rounded font-bold hover:bg-indigo-700 transition">
                     Simpan Fitur
                 </button>
-                <a href="{{ route('admin.produk.fitur.index', $produk->id) }}" class="px-6 py-3 border border-slate-200 rounded-xl font-bold text-slate-600 hover:bg-slate-50 transition text-center">
+                <a href="{{ route('admin.produk.fitur.index', $produk->id) }}" class="px-6 py-2.5 bg-slate-100 rounded font-bold text-slate-600 hover:bg-slate-200 transition">
                     Batal
                 </a>
             </div>
         </form>
+        </div> <!-- End Card Body -->
     </div>
 </div>
 
