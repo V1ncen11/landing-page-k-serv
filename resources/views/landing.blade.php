@@ -47,6 +47,8 @@
                         alt="Web Development Team"
                         class="w-full max-w-[340px] h-auto opacity-90"
                         style="filter: drop-shadow(0 0 40px rgba(103,61,230,0.3));"
+                        fetchpriority="high"
+                        loading="eager"
                     />
                 </div>
 
@@ -75,6 +77,8 @@
                         alt="Web Development Team"
                         class="w-full max-w-[520px] h-auto opacity-90"
                         style="filter: drop-shadow(0 0 40px rgba(103,61,230,0.3));"
+                        fetchpriority="high"
+                        loading="eager"
                     />
                 </div>
             </div>
@@ -94,7 +98,7 @@
                 {{-- Cepat --}}
                 <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-right">
-                    <img src="/images/kserv_cepat.svg" alt="Pengerjaan Cepat" class="h-auto object-contain" style="width: 300px; max-width: 100%;" />
+                    <img src="/images/kserv_cepat.svg" alt="Pengerjaan Cepat" class="h-auto object-contain" style="width: 300px; max-width: 100%;" loading="lazy" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Pengerjaan Cepat</h3>
@@ -105,7 +109,7 @@
                 {{-- Garansi Revisi --}}
                 <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-left">
-                    <img src="/images/kserv_garansi.svg" alt="Garansi Revisi" class="h-auto object-contain" style="width: 300px; max-width: 100%;" />
+                    <img src="/images/kserv_garansi.svg" alt="Garansi Revisi" class="h-auto object-contain" style="width: 300px; max-width: 100%;" loading="lazy" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Garansi Revisi</h3>
@@ -116,7 +120,7 @@
                 {{-- Harga Bersahabat --}}
                 <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-right">
-                    <img src="/images/kserv_harga.svg" alt="Harga Bersahabat" class="h-auto object-contain" style="width: 300px; max-width: 100%;" />
+                    <img src="/images/kserv_harga.svg" alt="Harga Bersahabat" class="h-auto object-contain" style="width: 300px; max-width: 100%;" loading="lazy" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Harga Bersahabat</h3>
@@ -127,7 +131,7 @@
                 {{-- Respon Cepat --}}
                 <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
                   <div class="w-full md:w-1/2 flex justify-center mix-blend-multiply" data-aos="fade-left">
-                    <img src="/images/kserv_respon.svg" alt="Respon Cepat" class="h-auto object-contain" style="width: 300px; max-width: 100%;" />
+                    <img src="/images/kserv_respon.svg" alt="Respon Cepat" class="h-auto object-contain" style="width: 300px; max-width: 100%;" loading="lazy" />
                   </div>
                   <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
                     <h3 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 tracking-tight">Respon Cepat 24/7</h3>
