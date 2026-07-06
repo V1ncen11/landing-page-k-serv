@@ -382,42 +382,55 @@
             <p class="text-slate-500 mt-2">Kumpulan bukti nyata kualitas pengerjaan K-Serv.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            @foreach($produks as $item)
-                @if(strtolower($item->kategori) == 'portofolio')
-                <div class="tilt-card group relative bg-slate-200 rounded-[24px] aspect-video overflow-hidden shadow-sm border border-slate-200 hover:shadow-xl transition-shadow duration-500 block" data-tilt data-tilt-gyroscope="false" data-tilt-max="8" data-tilt-glare="true" data-tilt-max-glare="0.3" data-aos="flip-left" data-aos-delay="100">
+        @php
+            $portofolios = $produks->filter(function($p) { return strtolower($p->kategori) == 'portofolio'; })->values();
+        @endphp
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            @foreach($portofolios as $index => $item)
+                @php
+                    $pattern = $index % 4;
+                    if ($pattern == 0) $colClass = 'md:col-span-8';
+                    elseif ($pattern == 1) $colClass = 'md:col-span-4';
+                    elseif ($pattern == 2) $colClass = 'md:col-span-4';
+                    else $colClass = 'md:col-span-8';
+                @endphp
+                <div class="tilt-card group relative bg-slate-900 rounded-[24px] overflow-hidden shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-500 block {{ $colClass }} min-h-[320px] lg:min-h-[400px]" data-tilt data-tilt-gyroscope="false" data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.3" data-aos="fade-up" data-aos-delay="{{ ($index % 3) * 100 }}">
                     {{-- Main link for the whole card --}}
                     <a href="{{ route('portofolio.show', $item->id) }}" class="absolute inset-0 z-10"></a>
 
                     <img src="{{ $item->gambar ?: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=600' }}"
-                         class="w-full h-full object-cover group-hover:scale-110 transition duration-700 rounded-[24px]"
+                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 group-hover:opacity-50 transition-all duration-700"
                          alt="{{ $item->nama }}" loading="lazy">
 
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 pointer-events-none">
-                        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500 pointer-events-auto">
-                            <span class="inline-block px-2 py-1 rounded-md bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest mb-2 shadow-lg shadow-slate-900/50 border border-slate-700">
-                                Project Done
-                            </span>
-                            <h4 class="text-white font-bold text-lg leading-tight">{{ $item->nama }}</h4>
-                            <p class="text-slate-300 text-xs mt-2 line-clamp-2 leading-relaxed">{{ $item->deskripsi }}</p>
+                    {{-- Always visible gradient and title --}}
+                    <div class="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent flex flex-col justify-end p-6 md:p-8 z-20 pointer-events-none">
+                        <div class="translate-y-8 group-hover:translate-y-0 transition-transform duration-500 pointer-events-auto">
+                            <h4 class="text-white font-bold text-2xl leading-tight">{{ $item->nama }}</h4>
                             
-                            <div class="mt-4 flex flex-wrap items-center gap-2">
-                                <a href="{{ route('portofolio.show', $item->id) }}" class="flex items-center gap-2 text-white text-xs font-bold bg-white/20 hover:bg-white/30 transition-colors w-fit px-3 py-1.5 rounded-full backdrop-blur-sm">
-                                    Detail
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" /></svg>
-                                </a>
-                                
-                                @if($item->link && strpos($item->link, 'wa.me') === false)
-                                <a href="{{ $item->link }}" target="_blank" class="flex items-center gap-2 text-slate-900 text-xs font-bold bg-white hover:bg-slate-100 transition-colors w-fit px-3 py-1.5 rounded-full shadow-sm">
-                                    Kunjungi Web
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                </a>
-                                @endif
+                            {{-- Hidden content that shows on hover --}}
+                            <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500">
+                                <div class="overflow-hidden">
+                                    <p class="text-slate-300 text-sm mt-3 line-clamp-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">{{ $item->deskripsi }}</p>
+                                    
+                                    <div class="mt-5 flex flex-wrap items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 pb-1">
+                                        <a href="{{ route('portofolio.show', $item->id) }}" class="flex items-center gap-2 text-white text-sm font-bold bg-white/20 hover:bg-white/30 transition-colors w-fit px-4 py-2 rounded-full backdrop-blur-sm relative z-30">
+                                            Lihat Detail
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" /></svg>
+                                        </a>
+                                        
+                                        @if($item->link && strpos($item->link, 'wa.me') === false)
+                                        <a href="{{ $item->link }}" target="_blank" class="flex items-center gap-2 text-slate-900 text-sm font-bold bg-white hover:bg-slate-100 transition-colors w-fit px-4 py-2 rounded-full shadow-sm relative z-30">
+                                            Kunjungi Website
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                        </a>
+                                        @endif
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                @endif
             @endforeach
         </div>
     </section>
