@@ -35,7 +35,7 @@
         
         <!-- User Panel -->
         <div class="px-4 py-4 border-b border-slate-700/50 flex items-center gap-3">
-            <img src="{{ asset('image.png') }}" alt="User Image" class="w-10 h-10 rounded-full border-2 border-slate-600 object-cover">
+            <img src="{{ asset('images/image.png') }}" alt="User Image" class="w-10 h-10 rounded-full border-2 border-slate-600 object-cover">
             <div>
                 <p class="text-sm font-bold text-white leading-tight">Kevin Nurachman</p>
                 <div class="flex items-center gap-1 mt-0.5">
@@ -118,7 +118,7 @@
                 
                 <!-- User Panel -->
                 <div class="px-4 py-4 border-b border-slate-700/50 flex items-center gap-3">
-                    <img src="{{ asset('image.png') }}" alt="User Image" class="w-10 h-10 rounded-full border-2 border-slate-600 object-cover">
+                    <img src="{{ asset('images/image.png') }}" alt="User Image" class="w-10 h-10 rounded-full border-2 border-slate-600 object-cover">
                     <div>
                         <p class="text-sm font-bold text-white leading-tight">Kevin Nurachman</p>
                         <div class="flex items-center gap-1 mt-0.5">
