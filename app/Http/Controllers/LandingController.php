@@ -45,10 +45,10 @@ class LandingController extends Controller
         $query = Blog::where('is_published', true)->orderBy('created_at', 'desc');
 
         if ($request->has('search') && $request->search != '') {
-            $searchTerm = $request->search;
+            $searchTerm = strtolower($request->search);
             $query->where(function($q) use ($searchTerm) {
-                $q->where('title', 'like', '%' . $searchTerm . '%')
-                  ->orWhere('category', 'like', '%' . $searchTerm . '%');
+                $q->whereRaw('LOWER(title) LIKE ?', ['%' . $searchTerm . '%'])
+                  ->orWhereRaw('LOWER(category) LIKE ?', ['%' . $searchTerm . '%']);
             });
         }
 
