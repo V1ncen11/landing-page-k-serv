@@ -23,17 +23,24 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'   => 'required|string|max:255',
-            'content' => 'required',
-            'image'   => 'nullable|url',
+            'title'            => 'required|string|max:255',
+            'slug'             => 'nullable|string|max:255|unique:blogs,slug',
+            'category'         => 'nullable|string|max:255',
+            'meta_description' => 'nullable|string',
+            'content'          => 'required',
+            'image'            => 'nullable|url',
         ]);
 
+        $slug = $request->slug ? Str::slug($request->slug) : Str::slug($request->title);
+
         Blog::create([
-            'title'        => $request->title,
-            'slug'         => Str::slug($request->title),
-            'content'      => $request->content,
-            'image'        => $request->image,
-            'is_published' => $request->has('is_published'),
+            'title'            => $request->title,
+            'slug'             => $slug,
+            'category'         => $request->category,
+            'meta_description' => $request->meta_description,
+            'content'          => $request->content,
+            'image'            => $request->image,
+            'is_published'     => $request->has('is_published'),
         ]);
 
         return redirect()->route('admin.blog.index')->with('success', 'Blog berhasil ditambahkan!');
@@ -48,18 +55,25 @@ class BlogController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'title'   => 'required|string|max:255',
-            'content' => 'required',
-            'image'   => 'nullable|url',
+            'title'            => 'required|string|max:255',
+            'slug'             => 'nullable|string|max:255|unique:blogs,slug,' . $id,
+            'category'         => 'nullable|string|max:255',
+            'meta_description' => 'nullable|string',
+            'content'          => 'required',
+            'image'            => 'nullable|url',
         ]);
+
+        $slug = $request->slug ? Str::slug($request->slug) : Str::slug($request->title);
 
         $blog = Blog::findOrFail($id);
         $blog->update([
-            'title'        => $request->title,
-            'slug'         => Str::slug($request->title),
-            'content'      => $request->content,
-            'image'        => $request->image,
-            'is_published' => $request->has('is_published'),
+            'title'            => $request->title,
+            'slug'             => $slug,
+            'category'         => $request->category,
+            'meta_description' => $request->meta_description,
+            'content'          => $request->content,
+            'image'            => $request->image,
+            'is_published'     => $request->has('is_published'),
         ]);
 
         return redirect()->route('admin.blog.index')->with('success', 'Blog berhasil diupdate!');

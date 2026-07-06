@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+@section('title', $blog->title . ' | K-SERV')
+@if($blog->meta_description)
+    @section('meta_description', $blog->meta_description)
+@endif
+@if($blog->image)
+    @section('og_image', $blog->image)
+@endif
+
 @section('content')
 <div class="bg-white dark:bg-slate-900 pt-32 pb-20 antialiased min-h-screen">
     <article class="max-w-4xl mx-auto px-6 md:px-8">
@@ -15,12 +23,18 @@
 
         {{-- Header --}}
         <header class="mb-14 text-center md:text-left">
-            <div class="text-sm font-bold text-[#673de6] tracking-widest uppercase mb-4">{{ $blog->created_at->format('d F Y') }}</div>
+            <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
+                <div class="text-sm font-bold text-slate-500 tracking-widest uppercase">{{ $blog->created_at->format('d F Y') }}</div>
+                @if($blog->category)
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-300"></div>
+                    <div class="text-sm font-bold text-[#673de6] tracking-widest uppercase">{{ $blog->category }}</div>
+                @endif
+            </div>
             <h1 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight mb-8">{{ $blog->title }}</h1>
             
             <div class="flex items-center justify-center md:justify-start gap-4 text-slate-600 dark:text-slate-400">
                 <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center font-bold text-lg text-[#673de6]">KN</div>
+                    <img src="{{ asset('images/image.png') }}" alt="Kevin Nurachman" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-700 object-cover shadow-sm">
                     <div class="text-left">
                         <p class="font-bold text-slate-900 dark:text-white text-sm">Kevin Nurachman</p>
                         <p class="text-xs text-slate-500 uppercase tracking-wide">Web Developer</p>

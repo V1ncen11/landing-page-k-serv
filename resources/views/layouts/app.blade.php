@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>K-SERV (KServ) - Jasa Pembuatan Website</title>
-    <meta name="description" content="K-SERV (kserv) adalah agensi developer di Singaparna, Tasikmalaya. Menyediakan jasa pembuatan website company profile, landing page promosi, aplikasi ujian online, dan sistem web custom profesional. Gratis domain & hosting.">
+    <title>@yield('title', 'K-SERV (KServ) - Jasa Pembuatan Website')</title>
+    <meta name="description" content="@yield('meta_description', 'K-SERV (kserv) adalah agensi developer di Singaparna, Tasikmalaya. Menyediakan jasa pembuatan website company profile, landing page promosi, aplikasi ujian online, dan sistem web custom profesional. Gratis domain & hosting.')">
     <meta name="keywords" content="jasa pembuatan website, bikin web company profile, jasa landing page, aplikasi ujian, sistem web custom, web developer, k-serv, pembuatan website murah, kserv">
     <meta name="author" content="Kevin Nurachman">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="K-SERV (KServ) - Jasa Pembuatan Website">
-    <meta property="og:description" content="K-SERV (kserv) adalah agensi developer di Singaparna, Tasikmalaya. Menyediakan jasa pembuatan website company profile, landing page promosi, aplikasi ujian online, dan sistem web custom profesional. Gratis domain & hosting.">
-    <meta property="og:image" content="{{ asset('images/favicon.png') }}">
+    <meta property="og:title" content="@yield('title', 'K-SERV (KServ) - Jasa Pembuatan Website')">
+    <meta property="og:description" content="@yield('meta_description', 'K-SERV (kserv) adalah agensi developer di Singaparna, Tasikmalaya. Menyediakan jasa pembuatan website company profile, landing page promosi, aplikasi ujian online, dan sistem web custom profesional. Gratis domain & hosting.')">
+    <meta property="og:image" content="@yield('og_image', asset('images/favicon.png'))">
     <meta name="theme-color" content="#f8fafc">
     
 

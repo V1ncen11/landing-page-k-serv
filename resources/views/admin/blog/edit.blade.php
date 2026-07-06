@@ -42,8 +42,31 @@
             {{-- Judul --}}
             <div>
                 <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wider">Judul Artikel</label>
-                <input type="text" name="title" value="{{ old('title', $blog->title) }}" required
+                <input type="text" name="title" id="title" value="{{ old('title', $blog->title) }}" required
                     class="w-full rounded-2xl border-slate-200 focus:border-amber-500 focus:ring-amber-500 text-xl font-bold py-4 px-5 shadow-sm">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {{-- URL Slug --}}
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wider">URL Slug</label>
+                    <input type="text" name="slug" id="slug" value="{{ old('slug', $blog->slug) }}"
+                        class="w-full rounded-2xl border-slate-200 focus:border-amber-500 focus:ring-amber-500 py-3 px-5 shadow-sm bg-slate-50 text-slate-500">
+                </div>
+
+                {{-- Kategori --}}
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wider">Kategori</label>
+                    <input type="text" name="category" value="{{ old('category', $blog->category) }}"
+                        class="w-full rounded-2xl border-slate-200 focus:border-amber-500 focus:ring-amber-500 py-3 px-5 shadow-sm">
+                </div>
+            </div>
+
+            {{-- Meta Description --}}
+            <div>
+                <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wider">Meta Description <span class="font-medium text-slate-400 lowercase normal-case">(opsional)</span></label>
+                <textarea name="meta_description" rows="2"
+                    class="w-full rounded-2xl border-slate-200 focus:border-amber-500 focus:ring-amber-500 py-3 px-5 shadow-sm">{{ old('meta_description', $blog->meta_description) }}</textarea>
             </div>
 
             {{-- Cover Image --}}
@@ -152,6 +175,22 @@
                 } else {
                     previewBox.classList.add('hidden');
                 }
+            });
+        }
+
+        // Auto Slug Generation
+        const titleInput = document.getElementById('title');
+        const slugInput = document.getElementById('slug');
+
+        if(titleInput && slugInput) {
+            titleInput.addEventListener('keyup', function() {
+                // Hanya update slug jika slug saat ini kosong, atau user memang mau mengganti judul
+                // Di halaman edit, biasanya kita tidak auto-update slug agar URL lama tidak rusak
+                // Tapi kita sediakan field slug agar bisa diedit manual.
+                // Jika ingin auto update:
+                // let title = this.value;
+                // let slug = title.toLowerCase().replace(/[^a-z0-9 -]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+                // slugInput.value = slug;
             });
         }
     });

@@ -41,9 +41,35 @@
             {{-- Judul --}}
             <div>
                 <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wider">Judul Artikel</label>
-                <input type="text" name="title" value="{{ old('title') }}" required
+                <input type="text" name="title" id="title" value="{{ old('title') }}" required
                     class="w-full rounded-2xl border-slate-200 focus:border-[#673de6] focus:ring-[#673de6] text-xl font-bold py-4 px-5 shadow-sm"
                     placeholder="Contoh: 5 Alasan Kenapa UMKM Wajib Punya Website">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {{-- URL Slug --}}
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wider">URL Slug <span class="font-medium text-slate-400 lowercase normal-case">(otomatis)</span></label>
+                    <input type="text" name="slug" id="slug" value="{{ old('slug') }}"
+                        class="w-full rounded-2xl border-slate-200 focus:border-[#673de6] focus:ring-[#673de6] py-3 px-5 shadow-sm bg-slate-50 text-slate-500"
+                        placeholder="contoh-url-slug-artikel">
+                </div>
+
+                {{-- Kategori --}}
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wider">Kategori</label>
+                    <input type="text" name="category" value="{{ old('category') }}"
+                        class="w-full rounded-2xl border-slate-200 focus:border-[#673de6] focus:ring-[#673de6] py-3 px-5 shadow-sm"
+                        placeholder="Contoh: Bisnis, Teknologi, Tips">
+                </div>
+            </div>
+
+            {{-- Meta Description --}}
+            <div>
+                <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wider">Meta Description <span class="font-medium text-slate-400 lowercase normal-case">(opsional)</span></label>
+                <textarea name="meta_description" rows="2"
+                    class="w-full rounded-2xl border-slate-200 focus:border-[#673de6] focus:ring-[#673de6] py-3 px-5 shadow-sm"
+                    placeholder="Tuliskan deskripsi singkat artikel (maks. 160 karakter) untuk tampil di pencarian Google...">{{ old('meta_description') }}</textarea>
             </div>
 
             {{-- Cover Image --}}
@@ -162,6 +188,21 @@
             if(gambarInput.value) {
                 gambarInput.dispatchEvent(new Event('input'));
             }
+        }
+
+        // Auto Slug Generation
+        const titleInput = document.getElementById('title');
+        const slugInput = document.getElementById('slug');
+
+        if(titleInput && slugInput) {
+            titleInput.addEventListener('keyup', function() {
+                let title = this.value;
+                let slug = title.toLowerCase()
+                                .replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+                                .replace(/\s+/g, '-') // collapse whitespace and replace by -
+                                .replace(/-+/g, '-'); // collapse dashes
+                slugInput.value = slug;
+            });
         }
     });
 </script>
