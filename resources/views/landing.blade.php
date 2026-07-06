@@ -559,6 +559,82 @@
         </div>
     </section>
 
+    {{-- ═══════════════════════ LATEST BLOGS ═══════════════════════ --}}
+    @if(isset($latestBlogs) && $latestBlogs->count() > 0)
+    <section class="py-24 bg-slate-50 border-t border-slate-100 overflow-hidden" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-6 md:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">Artikel & Insights Terbaru</h2>
+                    <p class="text-slate-500 max-w-2xl">Tips, trik, dan wawasan seputar dunia digital untuk perkembangan bisnis Anda.</p>
+                </div>
+                <div class="hidden md:block">
+                    <a href="{{ route('blog.index') }}" class="inline-flex items-center gap-2 font-bold text-indigo-600 hover:text-indigo-800 transition">
+                        Lihat Semua
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            {{-- Horizontal Swipeable Container (Carousel) --}}
+            <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-6 pb-8 -mx-6 px-6 md:mx-0 md:px-0">
+                @foreach($latestBlogs as $blog)
+                <div class="snap-start shrink-0 w-[85vw] sm:w-[320px] md:w-[350px]">
+                    <a href="{{ route('blog.show', $blog->slug) }}" class="group block bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 flex flex-col h-full">
+                        <div class="relative h-48 overflow-hidden bg-slate-100 shrink-0">
+                            @if($blog->image)
+                                <img src="{{ $blog->image }}" alt="{{ $blog->title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            @else
+                                <div class="w-full h-full flex items-center justify-center text-slate-400 font-medium">Artikel K-SERV</div>
+                            @endif
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            @if($blog->category)
+                                <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-[#673de6] text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">{{ $blog->category }}</span>
+                            @endif
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="text-xs font-bold text-slate-400 flex items-center gap-1.5 uppercase tracking-wider mb-3">
+                                <svg class="w-4 h-4 text-[#673de6]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                {{ $blog->created_at->format('d M Y') }}
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-[#673de6] transition-colors leading-snug line-clamp-2">{{ $blog->title }}</h3>
+                            <p class="text-sm text-slate-500 line-clamp-2 mb-5 flex-grow leading-relaxed">
+                                {{ Str::limit(strip_tags($blog->content), 80) }}
+                            </p>
+                            <div class="flex items-center text-[#673de6] font-bold text-sm mt-auto">
+                                Baca Artikel <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                @endforeach
+
+                {{-- Card Lihat Semua (Mobile only in carousel) --}}
+                <div class="snap-start shrink-0 w-[85vw] sm:w-[320px] md:w-[350px] flex items-center justify-center p-4 md:hidden">
+                    <a href="{{ route('blog.index') }}" class="flex flex-col items-center justify-center w-full h-full min-h-[300px] bg-indigo-50 hover:bg-indigo-100 rounded-3xl border-2 border-dashed border-indigo-200 transition-colors text-indigo-600 group">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </div>
+                        <span class="font-bold text-lg">Lihat Semua Artikel</span>
+                    </a>
+                </div>
+            </div>
+            
+            <style>
+                /* Hide scrollbar for Chrome, Safari and Opera */
+                .hide-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+                /* Hide scrollbar for IE, Edge and Firefox */
+                .hide-scrollbar {
+                    -ms-overflow-style: none;  /* IE and Edge */
+                    scrollbar-width: none;  /* Firefox */
+                }
+            </style>
+        </div>
+    </section>
+    @endif
+
     {{-- ═══════════════════════ FAQ ═══════════════════════ --}}
     <section id="faq" class="max-w-7xl mx-auto px-6 md:px-8 py-24 bg-white" data-aos="fade-up">
         <div class="mb-12">

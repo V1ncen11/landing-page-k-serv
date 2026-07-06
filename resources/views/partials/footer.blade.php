@@ -70,7 +70,7 @@
                 <p class="text-slate-500 text-sm font-medium">© 2026 K-SERV. All rights reserved.</p>
                 <div class="flex items-center gap-6">
                     <a href="https://github.com/V1ncen11" target="_blank" class="text-slate-500 hover:text-white transition text-sm font-bold">Built by Kevin</a>
-                    <a href="https://linkedin.com/in/kevin-nurachman" target="_blank" class="text-slate-500 hover:text-white transition text-sm font-bold">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/kevin-nurachman-453479385/" target="_blank" class="text-slate-500 hover:text-white transition text-sm font-bold">LinkedIn</a>
                 </div>
             </div>
         </div>

@@ -11,7 +11,8 @@ class LandingController extends Controller
     public function index()
     {
         $produks = Produk::active()->orderBy('created_at', 'asc')->get();
-        return view('landing', compact('produks'));
+        $latestBlogs = Blog::where('is_published', true)->orderBy('created_at', 'desc')->take(4)->get();
+        return view('landing', compact('produks', 'latestBlogs'));
     }
 
     public function about()
