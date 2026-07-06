@@ -588,9 +588,6 @@
                                 <div class="w-full h-full flex items-center justify-center text-slate-400 font-medium">Artikel K-SERV</div>
                             @endif
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            @if($blog->category)
-                                <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-[#673de6] text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">{{ $blog->category }}</span>
-                            @endif
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <div class="text-xs font-bold text-slate-400 flex items-center gap-1.5 uppercase tracking-wider mb-3">
@@ -601,8 +598,15 @@
                             <p class="text-sm text-slate-500 line-clamp-2 mb-5 flex-grow leading-relaxed">
                                 {{ Str::limit(strip_tags($blog->content), 80) }}
                             </p>
-                            <div class="flex items-center text-[#673de6] font-bold text-sm mt-auto">
-                                Baca Artikel <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
+                                @if($blog->category)
+                                    <span class="text-[11px] font-black text-slate-400 uppercase tracking-widest">{{ $blog->category }}</span>
+                                @else
+                                    <span></span>
+                                @endif
+                                <div class="flex items-center text-[#673de6] font-bold text-sm">
+                                    Baca <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                </div>
                             </div>
                         </div>
                     </a>
