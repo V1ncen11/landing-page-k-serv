@@ -62,10 +62,35 @@
 
             {{-- Deskripsi --}}
             <div>
-                <label class="block text-sm font-bold text-slate-700 mb-2">Deskripsi Proyek</label>
-                <textarea name="deskripsi" rows="4"
+                <label class="block text-sm font-bold text-slate-700 mb-2">Deskripsi Singkat</label>
+                <textarea name="deskripsi" rows="2"
                     class="w-full rounded-xl border-slate-200 focus:border-purple-500 focus:ring-purple-500"
-                    placeholder="Ceritain proyek ini singkat: klien siapa, apa yang dikerjain, tools yang dipake..." required></textarea>
+                    placeholder="Ceritain proyek ini singkat: klien siapa, apa yang dikerjain..." required></textarea>
+            </div>
+
+            {{-- Case Study Section --}}
+            <div class="mt-8 mb-4 border-t border-slate-100 pt-6">
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Data Case Study (Opsional)</h3>
+                <p class="text-xs text-slate-500 mb-6">Isi bagian ini untuk menampilkan studi kasus di halaman detail portofolio.</p>
+
+                <div class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Tantangan & Masalah</label>
+                        <textarea name="masalah" rows="3" class="w-full rounded-xl border-slate-200 focus:border-purple-500 focus:ring-purple-500" placeholder="Apa masalah yang dihadapi klien?"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Solusi yang Diberikan</label>
+                        <textarea name="solusi" rows="3" class="w-full rounded-xl border-slate-200 focus:border-purple-500 focus:ring-purple-500" placeholder="Solusi digital seperti apa yang dibuat?"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Teknologi yang Dipakai</label>
+                        <textarea name="teknologi" rows="2" class="w-full rounded-xl border-slate-200 focus:border-purple-500 focus:ring-purple-500" placeholder="Misal: Laravel, Tailwind CSS, MySQL"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Hasil & Dampak</label>
+                        <textarea name="hasil" rows="3" class="w-full rounded-xl border-slate-200 focus:border-purple-500 focus:ring-purple-500" placeholder="Apa dampak positif dari sistem ini untuk klien?"></textarea>
+                    </div>
+                </div>
             </div>
 
             {{-- Tombol --}}

@@ -1,12 +1,17 @@
 <?php
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\Admin\ProdukController;
+use App\Http\Controllers\Admin\BlogController as AdminBlogController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 // Public Routes
 Route::get('/', [LandingController::class, 'index']);
+Route::get('/tentang-kami', [LandingController::class, 'about'])->name('about');
+Route::get('/portofolio', [LandingController::class, 'portofolioIndex'])->name('portofolio.index');
 Route::get('/portofolio/{id}', [LandingController::class, 'portofolioShow'])->name('portofolio.show');
+Route::get('/blog', [LandingController::class, 'blogIndex'])->name('blog.index');
+Route::get('/blog/{slug}', [LandingController::class, 'blogShow'])->name('blog.show');
 
 // Informasi Routes
 Route::get('/syarat-ketentuan', function () { return view('informasi.syarat'); })->name('informasi.syarat');
@@ -24,4 +29,5 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('produk', ProdukController::class);
     Route::patch('produk/{id}/toggle', [ProdukController::class, 'toggleActive'])->name('produk.toggle');
     Route::resource('produk.fitur', \App\Http\Controllers\Admin\ProdukFiturController::class);
+    Route::resource('blog', AdminBlogController::class);
 });

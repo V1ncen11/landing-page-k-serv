@@ -49,6 +49,68 @@
         </div>
     </header>
 
+    {{-- CASE STUDY SECTION --}}
+    @if($portofolio->masalah || $portofolio->solusi || $portofolio->hasil || $portofolio->teknologi)
+    <section class="border-t border-slate-100 bg-white py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4">Studi Kasus</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto text-lg">Bagaimana kami merancang solusi digital untuk memecahkan masalah klien dari awal hingga akhir.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
+                @if($portofolio->masalah)
+                <div class="bg-slate-50 rounded-3xl p-8 md:p-10 border border-slate-100 relative group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-red-100 text-red-500 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Tantangan & Masalah</h3>
+                    <div class="prose prose-slate text-slate-600 leading-relaxed text-left">
+                        {!! nl2br(e($portofolio->masalah)) !!}
+                    </div>
+                </div>
+                @endif
+
+                @if($portofolio->solusi)
+                <div class="bg-slate-50 rounded-3xl p-8 md:p-10 border border-slate-100 relative group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-500 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Solusi yang Diberikan</h3>
+                    <div class="prose prose-slate text-slate-600 leading-relaxed text-left">
+                        {!! nl2br(e($portofolio->solusi)) !!}
+                    </div>
+                </div>
+                @endif
+                
+                @if($portofolio->teknologi)
+                <div class="bg-slate-50 rounded-3xl p-8 md:p-10 border border-slate-100 relative group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-500 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Teknologi yang Dipakai</h3>
+                    <div class="prose prose-slate text-slate-600 leading-relaxed text-left">
+                        {!! nl2br(e($portofolio->teknologi)) !!}
+                    </div>
+                </div>
+                @endif
+
+                @if($portofolio->hasil)
+                <div class="bg-gradient-to-br from-[#673de6] to-purple-600 rounded-3xl p-8 md:p-10 relative group hover:shadow-2xl hover:shadow-[#673de6]/30 hover:-translate-y-1 transition-all duration-300 text-white">
+                    <div class="w-12 h-12 bg-white/20 text-white rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Hasil & Dampak</h3>
+                    <div class="prose prose-invert text-white/90 leading-relaxed text-left">
+                        {!! nl2br(e($portofolio->hasil)) !!}
+                    </div>
+                </div>
+                @endif
+            </div>
+        </div>
+    </section>
+    @endif
+
     {{-- SPESIFIKASI / FITUR UMUM --}}
     @if($portofolio->spesifikasi)
     <section class="border-t border-slate-100 bg-slate-50 py-16">

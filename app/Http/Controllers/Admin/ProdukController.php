@@ -32,6 +32,10 @@ class ProdukController extends Controller
             'spesifikasi' => 'nullable|string',
             'link'        => 'nullable|url',
             'gambar'      => 'nullable|url',
+            'masalah'     => 'nullable|string',
+            'solusi'      => 'nullable|string',
+            'teknologi'   => 'nullable|string',
+            'hasil'       => 'nullable|string',
         ]);
 
         Produk::create([
@@ -42,6 +46,10 @@ class ProdukController extends Controller
             'spesifikasi' => $request->spesifikasi,
             'link'        => $request->link ?: 'https://wa.me/6287870402431',
             'gambar'      => $request->gambar,
+            'masalah'     => $request->masalah,
+            'solusi'      => $request->solusi,
+            'teknologi'   => $request->teknologi,
+            'hasil'       => $request->hasil,
             'is_active'   => true,
         ]);
 
@@ -64,6 +72,10 @@ class ProdukController extends Controller
             'spesifikasi' => 'nullable|string',
             'link'        => 'nullable|url',
             'gambar'      => 'nullable|url',
+            'masalah'     => 'nullable|string',
+            'solusi'      => 'nullable|string',
+            'teknologi'   => 'nullable|string',
+            'hasil'       => 'nullable|string',
         ]);
 
         $produk = Produk::findOrFail($id);
@@ -75,6 +87,10 @@ class ProdukController extends Controller
             'spesifikasi' => $request->spesifikasi,
             'link'        => $request->link ?: 'https://wa.me/6287870402431',
             'gambar'      => $request->gambar,
+            'masalah'     => $request->masalah,
+            'solusi'      => $request->solusi,
+            'teknologi'   => $request->teknologi,
+            'hasil'       => $request->hasil,
         ]);
 
         return redirect()->route('admin.produk.index')->with('success', 'Produk berhasil diupdate!');

@@ -8,7 +8,8 @@ class Produk extends Model
 {
     protected $table = 'produk';
     protected $fillable = [
-        'nama', 'kategori', 'deskripsi', 'spesifikasi', 'harga', 'gambar', 'link', 'is_active'
+        'nama', 'kategori', 'deskripsi', 'spesifikasi', 'harga', 'gambar', 'link', 'is_active',
+        'masalah', 'solusi', 'teknologi', 'hasil'
     ];
 
     protected $casts = [

@@ -91,6 +91,31 @@
                 </div>
             </div>
 
+            {{-- Case Study Section (Khusus Portofolio) --}}
+            <div id="case-study-box" class="mt-8 mb-4 border-t border-slate-100 pt-6" style="display: none;">
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Data Case Study (Opsional)</h3>
+                <p class="text-xs text-slate-500 mb-6">Isi bagian ini untuk menampilkan studi kasus di halaman detail portofolio.</p>
+
+                <div class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Tantangan & Masalah</label>
+                        <textarea name="masalah" rows="3" class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500" placeholder="Apa masalah yang dihadapi klien?">{{ old('masalah', $produk->masalah) }}</textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Solusi yang Diberikan</label>
+                        <textarea name="solusi" rows="3" class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500" placeholder="Solusi digital seperti apa yang dibuat?">{{ old('solusi', $produk->solusi) }}</textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Teknologi yang Dipakai</label>
+                        <textarea name="teknologi" rows="2" class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500" placeholder="Misal: Laravel, Tailwind CSS, MySQL">{{ old('teknologi', $produk->teknologi) }}</textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Hasil & Dampak</label>
+                        <textarea name="hasil" rows="3" class="w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500" placeholder="Apa dampak positif dari sistem ini untuk klien?">{{ old('hasil', $produk->hasil) }}</textarea>
+                    </div>
+                </div>
+            </div>
+
             {{-- Link Pemesanan / Link Website --}}
             <div>
                 <label class="block text-sm font-bold text-slate-700 mb-2" id="label-link">Link Pemesanan <span class="text-slate-400 font-normal">(URL WhatsApp / Tokopedia dll.)</span></label>
@@ -134,11 +159,13 @@
         const kategoriSelect = document.getElementById('kategori-select');
         const spesifikasiBox = document.getElementById('spesifikasi-box');
         const gambarBox      = document.getElementById('gambar-box');
+        const caseStudyBox   = document.getElementById('case-study-box');
 
         function toggleFields() {
             const val = kategoriSelect.value;
             spesifikasiBox.style.display = (val === 'Jasa') ? 'block' : 'none';
             gambarBox.style.display      = (val === 'Portofolio') ? 'block' : 'none';
+            if(caseStudyBox) caseStudyBox.style.display = (val === 'Portofolio') ? 'block' : 'none';
 
             const labelLink = document.getElementById('label-link');
             const helperLink = document.getElementById('helper-link');

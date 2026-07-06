@@ -8,10 +8,11 @@
 
             {{-- Desktop Nav (Absolute Center) --}}
             <div class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center gap-8 font-medium">
-                <a href="{{ url('/') }}#beranda" class="text-slate-300 hover:text-white transition text-sm">Beranda</a>
-                <a href="{{ url('/') }}#katalog" class="text-slate-300 hover:text-white transition text-sm">Katalog</a>
-                <a href="{{ url('/') }}#portofolio" class="text-slate-300 hover:text-white transition text-sm">Portofolio</a>
-                <a href="{{ url('/') }}#faq" class="text-slate-300 hover:text-white transition text-sm">FAQ</a>
+                <a href="{{ url('/') }}" class="text-slate-300 hover:text-white transition text-sm">Beranda</a>
+                <a href="{{ route('about') }}" class="text-slate-300 hover:text-white transition text-sm">Tentang Kami</a>
+                <a href="{{ url('/') }}#katalog" class="text-slate-300 hover:text-white transition text-sm">Layanan</a>
+                <a href="{{ route('portofolio.index') }}" class="text-slate-300 hover:text-white transition text-sm">Portofolio</a>
+                <a href="{{ route('blog.index') }}" class="text-slate-300 hover:text-white transition text-sm">Blog</a>
             </div>
 
             {{-- Action Buttons (Right) --}}
@@ -33,10 +34,11 @@
         {{-- Mobile Menu --}}
         <div id="mobileMenu" class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out" style="background-color: #1a1a2e;">
             <div class="px-6 pb-6 pt-2 flex flex-col gap-3 border-t border-white/10">
-                <a href="{{ url('/') }}#beranda" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-300 font-medium hover:bg-white/10 hover:text-white transition-all">Beranda</a>
-                <a href="{{ url('/') }}#katalog" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-300 font-medium hover:bg-white/10 hover:text-white transition-all">Katalog</a>
-                <a href="{{ url('/') }}#portofolio" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-300 font-medium hover:bg-white/10 hover:text-white transition-all">Portofolio</a>
-                <a href="{{ url('/') }}#faq" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-300 font-medium hover:bg-white/10 hover:text-white transition-all">FAQ</a>
+                <a href="{{ url('/') }}" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-300 font-medium hover:bg-white/10 hover:text-white transition-all">Beranda</a>
+                <a href="{{ route('about') }}" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-300 font-medium hover:bg-white/10 hover:text-white transition-all">Tentang Kami</a>
+                <a href="{{ url('/') }}#katalog" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-300 font-medium hover:bg-white/10 hover:text-white transition-all">Layanan</a>
+                <a href="{{ route('portofolio.index') }}" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-300 font-medium hover:bg-white/10 hover:text-white transition-all">Portofolio</a>
+                <a href="{{ route('blog.index') }}" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-300 font-medium hover:bg-white/10 hover:text-white transition-all">Blog</a>
                 <a href="https://wa.me/6287870402431" target="_blank" class="mt-2 text-white px-5 py-3 rounded-full text-sm font-bold text-center transition shadow-lg" style="background-color: #673de6;">
                     Pesan Jasa
                 </a>
