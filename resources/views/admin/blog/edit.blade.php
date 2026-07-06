@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-<div class="max-w-5xl mx-auto px-4 py-10 pt-28">
+<div class="max-w-5xl mx-auto">
     <div class="bg-white p-8 md:p-12 rounded-[32px] shadow-sm border border-slate-100">
 
         <div class="flex items-center gap-4 mb-10">

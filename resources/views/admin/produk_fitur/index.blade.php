@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-<main class="max-w-5xl mx-auto px-6 py-12">
+<div>
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
         <div>
             <div class="flex items-center gap-2 mb-2">
@@ -93,5 +93,5 @@
             </table>
         </div>
     </div>
-</main>
+</div>
 @endsection

@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-<main class="max-w-7xl mx-auto px-6 py-12 pt-28">
+<div>
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
         <div>
             <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight">Manajemen Blog</h1>
@@ -124,5 +124,5 @@
         {{ $blogs->links() }}
     </div>
     @endif
-</main>
+</div>
 @endsection
