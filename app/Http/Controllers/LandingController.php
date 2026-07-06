@@ -58,6 +58,7 @@ class LandingController extends Controller
     public function blogShow($slug)
     {
         $blog = Blog::where('slug', $slug)->where('is_published', true)->firstOrFail();
+        $blog->increment('views');
         return view('blog.show', compact('blog'));
     }
 }

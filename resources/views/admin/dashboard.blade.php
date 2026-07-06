@@ -13,7 +13,7 @@
     </div>
 
     <!-- Small Boxes -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
         
         <!-- Small Box: Total Jasa -->
         <div class="bg-indigo-500 rounded-lg text-white relative overflow-hidden shadow-sm">
@@ -66,6 +66,26 @@
             </div>
             <a href="{{ route('admin.blog.index') }}" class="block w-full text-center py-1.5 bg-black/10 hover:bg-black/20 text-amber-100 hover:text-white transition-colors text-sm relative z-10 flex items-center justify-center gap-1">
                 More info
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Small Box: Total Views -->
+        <div class="bg-emerald-500 rounded-lg text-white relative overflow-hidden shadow-sm">
+            <div class="p-5">
+                <h3 class="text-4xl font-bold mb-2">{{ number_format($totalViews, 0, ',', '.') }}</h3>
+                <p class="text-emerald-100 text-lg">Total Views</p>
+            </div>
+            <div class="absolute -right-4 -bottom-4 text-white/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+            </div>
+            <a href="{{ route('admin.blog.index') }}" class="block w-full text-center py-1.5 bg-black/10 hover:bg-black/20 text-emerald-100 hover:text-white transition-colors text-sm relative z-10 flex items-center justify-center gap-1">
+                Lihat Artikel
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>

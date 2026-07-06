@@ -14,7 +14,8 @@ class DashboardController extends Controller
         $totalJasa = Produk::where('kategori', 'Jasa')->count();
         $totalPortofolio = Produk::where('kategori', 'Portofolio')->count();
         $totalBlog = Blog::count();
+        $totalViews = Blog::sum('views');
 
-        return view('admin.dashboard', compact('totalJasa', 'totalPortofolio', 'totalBlog'));
+        return view('admin.dashboard', compact('totalJasa', 'totalPortofolio', 'totalBlog', 'totalViews'));
     }
 }
