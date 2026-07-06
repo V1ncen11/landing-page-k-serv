@@ -31,18 +31,20 @@
             <h3 class="text-lg font-bold text-slate-700 w-full md:w-auto">Daftar Artikel</h3>
             
             <div class="flex flex-col sm:flex-row w-full md:w-auto gap-3">
-                <form action="{{ route('admin.blog.index') }}" method="GET" class="relative w-full sm:w-64 flex items-center">
-                    <input type="text" name="search" value="{{ request('search') }}" placeholder="Cari artikel..." 
-                        class="w-full text-sm rounded border border-slate-300 focus:border-[#673de6] focus:ring-[#673de6] py-2 pl-3 pr-10">
-                    @if(request('search'))
-                        <a href="{{ route('admin.blog.index') }}" class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 hover:text-rose-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                        </a>
-                    @else
-                        <button type="submit" class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 hover:text-[#673de6]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                        </button>
-                    @endif
+                <form action="{{ route('admin.blog.index') }}" method="GET" class="w-full sm:w-64">
+                    <div class="relative w-full">
+                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Cari artikel..." 
+                            class="w-full text-sm rounded border border-slate-300 focus:border-[#673de6] focus:ring-[#673de6] py-2 pl-3 pr-10">
+                        @if(request('search'))
+                            <a href="{{ route('admin.blog.index') }}" class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 hover:text-rose-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                            </a>
+                        @else
+                            <button type="submit" class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 hover:text-[#673de6]">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                            </button>
+                        @endif
+                    </div>
                 </form>
 
                 <a href="{{ route('admin.blog.create') }}" class="inline-flex items-center justify-center px-4 py-2 bg-indigo-600 text-white text-sm font-bold rounded hover:bg-indigo-700 transition shrink-0">
