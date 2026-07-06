@@ -9,9 +9,19 @@ use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $blogs = Blog::orderBy('created_at', 'desc')->paginate(10);
+        $query = Blog::orderBy('created_at', 'desc');
+        
+        if ($request->has('search') && $request->search != '') {
+            $searchTerm = $request->search;
+            $query->where(function($q) use ($searchTerm) {
+                $q->where('title', 'like', '%' . $searchTerm . '%')
+                  ->orWhere('category', 'like', '%' . $searchTerm . '%');
+            });
+        }
+
+        $blogs = $query->paginate(10)->appends(['search' => $request->search]);
         return view('admin.blog.index', compact('blogs'));
     }
 

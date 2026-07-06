@@ -39,9 +39,19 @@ class LandingController extends Controller
         return view('portofolio.show', compact('portofolio', 'fiturs'));
     }
 
-    public function blogIndex()
+    public function blogIndex(Request $request)
     {
-        $blogs = Blog::where('is_published', true)->orderBy('created_at', 'desc')->paginate(9);
+        $query = Blog::where('is_published', true)->orderBy('created_at', 'desc');
+
+        if ($request->has('search') && $request->search != '') {
+            $searchTerm = $request->search;
+            $query->where(function($q) use ($searchTerm) {
+                $q->where('title', 'like', '%' . $searchTerm . '%')
+                  ->orWhere('category', 'like', '%' . $searchTerm . '%');
+            });
+        }
+
+        $blogs = $query->paginate(9)->appends(['search' => $request->search]);
         return view('blog.index', compact('blogs'));
     }
 
