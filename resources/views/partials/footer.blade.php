@@ -1,5 +1,5 @@
     {{-- ═══════════════════════ PREMIUM FOOTER ═══════════════════════ --}}
-    <footer class="bg-slate-900 pt-20 pb-10 border-t border-slate-800">
+    <footer id="footer" class="bg-slate-900 pt-20 pb-10 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-6 md:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 {{-- Brand Info --}}

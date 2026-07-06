@@ -13,6 +13,7 @@
                 <a href="{{ url('/') }}#katalog" class="text-slate-300 hover:text-white transition text-sm">Layanan</a>
                 <a href="{{ route('portofolio.index') }}" class="text-slate-300 hover:text-white transition text-sm">Portofolio</a>
                 <a href="{{ route('blog.index') }}" class="text-slate-300 hover:text-white transition text-sm">Blog</a>
+                <a href="#footer" class="text-slate-300 hover:text-white transition text-sm">Kontak</a>
             </div>
 
             {{-- Action Buttons (Right) --}}
@@ -39,6 +40,7 @@
                 <a href="{{ url('/') }}#katalog" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-300 font-medium hover:bg-white/10 hover:text-white transition-all">Layanan</a>
                 <a href="{{ route('portofolio.index') }}" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-300 font-medium hover:bg-white/10 hover:text-white transition-all">Portofolio</a>
                 <a href="{{ route('blog.index') }}" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-300 font-medium hover:bg-white/10 hover:text-white transition-all">Blog</a>
+                <a href="#footer" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-300 font-medium hover:bg-white/10 hover:text-white transition-all">Kontak</a>
                 <a href="https://wa.me/6287870402431" target="_blank" class="mt-2 text-white px-5 py-3 rounded-full text-sm font-bold text-center transition shadow-lg" style="background-color: #673de6;">
                     Pesan Jasa
                 </a>
