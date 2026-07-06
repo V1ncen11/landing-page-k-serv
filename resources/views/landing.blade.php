@@ -401,7 +401,7 @@
                 @endphp
                 <div class="tilt-card group relative bg-slate-900 rounded-[24px] overflow-hidden shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-500 block {{ $colClass }} min-h-[320px] lg:min-h-[400px]" data-tilt data-tilt-gyroscope="false" data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.3" data-aos="fade-up" data-aos-delay="{{ ($index % 3) * 100 }}">
                     {{-- Main link for the whole card --}}
-                    <a href="{{ route('portofolio.show', $item->id) }}" class="absolute inset-0 z-10"></a>
+                    <a href="{{ route('portofolio.show', $item->id) }}" class="absolute inset-0 z-10" aria-label="Lihat detail portofolio {{ $item->nama }}"></a>
 
                     <img src="{{ $item->gambar ?: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=600' }}"
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 group-hover:opacity-50 transition-all duration-700"
