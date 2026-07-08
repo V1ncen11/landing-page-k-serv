@@ -12,8 +12,8 @@
         </ol>
     </div>
 
-    <!-- Small Boxes -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-10">
+    <!-- Small Boxes (Internal Stats) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
         
         <!-- Small Box: Total Jasa -->
         <div class="bg-indigo-500 rounded-lg text-white relative overflow-hidden shadow-sm">
@@ -71,6 +71,11 @@
                 </svg>
             </a>
         </div>
+    </div>
+
+    <!-- Small Boxes (Google Analytics) -->
+    <h2 class="text-lg font-bold text-slate-700 mb-4 mt-2">Data Google Analytics</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
 
         <!-- Small Box: Total Visitors (GA4) -->
         <div class="bg-emerald-500 rounded-lg text-white relative overflow-hidden shadow-sm">
@@ -109,6 +114,74 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
             </a>
+        </div>
+    </div>
+
+    <!-- New Section: Data Tables -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
+        <!-- Table 1: Top Blogs -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-slate-100">
+            <div class="p-5 border-b border-slate-100 bg-slate-50">
+                <h3 class="font-bold text-slate-800">Top 5 Artikel Terpopuler</h3>
+            </div>
+            <div class="p-0 overflow-x-auto">
+                <table class="w-full text-left text-sm text-slate-600">
+                    <thead class="bg-slate-50 text-slate-500 uppercase text-xs">
+                        <tr>
+                            <th class="px-5 py-3">Judul Artikel</th>
+                            <th class="px-5 py-3 text-right">Views</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        @forelse($topBlogs as $blog)
+                        <tr class="hover:bg-slate-50">
+                            <td class="px-5 py-3"><a href="{{ route('admin.blog.edit', $blog->id) }}" class="hover:text-indigo-600 truncate block max-w-[250px]">{{ $blog->title }}</a></td>
+                            <td class="px-5 py-3 text-right font-medium text-slate-700">{{ number_format($blog->views, 0, ',', '.') }}</td>
+                        </tr>
+                        @empty
+                        <tr>
+                            <td colspan="2" class="px-5 py-4 text-center text-slate-400">Belum ada artikel</td>
+                        </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Table 2: Top Cities -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-slate-100">
+            <div class="p-5 border-b border-slate-100 bg-slate-50 flex justify-between items-center">
+                <h3 class="font-bold text-slate-800">Asal Kota Pengunjung (7 Hari)</h3>
+                <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full font-medium">GA4</span>
+            </div>
+            <div class="p-0 overflow-x-auto">
+                <table class="w-full text-left text-sm text-slate-600">
+                    <thead class="bg-slate-50 text-slate-500 uppercase text-xs">
+                        <tr>
+                            <th class="px-5 py-3">Kota</th>
+                            <th class="px-5 py-3 text-right">Page Views</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        @forelse($topCities as $cityData)
+                        <tr class="hover:bg-slate-50">
+                            <td class="px-5 py-3 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                {{ $cityData['city'] ?? 'Unknown' }}
+                            </td>
+                            <td class="px-5 py-3 text-right font-medium text-slate-700">{{ number_format($cityData['screenPageViews'] ?? 0, 0, ',', '.') }}</td>
+                        </tr>
+                        @empty
+                        <tr>
+                            <td colspan="2" class="px-5 py-4 text-center text-slate-400">Data belum tersedia / sinkronisasi berjalan</td>
+                        </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
