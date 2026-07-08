@@ -22,6 +22,15 @@
         .main-header { z-index: 1034; }
         .main-sidebar { z-index: 1040; }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DVJGDMVSGF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DVJGDMVSGF');
+    </script>
 </head>
 <body class="bg-[#f4f6f9] text-slate-900 antialiased h-screen overflow-hidden flex">
 
