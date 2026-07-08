@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('title', $portofolio->nama . ' | K-SERV Portofolio')
+@section('meta_description', Str::limit(trim(preg_replace('/\s+/', ' ', strip_tags($portofolio->deskripsi))), 150))
+@if($portofolio->gambar)
+    @section('og_image', filter_var($portofolio->gambar, FILTER_VALIDATE_URL) ? $portofolio->gambar : asset($portofolio->gambar))
+@endif
 @section('content')
 <div class="bg-white text-slate-900 antialiased pt-28">
 

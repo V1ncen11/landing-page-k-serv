@@ -3,9 +3,11 @@
 @section('title', $blog->title . ' | K-SERV')
 @if($blog->meta_description)
     @section('meta_description', $blog->meta_description)
+@else
+    @section('meta_description', Str::limit(trim(preg_replace('/\s+/', ' ', strip_tags($blog->content))), 150))
 @endif
 @if($blog->image)
-    @section('og_image', $blog->image)
+    @section('og_image', filter_var($blog->image, FILTER_VALIDATE_URL) ? $blog->image : asset($blog->image))
 @endif
 
 @section('content')

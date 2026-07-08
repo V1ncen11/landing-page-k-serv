@@ -4,192 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 – Halaman Tidak Ditemukan | K-SERV</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #13111c;
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 24px;
-        }
-
-        /* Glowing orb background */
-        body::before {
-            content: '';
-            position: fixed;
-            top: -150px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(103,61,230,0.25) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .container {
-            position: relative;
-            z-index: 1;
-            max-width: 520px;
-            width: 100%;
-        }
-
-        /* K-SERV Navbar */
-        .navbar {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            background-color: #1a1a2e;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            padding: 18px 32px;
-            display: flex;
-            align-items: center;
-            z-index: 100;
-        }
-        .navbar-logo {
-            font-size: 1.4rem;
-            font-weight: 900;
-            color: #fff;
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-        .navbar-logo span { color: #a78bfa; }
-
-        /* Error code */
-        .error-code {
-            font-size: clamp(7rem, 20vw, 10rem);
-            font-weight: 900;
-            line-height: 1;
-            background: linear-gradient(135deg, #673de6, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 24px;
-        }
-
-        .error-title {
-            font-size: clamp(1.5rem, 5vw, 2rem);
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 12px;
-        }
-
-        .error-desc {
-            color: #94a3b8;
-            font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 36px;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            padding: 14px 28px;
-            background-color: #673de6;
-            color: #fff;
-            font-weight: 700;
-            border-radius: 999px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: opacity 0.2s, transform 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
-
-        .btn-secondary {
-            padding: 14px 28px;
-            border: 1px solid rgba(255,255,255,0.2);
-            color: #fff;
-            font-weight: 600;
-            border-radius: 999px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: border-color 0.2s, background 0.2s;
-        }
-        .btn-secondary:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
-
-        /* Floating illustration */
-        .illustration {
-            margin-bottom: 32px;
-            opacity: 0.85;
-        }
-
-        /* Footer hint */
-        .hint {
-            margin-top: 40px;
-            color: #475569;
-            font-size: 0.8rem;
-        }
-        .hint a { color: #a78bfa; text-decoration: none; }
-        .hint a:hover { text-decoration: underline; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
     </style>
 </head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <a href="/" class="navbar-logo">K<span>-</span>SERV.</a>
-    </nav>
+<body class="bg-[#13111c] text-white min-h-screen flex items-center justify-center relative overflow-hidden antialiased">
+    
+    {{-- Glowing Orbs Background --}}
+    <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#673de6]/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-rose-500/10 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
+    <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 24px 24px;"></div>
 
-    <div class="container">
-        <!-- SVG Illustration -->
-        <div class="illustration">
-            <svg width="180" height="140" viewBox="0 0 180 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Browser window -->
-                <rect x="10" y="20" width="160" height="105" rx="10" fill="#1e1b4b" stroke="rgba(103,61,230,0.4)" stroke-width="1.5"/>
-                <!-- Top bar -->
-                <rect x="10" y="20" width="160" height="24" rx="10" fill="#2d2a5e"/>
-                <rect x="10" y="32" width="160" height="12" fill="#2d2a5e"/>
-                <!-- Dots -->
-                <circle cx="28" cy="32" r="4" fill="#f87171"/>
-                <circle cx="42" cy="32" r="4" fill="#fbbf24"/>
-                <circle cx="56" cy="32" r="4" fill="#4ade80"/>
-                <!-- 404 text in browser -->
-                <text x="90" y="88" text-anchor="middle" font-family="Inter, sans-serif" font-weight="900" font-size="32" fill="url(#grad)">404</text>
-                <!-- Sad face -->
-                <text x="90" y="115" text-anchor="middle" font-size="18">😕</text>
-                <defs>
-                    <linearGradient id="grad" x1="60" y1="60" x2="120" y2="100" gradientUnits="userSpaceOnUse">
-                        <stop offset="0%" stop-color="#673de6"/>
-                        <stop offset="100%" stop-color="#a78bfa"/>
-                    </linearGradient>
-                </defs>
-            </svg>
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center w-full">
+        {{-- Logo K-SERV --}}
+        <a href="/" class="inline-flex items-center gap-3 mb-16 hover:scale-105 transition-transform duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#673de6] to-purple-600 flex items-center justify-center shadow-lg shadow-[#673de6]/30">
+                <span class="text-white font-black text-2xl">K</span>
+            </div>
+            <span class="text-3xl font-black tracking-tight text-white">K-SERV.</span>
+        </a>
+
+        {{-- 404 Visual Art --}}
+        <div class="relative mb-10 group cursor-default">
+            {{-- Angka 404 Gede di belakang --}}
+            <h1 class="text-[12rem] md:text-[16rem] leading-none font-black text-transparent bg-clip-text bg-gradient-to-b from-white/20 to-transparent select-none tracking-tighter mix-blend-overlay group-hover:scale-105 transition-transform duration-700">404</h1>
+            
+            {{-- Teks utama di depan --}}
+            <div class="absolute inset-0 flex items-center justify-center flex-col">
+                <div class="w-20 h-20 bg-white/5 backdrop-blur-md rounded-full border border-white/10 flex items-center justify-center mb-6 shadow-xl text-4xl">
+                    👾
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black text-white tracking-tight drop-shadow-lg">Jalan Buntu.</h2>
+            </div>
         </div>
 
-        <div class="error-code">404</div>
-        <h1 class="error-title">Halaman Tidak Ditemukan</h1>
-        <p class="error-desc">
-            Ups! Halaman yang kamu cari tidak ada atau sudah dipindahkan.<br>
-            Tapi tenang, kami siap bantu bisnis kamu tetap online! 🚀
+        {{-- Deskripsi --}}
+        <p class="text-slate-400 text-lg md:text-xl mb-12 max-w-lg mx-auto leading-relaxed font-medium">
+            Waduh, sepertinya Anda nyasar! Halaman yang Anda cari mungkin sudah dihapus, dipindahkan, atau memang tidak pernah ada.
         </p>
 
-        <div class="btn-group">
-            <a href="/" class="btn-primary">
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                Kembali ke Beranda
+        {{-- Tombol Aksi --}}
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/" class="w-full sm:w-auto px-8 py-4 bg-[#673de6] hover:bg-purple-600 text-white font-bold rounded-2xl transition-all hover:-translate-y-1 shadow-lg shadow-purple-500/25 flex items-center justify-center gap-3 text-lg">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                Kembali ke Bumi
             </a>
-            <a href="https://wa.me/6287870402431" target="_blank" class="btn-secondary">
-                Hubungi Kami
+            <a href="https://wa.me/6287870402431" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-bold rounded-2xl transition-all backdrop-blur-sm flex items-center justify-center gap-3 text-lg">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                Lapor Admin
             </a>
         </div>
-
-        <p class="hint">Atau cek layanan kami di <a href="/#katalog">halaman katalog</a></p>
     </div>
 </body>
+</html>
 </html>

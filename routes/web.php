@@ -21,8 +21,8 @@ Route::get('/garansi-revisi', function () { return view('informasi.garansi'); })
 Route::get('/cara-pembayaran', function () { return view('informasi.pembayaran'); })->name('informasi.pembayaran');
 
 // Auth Routes
-Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
-Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+Route::get('/masuk-bosKevin', [AuthController::class, 'showLogin'])->name('login');
+Route::post('/masuk-bosKevin', [AuthController::class, 'login'])->name('login.post');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Admin Routes (Protected)

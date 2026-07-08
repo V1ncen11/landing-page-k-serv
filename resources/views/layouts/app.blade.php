@@ -9,13 +9,23 @@
     <meta name="keywords" content="jasa pembuatan website, bikin web company profile, jasa landing page, aplikasi ujian, sistem web custom, web developer, k-serv, pembuatan website murah, kserv">
     <meta name="author" content="Kevin Nurachman">
 
+    <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:title" content="@yield('title', 'K-SERV (KServ) - Jasa Pembuatan Website')">
     <meta property="og:description" content="@yield('meta_description', 'K-SERV (kserv) adalah agensi developer di Singaparna, Tasikmalaya. Menyediakan jasa pembuatan website company profile, landing page promosi, aplikasi ujian online, dan sistem web custom profesional. Gratis domain & hosting.')">
     <meta property="og:image" content="@yield('og_image', asset('images/favicon.png'))">
-    <meta name="theme-color" content="#f8fafc">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ url()->current() }}">
+    <meta name="twitter:title" content="@yield('title', 'K-SERV (KServ) - Jasa Pembuatan Website')">
+    <meta name="twitter:description" content="@yield('meta_description', 'K-SERV (kserv) adalah agensi developer di Singaparna, Tasikmalaya. Menyediakan jasa pembuatan website company profile, landing page promosi, aplikasi ujian online, dan sistem web custom profesional. Gratis domain & hosting.')">
+    <meta name="twitter:image" content="@yield('og_image', asset('images/favicon.png'))">
     
+    <meta name="theme-color" content="#f8fafc">
 
   
     @vite(['resources/css/app.css', 'resources/js/app.js'])
