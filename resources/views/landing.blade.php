@@ -403,8 +403,11 @@
                     {{-- Main link for the whole card --}}
                     <a href="{{ route('portofolio.show', $item->id) }}" class="absolute inset-0 z-10" aria-label="Lihat detail portofolio {{ $item->nama }}"></a>
 
+                    {{-- Skeleton Wrapper --}}
+                    <div class="absolute inset-0 bg-slate-800 animate-pulse z-0" id="skeleton-port-{{ $item->id }}"></div>
                     <img src="{{ $item->gambar ?: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=600' }}"
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 group-hover:opacity-50 transition-all duration-700"
+                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 group-hover:opacity-50 transition-all duration-700 opacity-0 z-10"
+                         onload="this.classList.remove('opacity-0'); document.getElementById('skeleton-port-{{ $item->id }}')?.remove();"
                          alt="{{ $item->nama }}" loading="lazy">
 
                     {{-- Always visible gradient and title --}}
@@ -631,7 +634,8 @@
                     <a href="{{ route('blog.show', $blog->slug) }}" class="group block bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 flex flex-col h-full">
                         <div class="relative h-48 overflow-hidden bg-slate-100 shrink-0">
                             @if($blog->image)
-                                <img src="{{ $blog->image }}" alt="{{ $blog->title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-slate-200 animate-pulse z-0" id="skeleton-blog-{{ $blog->id }}"></div>
+                                <img src="{{ $blog->image }}" alt="{{ $blog->title }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-0 z-10" onload="this.classList.remove('opacity-0'); document.getElementById('skeleton-blog-{{ $blog->id }}')?.remove();" loading="lazy">
                             @else
                                 <div class="w-full h-full flex items-center justify-center text-slate-400 font-medium">Artikel K-SERV</div>
                             @endif
