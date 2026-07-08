@@ -22,7 +22,7 @@ Route::get('/cara-pembayaran', function () { return view('informasi.pembayaran')
 
 // Auth Routes
 Route::get('/masuk-bosKevin', [AuthController::class, 'showLogin'])->name('login');
-Route::post('/masuk-bosKevin', [AuthController::class, 'login'])->name('login.post');
+Route::post('/masuk-bosKevin', [AuthController::class, 'login'])->middleware('throttle:5,1')->name('login.post');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Admin Routes (Protected)
