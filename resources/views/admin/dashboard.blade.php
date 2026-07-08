@@ -13,7 +13,7 @@
     </div>
 
     <!-- Small Boxes -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-10">
         
         <!-- Small Box: Total Jasa -->
         <div class="bg-indigo-500 rounded-lg text-white relative overflow-hidden shadow-sm">
@@ -72,11 +72,30 @@
             </a>
         </div>
 
-        <!-- Small Box: Total Views -->
+        <!-- Small Box: Total Visitors (GA4) -->
         <div class="bg-emerald-500 rounded-lg text-white relative overflow-hidden shadow-sm">
             <div class="p-5">
-                <h3 class="text-4xl font-bold mb-2">{{ number_format($totalViews, 0, ',', '.') }}</h3>
-                <p class="text-emerald-100 text-lg">Total Views</p>
+                <h3 class="text-4xl font-bold mb-2">{{ number_format($totalVisitors ?? 0, 0, ',', '.') }}</h3>
+                <p class="text-emerald-100 text-lg">Pengunjung (7 Hari)</p>
+            </div>
+            <div class="absolute -right-4 -bottom-4 text-white/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            </div>
+            <a href="https://analytics.google.com/" target="_blank" class="block w-full text-center py-1.5 bg-black/10 hover:bg-black/20 text-emerald-100 hover:text-white transition-colors text-sm relative z-10 flex items-center justify-center gap-1">
+                Buka Analytics
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+            </a>
+        </div>
+        
+        <!-- Small Box: Total Page Views (GA4) -->
+        <div class="bg-rose-500 rounded-lg text-white relative overflow-hidden shadow-sm">
+            <div class="p-5">
+                <h3 class="text-4xl font-bold mb-2">{{ number_format($totalViews ?? 0, 0, ',', '.') }}</h3>
+                <p class="text-rose-100 text-lg">Page Views (7 Hari)</p>
             </div>
             <div class="absolute -right-4 -bottom-4 text-white/20">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -84,10 +103,10 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
             </div>
-            <a href="{{ route('admin.blog.index') }}" class="block w-full text-center py-1.5 bg-black/10 hover:bg-black/20 text-emerald-100 hover:text-white transition-colors text-sm relative z-10 flex items-center justify-center gap-1">
-                Lihat Artikel
+            <a href="https://analytics.google.com/" target="_blank" class="block w-full text-center py-1.5 bg-black/10 hover:bg-black/20 text-rose-100 hover:text-white transition-colors text-sm relative z-10 flex items-center justify-center gap-1">
+                Buka Analytics
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
             </a>
         </div>
