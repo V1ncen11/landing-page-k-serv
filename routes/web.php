@@ -6,12 +6,13 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 // Public Routes
-Route::get('/', [LandingController::class, 'index']);
+Route::get('/', [LandingController::class, 'index'])->name('home');
 Route::get('/tentang-kami', [LandingController::class, 'about'])->name('about');
 Route::get('/portofolio', [LandingController::class, 'portofolioIndex'])->name('portofolio.index');
 Route::get('/portofolio/{id}', [LandingController::class, 'portofolioShow'])->name('portofolio.show');
 Route::get('/blog', [LandingController::class, 'blogIndex'])->name('blog.index');
 Route::get('/blog/{slug}', [LandingController::class, 'blogShow'])->name('blog.show');
+Route::post('/contact', [LandingController::class, 'storeContact'])->name('contact.store');
 
 // Informasi Routes
 Route::get('/syarat-ketentuan', function () { return view('informasi.syarat'); })->name('informasi.syarat');
@@ -31,4 +32,5 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::patch('produk/{id}/toggle', [ProdukController::class, 'toggleActive'])->name('produk.toggle');
     Route::resource('produk.fitur', \App\Http\Controllers\Admin\ProdukFiturController::class);
     Route::resource('blog', AdminBlogController::class);
+    Route::resource('contact', \App\Http\Controllers\Admin\ContactController::class)->only(['index', 'show', 'destroy']);
 });

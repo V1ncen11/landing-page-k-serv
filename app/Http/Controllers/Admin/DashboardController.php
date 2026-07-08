@@ -10,6 +10,7 @@ use App\Models\Blog;
 use Spatie\Analytics\Facades\Analytics;
 use Spatie\Analytics\Period;
 use Spatie\Analytics\OrderBy;
+use App\Models\Contact;
 
 class DashboardController extends Controller
 {
@@ -45,6 +46,8 @@ class DashboardController extends Controller
             \Log::error('Analytics API Error: ' . $e->getMessage());
         }
 
-        return view('admin.dashboard', compact('totalJasa', 'totalPortofolio', 'totalBlog', 'totalViews', 'totalVisitors', 'topBlogs', 'topCities'));
+        $unreadMessages = Contact::where('is_read', false)->count();
+
+        return view('admin.dashboard', compact('totalJasa', 'totalPortofolio', 'totalBlog', 'totalViews', 'totalVisitors', 'topBlogs', 'topCities', 'unreadMessages'));
     }
 }

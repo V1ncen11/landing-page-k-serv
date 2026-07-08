@@ -488,30 +488,61 @@
             </div>
         </div>
     </section>
-    {{-- ═══════════════════════ CTA SECTION ═══════════════════════ --}}
-    <section class="py-24 bg-white transition-colors duration-300">
-        <div class="max-w-5xl mx-auto px-6 md:px-8">
-            <div class="rounded-[3rem] py-16 md:py-24 px-8 md:px-20 text-center relative overflow-hidden" style="background-color: #13111c;">
+    {{-- ═══════════════════════ CTA & KONTAK SECTION ═══════════════════════ --}}
+    <section id="kontak" class="py-24 bg-white transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-6 md:px-8">
+            <div class="rounded-[3rem] p-8 md:p-16 relative overflow-hidden" style="background-color: #13111c;">
                 
                 {{-- Subtle dot pattern --}}
                 <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, rgba(103,61,230,0.15) 1px, transparent 1px); background-size: 40px 40px;"></div>
 
-                <div class="relative z-10">
-                    <h2 class="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight">Punya Ide? Kita Wujudkan Bareng.</h2>
-                    
-                    <p class="text-base mb-10 max-w-xl mx-auto leading-relaxed" style="color: #94a3b8;">
-                        Gak nemu yang cocok di katalog? Tenang, K-Serv bisa bantu custom proyek apapun. Konsultasi pertama selalu gratis!
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="https://wa.me/6287870402431?text=Halo%20K-Serv,%20saya%20punya%20ide%20project%20nih." target="_blank"
-                           class="inline-flex justify-center items-center gap-2 px-8 py-4 text-white font-bold rounded-full hover:-translate-y-1 shadow-lg transition-all duration-300" style="background-color: #673de6;">
-                            <i class="fab fa-whatsapp text-xl"></i> Chat WhatsApp Sekarang
-                        </a>
-                        <a href="{{ url('/#katalog') }}" 
-                           class="inline-flex justify-center items-center gap-2 px-8 py-4 bg-transparent text-white border border-white/30 hover:border-white/60 hover:bg-white/10 font-bold rounded-full transition-all duration-300">
-                            Lihat Katalog Dulu
-                        </a>
+                <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight">Punya Ide? Kita Wujudkan Bareng.</h2>
+                        
+                        <p class="text-base mb-10 max-w-xl leading-relaxed" style="color: #94a3b8;">
+                            K-Serv bisa bantu wujudkan website, sistem kasir, profil perusahaan, hingga aplikasi custom. Isi formulir di samping, dan tim kami akan segera menghubungi Anda.
+                        </p>
+                        
+                        <div class="flex items-center gap-4">
+                            <a href="https://wa.me/6287870402431" target="_blank"
+                               class="inline-flex justify-center items-center gap-2 px-6 py-3 text-white font-bold rounded-full shadow-lg transition-all duration-300" style="background-color: #25d366;">
+                                <i class="fab fa-whatsapp text-lg"></i> Fast Respon WA
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8 shadow-xl">
+                        <h3 class="text-2xl font-black text-slate-900 mb-6">Tinggalkan Pesan</h3>
+                        
+                        @if(session('success_contact'))
+                        <div class="mb-6 bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-3 rounded-xl flex gap-3 items-start">
+                            <svg class="w-5 h-5 text-emerald-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <div>
+                                <h4 class="font-bold text-sm">Berhasil Terkirim!</h4>
+                                <p class="text-xs mt-0.5">{{ session('success_contact') }}</p>
+                            </div>
+                        </div>
+                        @endif
+
+                        <form action="{{ route('contact.store') }}" method="POST">
+                            @csrf
+                            <div class="mb-4">
+                                <label class="block text-sm font-bold text-slate-700 mb-1">Nama Lengkap</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#673de6]/50 focus:border-[#673de6] transition-colors" placeholder="Cth: Budi Santoso">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-sm font-bold text-slate-700 mb-1">Alamat Email / WA</label>
+                                <input type="text" name="email" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#673de6]/50 focus:border-[#673de6] transition-colors" placeholder="Cth: budi@gmail.com / 08123456789">
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-bold text-slate-700 mb-1">Pesan / Kebutuhan</label>
+                                <textarea name="message" required rows="3" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#673de6]/50 focus:border-[#673de6] transition-colors resize-none" placeholder="Ceritakan singkat kebutuhan bisnis Anda..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-4 text-white font-bold rounded-xl hover:-translate-y-1 shadow-md transition-all duration-300" style="background-color: #673de6;">
+                                Kirim Pesan Sekarang
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

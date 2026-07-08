@@ -12,6 +12,24 @@
         </ol>
     </div>
 
+    @if($unreadMessages > 0)
+    <div class="mb-6 bg-rose-50 border border-rose-200 rounded-xl p-5 flex flex-col md:flex-row md:items-center justify-between shadow-sm">
+        <div class="flex items-start gap-4">
+            <div class="bg-rose-100 p-2.5 rounded-full mt-0.5 shadow-sm">
+                <svg class="w-7 h-7 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            </div>
+            <div>
+                <h3 class="font-black text-rose-800 text-lg">Ada {{ $unreadMessages }} Pesan Baru!</h3>
+                <p class="text-rose-600 text-sm mt-0.5">Ada calon klien yang menunggu balasan dari Anda.</p>
+            </div>
+        </div>
+        <a href="{{ route('admin.contact.index') }}" class="mt-4 md:mt-0 inline-flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white px-5 py-2.5 rounded-lg font-bold text-sm shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
+            Buka Inbox
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
+        </a>
+    </div>
+    @endif
+
     <!-- Small Boxes (Internal Stats) -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
         

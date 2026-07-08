@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Produk;
 use App\Models\Blog;
+use App\Models\Contact;
 
 class LandingController extends Controller
 {
@@ -61,5 +62,22 @@ class LandingController extends Controller
         $blog = Blog::where('slug', $slug)->where('is_published', true)->firstOrFail();
         $blog->increment('views');
         return view('blog.show', compact('blog'));
+    }
+
+    public function storeContact(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'message' => 'required|string',
+        ]);
+
+        Contact::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message,
+        ]);
+
+        return redirect()->back()->with('success_contact', 'Pesan Anda berhasil dikirim! Kami akan segera menghubungi Anda.');
     }
 }
