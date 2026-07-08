@@ -7,58 +7,48 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
     </style>
 </head>
-<body class="bg-[#13111c] text-white min-h-screen flex items-center justify-center relative overflow-hidden antialiased">
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col items-center justify-center p-6 antialiased">
     
-    {{-- Glowing Orbs Background --}}
-    <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#673de6]/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-rose-500/10 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
-    <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 24px 24px;"></div>
-
-    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center w-full">
-        {{-- Logo K-SERV --}}
-        <a href="/" class="inline-flex items-center gap-3 mb-16 hover:scale-105 transition-transform duration-300">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#673de6] to-purple-600 flex items-center justify-center shadow-lg shadow-[#673de6]/30">
-                <span class="text-white font-black text-2xl">K</span>
-            </div>
-            <span class="text-3xl font-black tracking-tight text-white">K-SERV.</span>
+    {{-- Navbar / Logo --}}
+    <div class="absolute top-8 left-8 md:top-10 md:left-10">
+        <a href="{{ url('/') }}" class="inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src="{{ asset('images/favicon.svg') }}" alt="K-SERV Logo" class="w-8 h-8">
+            <span class="font-bold text-xl text-slate-800 tracking-tight">K-SERV.</span>
         </a>
+    </div>
 
-        {{-- 404 Visual Art --}}
-        <div class="relative mb-10 group cursor-default">
-            {{-- Angka 404 Gede di belakang --}}
-            <h1 class="text-[12rem] md:text-[16rem] leading-none font-black text-transparent bg-clip-text bg-gradient-to-b from-white/20 to-transparent select-none tracking-tighter mix-blend-overlay group-hover:scale-105 transition-transform duration-700">404</h1>
-            
-            {{-- Teks utama di depan --}}
-            <div class="absolute inset-0 flex items-center justify-center flex-col">
-                <div class="w-20 h-20 bg-white/5 backdrop-blur-md rounded-full border border-white/10 flex items-center justify-center mb-6 shadow-xl text-4xl">
-                    👾
-                </div>
-                <h2 class="text-4xl md:text-5xl font-black text-white tracking-tight drop-shadow-lg">Jalan Buntu.</h2>
-            </div>
-        </div>
+    <div class="w-full max-w-2xl mx-auto text-center">
+        {{-- Illustration --}}
+        <img src="{{ asset('images/error404.svg') }}" alt="Halaman Tidak Ditemukan" class="w-full max-w-[350px] md:max-w-[400px] mx-auto mb-8 animate-float">
 
-        {{-- Deskripsi --}}
-        <p class="text-slate-400 text-lg md:text-xl mb-12 max-w-lg mx-auto leading-relaxed font-medium">
-            Waduh, sepertinya Anda nyasar! Halaman yang Anda cari mungkin sudah dihapus, dipindahkan, atau memang tidak pernah ada.
+        {{-- Content --}}
+        <h1 class="text-3xl md:text-4xl font-black text-slate-900 mb-3 tracking-tight">Halaman Tidak Ditemukan</h1>
+        <p class="text-slate-500 mb-8 max-w-md mx-auto leading-relaxed text-sm md:text-base">
+            Maaf, halaman yang Anda cari mungkin telah dihapus, namanya diubah, atau tidak tersedia untuk sementara waktu.
         </p>
 
-        {{-- Tombol Aksi --}}
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/" class="w-full sm:w-auto px-8 py-4 bg-[#673de6] hover:bg-purple-600 text-white font-bold rounded-2xl transition-all hover:-translate-y-1 shadow-lg shadow-purple-500/25 flex items-center justify-center gap-3 text-lg">
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
-                Kembali ke Bumi
+        {{-- Buttons --}}
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a href="{{ url('/') }}" class="w-full sm:w-auto px-6 py-2.5 bg-[#673de6] hover:bg-purple-600 text-white font-bold rounded-xl transition-all shadow-md shadow-purple-500/20 text-sm flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Kembali ke Beranda
             </a>
-            <a href="https://wa.me/6287870402431" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-bold rounded-2xl transition-all backdrop-blur-sm flex items-center justify-center gap-3 text-lg">
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Lapor Admin
+            <a href="https://wa.me/6287870402431" target="_blank" class="w-full sm:w-auto px-6 py-2.5 bg-white text-slate-700 hover:text-slate-900 hover:bg-slate-50 border border-slate-200 font-bold rounded-xl transition-all shadow-sm text-sm flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                Laporkan Kendala
             </a>
         </div>
     </div>
+    
 </body>
 </html>
 </html>
