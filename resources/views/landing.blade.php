@@ -692,23 +692,37 @@
     @endif
 
     {{-- ═══════════════════════ FAQ ═══════════════════════ --}}
-    <section id="faq" class="max-w-7xl mx-auto px-6 md:px-8 py-24 bg-white" data-aos="fade-up">
-        <div class="mb-12">
+    <section id="faq" class="max-w-4xl mx-auto px-6 md:px-8 py-24 bg-white" data-aos="fade-up">
+        <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-slate-900">Sering Ditanyakan</h2>
+            <p class="text-slate-500 mt-2">Punya pertanyaan? Mungkin jawabannya ada di bawah ini.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-slate-400 transition-all duration-300" data-aos="fade-right">
-                <h4 class="font-bold text-slate-900 mb-2 italic underline decoration-slate-300">Berapa lama pengerjaan website atau sistem?</h4>
-                <p class="text-slate-500 text-sm">Biasanya memakan waktu 1-2 minggu untuk website, dan menyesuaikan untuk sistem custom tergantung tingkat kesulitannya.</p>
+        
+        <div class="space-y-4">
+            @php
+                $faqs = [
+                    ['q' => 'Berapa lama pengerjaan website atau sistem?', 'a' => 'Biasanya memakan waktu 1-2 minggu untuk website, dan menyesuaikan untuk sistem custom tergantung tingkat kesulitannya.'],
+                    ['q' => 'Apakah ada garansi revisi?', 'a' => 'Pasti! K-SERV memberikan garansi revisi desain sampai klien benar-benar puas sesuai dengan brief awal.'],
+                    ['q' => 'Apakah biaya sudah termasuk domain dan hosting?', 'a' => 'Ya! Hampir semua paket pembuatan website di K-SERV sudah gratis domain (.com / .id dll) dan hosting super cepat selama 1 tahun pertama.'],
+                    ['q' => 'Apakah saya akan dibantu mengelola website setelah selesai?', 'a' => 'Tentu saja. Kami memberikan dukungan teknis dan maintenance gratis selama 30 hari pertama, serta panduan cara menggunakan website.'],
+                    ['q' => 'Apakah K-SERV bisa membuat aplikasi Android/iOS atau sistem kasir?', 'a' => 'Bisa banget. Selain website Company Profile, kami juga ahlinya membuat sistem custom, aplikasi kasir (POS), dan web ujian online.'],
+                    ['q' => 'Apakah harga bisa disesuaikan dengan budget bisnis saya?', 'a' => 'Tentu. Kami paham setiap bisnis punya kebutuhan berbeda. Silakan konsultasikan budget Anda, dan kami akan berikan solusi teknis terbaik yang sesuai.'],
+                ];
+            @endphp
+            
+            @foreach($faqs as $index => $faq)
+            <div x-data="{ open: false }" class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" :class="open ? 'shadow-md border-indigo-200' : 'hover:border-slate-300'" data-aos="fade-up" data-aos-delay="{{ $index * 50 }}">
+                <button @click="open = !open" class="w-full flex items-center justify-between p-6 bg-white text-left focus:outline-none">
+                    <h4 class="font-bold text-slate-900 pr-4" :class="open ? 'text-[#673de6]' : ''">{{ $faq['q'] }}</h4>
+                    <span class="shrink-0 text-slate-400 transition-transform duration-300" :class="open ? 'rotate-180 text-[#673de6]' : ''">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </span>
+                </button>
+                <div x-show="open" x-collapse class="px-6 pb-6 bg-white" style="display: none;">
+                    <p class="text-slate-500 text-sm leading-relaxed border-t border-slate-100 pt-4">{{ $faq['a'] }}</p>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-slate-400 transition-all duration-300" data-aos="fade-left">
-                <h4 class="font-bold text-slate-900 mb-2 italic underline decoration-slate-300">Apakah ada garansi revisi?</h4>
-                <p class="text-slate-500 text-sm">Pasti! Kita kasih garansi revisi sampai sesuai dengan brief awal.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-slate-400 transition-all duration-300" data-aos="fade-right">
-                <h4 class="font-bold text-slate-900 mb-2 italic underline decoration-slate-300">Berapa lama pengerjaan pembuatan Website/Aplikasi?</h4>
-                <p class="text-slate-500 text-sm">Biasanya 2-3 Minggu pengerjaan untuk pembuatan projeknya tergantung tingkat kesulitannya.</p>
-            </div>
+            @endforeach
         </div>
     </section>
 
@@ -746,4 +760,49 @@
 
 @push('scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
+@endpush
+
+@push('schema')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "{{ url('/') }}#organization",
+      "name": "K-SERV (KServ)",
+      "url": "{{ url('/') }}",
+      "logo": "{{ asset('images/favicon.png') }}",
+      "image": "{{ asset('images/hero_illustration.png') }}",
+      "description": "Agensi developer di Tasikmalaya yang menyediakan jasa pembuatan website company profile, landing page promosi, aplikasi ujian online, dan sistem web custom profesional.",
+      "telephone": "+6287870402431",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Singaparna",
+        "addressRegion": "Tasikmalaya",
+        "addressCountry": "ID"
+      },
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.instagram.com/k_serv.id"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        @foreach($faqs as $index => $faq)
+        {
+          "@type": "Question",
+          "name": "{{ $faq['q'] }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ $faq['a'] }}"
+          }
+        }{{ $index < count($faqs) - 1 ? ',' : '' }}
+        @endforeach
+      ]
+    }
+  ]
+}
+</script>
 @endpush

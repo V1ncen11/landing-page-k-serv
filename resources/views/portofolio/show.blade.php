@@ -243,3 +243,48 @@
 
 </div>
 @endsection
+
+@push('schema')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "{{ $portofolio->nama }}",
+      "image": [
+        "{{ $portofolio->gambar ? (filter_var($portofolio->gambar, FILTER_VALIDATE_URL) ? $portofolio->gambar : asset($portofolio->gambar)) : asset('images/hero_illustration.png') }}"
+      ],
+      "description": "{{ $portofolio->deskripsi }}",
+      "author": {
+        "@type": "Organization",
+        "name": "K-SERV (KServ)",
+        "url": "{{ url('/') }}"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "{{ url('/') }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portofolio",
+          "item": "{{ route('portofolio.index') }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{ $portofolio->nama }}"
+        }
+      ]
+    }
+  ]
+}
+</script>
+@endpush

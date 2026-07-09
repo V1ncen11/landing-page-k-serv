@@ -72,3 +72,49 @@
     </article>
 </div>
 @endsection
+
+@push('schema')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "{{ $blog->title }}",
+      "image": [
+        "{{ $blog->image ? (filter_var($blog->image, FILTER_VALIDATE_URL) ? $blog->image : asset($blog->image)) : asset('images/favicon.png') }}"
+      ],
+      "datePublished": "{{ $blog->created_at->toIso8601String() }}",
+      "dateModified": "{{ $blog->updated_at->toIso8601String() }}",
+      "author": [{
+          "@type": "Person",
+          "name": "Kevin Nurachman",
+          "url": "{{ url('/') }}"
+        }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "{{ url('/') }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "{{ route('blog.index') }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{ $blog->title }}"
+        }
+      ]
+    }
+  ]
+}
+</script>
+@endpush

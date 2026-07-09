@@ -63,6 +63,12 @@
 
       gtag('config', 'G-DVJGDMVSGF');
     </script>
+    
+    <!-- Alpine.js (Lightweight interactivity for FAQs etc) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Schema.org JSON-LD -->
+    @stack('schema')
 </head>
 
 <body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 antialiased transition-colors duration-300 overflow-x-hidden w-full relative">
