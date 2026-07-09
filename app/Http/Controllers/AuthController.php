@@ -11,7 +11,7 @@ class AuthController extends Controller
     {
         // Jika sudah login, langsung lempar ke dashboard admin
         if (Auth::check()) {
-            return redirect()->route('admin.produk.index');
+            return redirect()->route('admin.dashboard');
         }
         
         return view('auth.login');
@@ -27,7 +27,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/admin/produk')->with('success', 'Berhasil masuk ke Dashboard Admin!');
+            return redirect()->route('admin.dashboard')->with('success', 'Berhasil masuk ke Dashboard Admin!');
         }
 
         return back()->withErrors([
