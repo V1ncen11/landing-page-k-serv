@@ -766,42 +766,42 @@
 <script type="application/ld+json">
 {
   "@@context": "https://schema.org",
-  "@graph": [
+  "@type": "LocalBusiness",
+  "@id": "{{ url('/') }}#organization",
+  "name": "K-SERV (KServ)",
+  "url": "{{ url('/') }}",
+  "logo": "{{ asset('images/favicon.png') }}",
+  "image": "{{ asset('images/hero_illustration.png') }}",
+  "description": "Agensi developer di Tasikmalaya yang menyediakan jasa pembuatan website company profile, landing page promosi, aplikasi ujian online, dan sistem web custom profesional.",
+  "telephone": "+6287870402431",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Singaparna",
+    "addressRegion": "Tasikmalaya",
+    "addressCountry": "ID"
+  },
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.instagram.com/k_serv.id"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    @foreach($faqs as $index => $faq)
     {
-      "@type": "LocalBusiness",
-      "@id": "{{ url('/') }}#organization",
-      "name": "K-SERV (KServ)",
-      "url": "{{ url('/') }}",
-      "logo": "{{ asset('images/favicon.png') }}",
-      "image": "{{ asset('images/hero_illustration.png') }}",
-      "description": "Agensi developer di Tasikmalaya yang menyediakan jasa pembuatan website company profile, landing page promosi, aplikasi ujian online, dan sistem web custom profesional.",
-      "telephone": "+6287870402431",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Singaparna",
-        "addressRegion": "Tasikmalaya",
-        "addressCountry": "ID"
-      },
-      "priceRange": "$$",
-      "sameAs": [
-        "https://www.instagram.com/k_serv.id"
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        @foreach($faqs as $index => $faq)
-        {
-          "@type": "Question",
-          "name": "{{ $faq['q'] }}",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "{{ $faq['a'] }}"
-          }
-        }@if(!$loop->last),@endif
-        @endforeach
-      ]
-    }
+      "@type": "Question",
+      "name": "{{ $faq['q'] }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ $faq['a'] }}"
+      }
+    }@if(!$loop->last),@endif
+    @endforeach
   ]
 }
 </script>
