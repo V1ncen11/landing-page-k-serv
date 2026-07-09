@@ -798,7 +798,7 @@
             "@type": "Answer",
             "text": "{{ $faq['a'] }}"
           }
-        }{{ $index < count($faqs) - 1 ? ',' : '' }}
+        }@if(!$loop->last),@endif
         @endforeach
       ]
     }
