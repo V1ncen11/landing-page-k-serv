@@ -14,6 +14,9 @@ Route::get('/blog', [LandingController::class, 'blogIndex'])->name('blog.index')
 Route::get('/blog/{slug}', [LandingController::class, 'blogShow'])->name('blog.show');
 Route::post('/contact', [LandingController::class, 'storeContact'])->name('contact.store');
 
+// Sitemap
+Route::get('/sitemap.xml', [\App\Http\Controllers\SitemapController::class, 'index'])->name('sitemap');
+
 // Informasi Routes
 Route::get('/syarat-ketentuan', function () { return view('informasi.syarat'); })->name('informasi.syarat');
 Route::get('/kebijakan-privasi', function () { return view('informasi.privasi'); })->name('informasi.privasi');
