@@ -61,6 +61,7 @@
             <table class="w-full text-left border-collapse">
                 <thead>
                     <tr class="bg-slate-50/50 border-b border-slate-100">
+                        <th class="px-6 py-5 text-sm font-bold text-slate-400 uppercase tracking-wider text-center w-16">No</th>
                         <th class="px-8 py-5 text-sm font-bold text-slate-400 uppercase tracking-wider">Judul Artikel</th>
                         <th class="px-8 py-5 text-sm font-bold text-slate-400 uppercase tracking-wider text-center">Status</th>
                         <th class="px-8 py-5 text-sm font-bold text-slate-400 uppercase tracking-wider text-center">Tanggal</th>
@@ -70,6 +71,9 @@
                 <tbody class="divide-y divide-slate-50">
                     @forelse($blogs as $item)
                     <tr class="hover:bg-slate-50/80 transition-all {{ !$item->is_published ? 'opacity-70' : '' }}">
+                        <td class="px-6 py-6 text-center font-bold text-slate-400">
+                            {{ ($blogs->currentPage() - 1) * $blogs->perPage() + $loop->iteration }}
+                        </td>
                         <td class="px-8 py-6">
                             <div class="flex items-center gap-4">
                                 @if($item->image)
@@ -128,7 +132,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="4" class="px-8 py-16 text-center text-slate-400">
+                        <td colspan="5" class="px-8 py-16 text-center text-slate-400">
                             <div class="flex flex-col items-center gap-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
