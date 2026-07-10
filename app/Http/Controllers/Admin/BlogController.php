@@ -50,7 +50,7 @@ class BlogController extends Controller
             'meta_description' => $request->meta_description,
             'content'          => $request->content,
             'image'            => $request->image,
-            'is_published'     => $request->has('is_published'),
+            'is_published'     => $request->boolean('is_published'),
         ]);
 
         return redirect()->route('admin.blog.index')->with('success', 'Blog berhasil ditambahkan!');
@@ -83,7 +83,7 @@ class BlogController extends Controller
             'meta_description' => $request->meta_description,
             'content'          => $request->content,
             'image'            => $request->image,
-            'is_published'     => $request->has('is_published'),
+            'is_published'     => $request->boolean('is_published'),
         ]);
 
         return redirect()->route('admin.blog.index')->with('success', 'Blog berhasil diupdate!');
